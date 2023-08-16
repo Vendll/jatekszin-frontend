@@ -4,6 +4,11 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
+dependencies:
+  svelte-scrolling:
+    specifier: ^1.2.2
+    version: 1.2.2(svelte@3.59.2)
+
 devDependencies:
   '@floating-ui/dom':
     specifier: ^1.5.1
@@ -2010,10 +2015,17 @@ packages:
       typescript: 5.1.6
     dev: true
 
+  /svelte-scrolling@1.2.2(svelte@3.59.2):
+    resolution: {integrity: sha512-vlVbC8OGte6nqlw2lu9r4L1G48W1h2Aq16fNd0Y2YAUTjM10f55inMGN7zm2rFDPH/tPRIfqZBui+u5i8RD6mA==}
+    peerDependencies:
+      svelte: ^3.38.3
+    dependencies:
+      svelte: 3.59.2
+    dev: false
+
   /svelte@3.59.2:
     resolution: {integrity: sha512-vzSyuGr3eEoAtT/A6bmajosJZIUWySzY2CzB3w2pgPvnkUjGqlDnsNnA0PMO+mMAhuyMul6C2uuZzY6ELSkzyA==}
     engines: {node: '>= 8'}
-    dev: true
 
   /tailwindcss@3.3.3:
     resolution: {integrity: sha512-A0KgSkef7eE4Mf+nKJ83i75TMyq8HqY3qmFIJSWy8bNt0v1lG7jUcpGpoTFxAwYcWOphcTBLPPJg+bDfhDf52w==}

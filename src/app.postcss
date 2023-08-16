@@ -94,7 +94,160 @@
 	--color-surface-800: 146 146 146; /* ⬅ #929292 */
 	--color-surface-900: 120 120 120; /* ⬅ #787878 */
 }
-html,
-body {
-	@apply h-full;
+@font-face {
+	font-family: 'Heavitas Neue';
+	src: local('Heavitas Neue Black'), local('HeavitasNeue-Black'),
+		url('/fonts/HeavitasNeue-Black.woff2') format('woff2'),
+		url('/fonts/HeavitasNeue-Black.woff') format('woff');
+	font-weight: 900;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Heavitas Neue';
+	src: local('Heavitas Neue Bold'), local('HeavitasNeue-Bold'),
+		url('/fonts/HeavitasNeue-Bold.woff2') format('woff2'),
+		url('/fonts/HeavitasNeue-Bold.woff') format('woff');
+	font-weight: bold;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Heavitas Neue';
+	src: local('Heavitas Neue Light'), local('HeavitasNeue-Light'),
+		url('/fonts/HeavitasNeue-Light.woff2') format('woff2'),
+		url('/fonts/HeavitasNeue-Light.woff') format('woff');
+	font-weight: 300;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Heavitas Neue Extra';
+	src: local('Heavitas Neue Extra Light'), local('HeavitasNeue-ExtraLight'),
+		url('/fonts/HeavitasNeue-ExtraLight.woff2') format('woff2'),
+		url('/fonts/HeavitasNeue-ExtraLight.woff') format('woff');
+	font-weight: 200;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Heavitas Neue Semi';
+	src: local('Heavitas Neue Semi Bold'), local('HeavitasNeue-SemiBold'),
+		url('/fonts/HeavitasNeue-SemiBold.woff2') format('woff2'),
+		url('/fonts/HeavitasNeue-SemiBold.woff') format('woff');
+	font-weight: 600;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Heavitas Neue Extra';
+	src: local('Heavitas Neue Extra Bold'), local('HeavitasNeue-ExtraBold'),
+		url('/fonts/HeavitasNeue-ExtraBold.woff2') format('woff2'),
+		url('/fonts/HeavitasNeue-ExtraBold.woff') format('woff');
+	font-weight: bold;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Heavitas Neue';
+	src: local('Heavitas Neue Regular'), local('HeavitasNeue-Regular'),
+		url('/fonts/HeavitasNeue-Regular.woff2') format('woff2'),
+		url('/fonts/HeavitasNeue-Regular.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Heavitas Neue';
+	src: local('Heavitas Neue Bold'), local('HeavitasNeue-Bold'),
+		url('/fonts/HeavitasNeue-Bold.woff2') format('woff2'),
+		url('/fonts/HeavitasNeue-Bold.woff') format('woff');
+	font-weight: bold;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Heavitas Neue Extra';
+	src: local('Heavitas Neue Extra Bold'), local('HeavitasNeue-ExtraBold'),
+		url('/fonts/HeavitasNeue-ExtraBold.woff2') format('woff2'),
+		url('/fonts/HeavitasNeue-ExtraBold.woff') format('woff');
+	font-weight: bold;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Heavitas Neue';
+	src: local('Heavitas Neue Regular'), local('HeavitasNeue-Regular'),
+		url('/fonts/HeavitasNeue-Regular.woff2') format('woff2'),
+		url('/fonts/HeavitasNeue-Regular.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Heavitas Neue';
+	src: local('Heavitas Neue Light'), local('HeavitasNeue-Light'),
+		url('/fonts/HeavitasNeue-Light.woff2') format('woff2'),
+		url('/fonts/HeavitasNeue-Light.woff') format('woff');
+	font-weight: 300;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Heavitas Neue Extra';
+	src: local('Heavitas Neue Extra Light'), local('HeavitasNeue-ExtraLight'),
+		url('/fonts/HeavitasNeue-ExtraLight.woff2') format('woff2'),
+		url('/fonts/HeavitasNeue-ExtraLight.woff') format('woff');
+	font-weight: 200;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Heavitas Neue';
+	src: local('Heavitas Neue Black'), local('HeavitasNeue-Black'),
+		url('/fonts/HeavitasNeue-Black.woff2') format('woff2'),
+		url('/fonts/HeavitasNeue-Black.woff') format('woff');
+	font-weight: 900;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Heavitas Neue Semi';
+	src: local('Heavitas Neue Semi Bold'), local('HeavitasNeue-SemiBold'),
+		url('/fonts/HeavitasNeue-SemiBold.woff2') format('woff2'),
+		url('/fonts/HeavitasNeue-SemiBold.woff') format('woff');
+	font-weight: 600;
+	font-style: normal;
+	font-display: swap;
+}
+
+.font-heavitas {
+	font-family: 'Heavitas Neue';
+	font-weight: 700;
+	font-style: normal;
+}
+.text-blue-stroke {
+	-webkit-text-stroke: 2px rgb(var(--color-primary-500));
+}
+.text-blue-stroke-thin {
+	-webkit-text-stroke: 1px rgb(var(--color-primary-500));
+}
+.text-white-stroke {
+	-webkit-text-stroke: 2px #ffffff;
+}
+.text-white-stroke-thin {
+	-webkit-text-stroke: 1px #ffffff;
 }

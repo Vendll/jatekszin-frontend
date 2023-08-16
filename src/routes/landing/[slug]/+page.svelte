@@ -1,0 +1,17 @@
+<script lang="ts">
+	import Hero from '$components/Hero.svelte';
+	import Informaciok from '$components/Informaciok.svelte';
+	import Szereplok from '$components/Szereplok.svelte';
+	import Trailer from '$components/Trailer.svelte';
+	import Galeria from '$components/Galeria.svelte';
+	import Tamogatoink from '$components/Tamogatoink.svelte';
+</script>
+
+<div class="space-y-16">
+	<Hero />
+	<Informaciok />
+	<Szereplok />
+	<Trailer />
+	<Galeria />
+	<Tamogatoink />
+</div>
