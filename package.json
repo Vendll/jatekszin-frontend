@@ -35,6 +35,8 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"svelte-scrolling": "^1.2.2"
+		"svelte-icons-pack": "^2.1.0",
+		"svelte-scrolling": "^1.2.2",
+		"swiper": "^10.2.0"
 	}
 }

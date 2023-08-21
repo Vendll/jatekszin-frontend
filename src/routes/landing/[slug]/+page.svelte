@@ -5,13 +5,19 @@
 	import Trailer from '$components/Trailer.svelte';
 	import Galeria from '$components/Galeria.svelte';
 	import Tamogatoink from '$components/Tamogatoink.svelte';
+	import Footer from '$components/Footer.svelte';
+	import TopButton from '$components/TopButton.svelte';
 </script>
 
 <div class="space-y-16">
 	<Hero />
-	<Informaciok />
-	<Szereplok />
-	<Trailer />
-	<Galeria />
-	<Tamogatoink />
+	<section class="max-w-7xl mx-auto space-y-16">
+		<Informaciok />
+		<Szereplok />
+		<Trailer />
+		<Galeria />
+		<Tamogatoink />
+	</section>
+	<Footer />
+	<TopButton />
 </div>

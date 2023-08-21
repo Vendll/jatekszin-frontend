@@ -1,45 +1,65 @@
 <script lang="ts">
 	import { scrollTo } from 'svelte-scrolling';
+	import { fade } from 'svelte/transition';
+	import hero from '$lib/assets/IMG_8154.jpg';
+	import heroMobile from '$lib/assets/IMG_8078.jpg';
+	import { onMount } from 'svelte';
+
+	let ready = false;
+	onMount(() => (ready = true));
 </script>
 
 <div
 	class="relative bg-gray-600 text-white !h-screen w-screen font-heavitas flex flex-col justify-between"
 >
 	<div class="absolute inset-0 z-0 overflow-hidden">
-		<img src="/hero.jpg" alt="" class="h-full w-full object-cover" />
+		<img src={hero} alt="Hero" class="hidden sm:block h-full w-full object-cover object-center" />
+		<img
+			src={heroMobile}
+			alt="Hero"
+			class="block sm:hidden h-full w-full object-cover object-center"
+		/>
 	</div>
 	<div class="z-10 text-5xl text-center py-12">játékszín</div>
-	<div class="z-10 text-4xl text-center py-12">
-		<p class="px-12 text-blue-stroke">paolo genovese</p>
-		<p class="text-5xl text-error-500 text-white-stroke">teljesen idegenek</p>
-	</div>
-	<div class="z-10 grid grid-cols-2 text-xl justify-center items-center px-6 pb-12 gap-y-4">
-		<p
-			use:scrollTo={'jegyvásárlás'}
-			class="col-span-2 text-center text-error-500 text-white-stroke-thin"
+	{#if ready}
+		<div
+			class="z-10 text-4xl text-center py-12 h-full justify-start flex flex-col"
+			in:fade={{ delay: 350, duration: 1500 }}
 		>
-			jegyvásárlás
-		</p>
-		<p
-			use:scrollTo={{ ref: 'információk', offset: -50, duration: 1000 }}
-			class="text-blue-stroke-thin"
+			<p class="px-12 text-blue-stroke">paolo genovese</p>
+			<p class="text-5xl text-error-500 text-white-stroke">teljesen idegenek</p>
+		</div>
+		<div
+			in:fade={{ delay: 850, duration: 1500 }}
+			class="z-10 grid grid-cols-2 text-2xl lg:text-3xl lg:self-center lg:max-w-lg justify-center items-center px-6 pb-24 lg:pb-12 gap-y-4"
 		>
-			információk
-		</p>
-		<p
-			use:scrollTo={{ ref: 'szereplők', offset: -50, duration: 1000 }}
-			class="text-blue-stroke-thin text-right"
-		>
-			szereplők
-		</p>
-		<p use:scrollTo={{ ref: 'trailer', offset: -50, duration: 1000 }} class="text-blue-stroke-thin">
-			trailer
-		</p>
-		<p
-			use:scrollTo={{ ref: 'galéria', offset: -50, duration: 1000 }}
-			class="text-blue-stroke-thin text-right"
-		>
-			galéria
-		</p>
-	</div>
+			<p
+				use:scrollTo={'jegyvásárlás'}
+				class="col-span-2 text-center text-3xl text-error-500 text-white-stroke"
+			>
+				jegyvásárlás
+			</p>
+			<p
+				use:scrollTo={{ ref: 'információk', offset: -50, duration: 1000 }}
+				class="text-blue-stroke"
+			>
+				információk
+			</p>
+			<p
+				use:scrollTo={{ ref: 'szereplők', offset: -50, duration: 1000 }}
+				class="text-blue-stroke text-right"
+			>
+				szereplők
+			</p>
+			<p use:scrollTo={{ ref: 'trailer', offset: -50, duration: 1000 }} class="text-blue-stroke">
+				trailer
+			</p>
+			<p
+				use:scrollTo={{ ref: 'galéria', offset: -50, duration: 1000 }}
+				class="text-blue-stroke text-right"
+			>
+				galéria
+			</p>
+		</div>
+	{/if}
 </div>
