@@ -1,5 +1,8 @@
-<!-- YOU CAN DELETE EVERYTHING IN THIS PAGE -->
+<script lang="ts">
+	import Hero from '$components/Hero.svelte';
+</script>
 
+<Hero mainPage={true} />
 <div class="container h-full mx-auto flex justify-center items-center">
 	<div class="space-y-5">
 		<p>Start by exploring:</p>

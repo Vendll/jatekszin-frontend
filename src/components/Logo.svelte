@@ -1,9 +1,15 @@
-<script lang="ts"></script>
+<script lang="ts">
+	export let height: string;
+	export let slideUp: boolean;
+	export let width: string;
+</script>
 
 <svg
-	class="fill-white h-52 -mt-12"
-	width="100%"
-	height="100%"
+	class="fill-white"
+	class:height
+	class:slideUp
+	{width}
+	{height}
 	viewBox="0 0 1920 1080"
 	version="1.1"
 	xmlns="http://www.w3.org/2000/svg"
@@ -16,3 +22,9 @@
 		style="fill-rule:nonzero;"
 	/>
 </svg>
+
+<style>
+	.slideUp {
+		margin-top: -3rem;
+	}
+</style>
