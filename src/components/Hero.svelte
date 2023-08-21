@@ -4,6 +4,7 @@
 	import hero from '$lib/assets/IMG_8154.jpg?w=1800&h=1200&format=webp';
 	import heroMobile from '$lib/assets/IMG_8078.jpg?w=1200&h=1800&format=webp';
 	import { onMount, onDestroy, afterUpdate, beforeUpdate } from 'svelte';
+	import { onMount, onDestroy, afterUpdate, beforeUpdate } from 'svelte';
 	import Logo from './Logo.svelte';
 	import { register } from 'swiper/element/bundle';
 	register();
