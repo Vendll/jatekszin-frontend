@@ -33,7 +33,7 @@
 	>
 		<img src={szinesz4} alt="" class="absolute inset-0 rounded-md object-center z-0" />
 		<div class="z-10 text-error-500 text-xl lg:text-xl text-white-stroke-thin font-heavitas">
-			Hope, külügyminiszterasszony
+			Carlotta
 		</div>
 		<div class="z-10 text-white font-">Lévay Viktória</div>
 	</div>
