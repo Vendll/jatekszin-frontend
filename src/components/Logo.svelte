@@ -2,11 +2,12 @@
 	export let height: string;
 	export let slideUp: boolean;
 	export let width: string;
+	export let color: boolean;
 </script>
 
 <svg
-	class="fill-white"
-	class:height
+	class="fill-white transition-color duration-300 ease-in-out"
+	class:color
 	class:slideUp
 	{width}
 	{height}
@@ -26,5 +27,8 @@
 <style>
 	.slideUp {
 		margin-top: -3rem;
+	}
+	.color {
+		fill: rgb(var(--color-primary-500));
 	}
 </style>

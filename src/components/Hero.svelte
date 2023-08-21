@@ -3,8 +3,6 @@
 	import { fade } from 'svelte/transition';
 	import hero from '$lib/assets/IMG_8154.jpg?w=1800&h=1200&format=webp';
 	import heroMobile from '$lib/assets/IMG_8078.jpg?w=1200&h=1800&format=webp';
-	import { onMount, onDestroy, afterUpdate, beforeUpdate } from 'svelte';
-	import { onMount, onDestroy, afterUpdate, beforeUpdate } from 'svelte';
 	import Logo from './Logo.svelte';
 	import { register } from 'swiper/element/bundle';
 	register();
@@ -25,7 +23,7 @@
 			/>
 		</div>
 		<div class="z-20 text-5xl text-center">
-			<Logo height={'13rem'} slideUp width={'100%'} />
+			<Logo color height={'13rem'} slideUp width={'100%'} />
 		</div>
 
 		<div
@@ -78,7 +76,7 @@
 				autoplay-delay="2500"
 				autoplay-disable-on-interaction="false"
 				loop="true"
-				class=""
+				class="w-full h-full"
 			>
 				{#each Array.from({ length: 8 }) as _, i}
 					<swiper-slide class="card rounded-none bg-gray-300 py-20 !h-full text-center">
