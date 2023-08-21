@@ -1,8 +1,8 @@
 <script lang="ts">
 	import { scrollTo } from 'svelte-scrolling';
 	import { fade } from 'svelte/transition';
-	import hero from '$lib/assets/IMG_8154.jpg';
-	import heroMobile from '$lib/assets/IMG_8078.jpg';
+	import hero from '$lib/assets/IMG_8154.jpg?w=1800&h=1200&format=webp';
+	import heroMobile from '$lib/assets/IMG_8078.jpg?w=1200&h=1800&format=webp';
 	import { onMount } from 'svelte';
 
 	let ready = false;

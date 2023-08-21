@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { scrollRef } from 'svelte-scrolling';
-	import poster from '$lib/assets/poster.jpeg';
+	import poster from '$lib/assets/poster.jpeg?w=785&h=1100&format=webp';
 </script>
 
 <div use:scrollRef={'jegyvásárlás'} class="lg:grid lg:grid-cols-7">

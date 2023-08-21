@@ -1,9 +1,9 @@
 <script lang="ts">
 	import { scrollRef } from 'svelte-scrolling';
-	import szinesz1 from '$lib/assets/IMG_5202.jpg';
-	import szinesz2 from '$lib/assets/IMG_5232.jpg';
-	import szinesz3 from '$lib/assets/IMG_5242_AA.jpg';
-	import szinesz4 from '$lib/assets/IMG_5545_BB.jpg';
+	import szinesz1 from '$lib/assets/IMG_5202.jpg?w=500&h=500&format=webp';
+	import szinesz2 from '$lib/assets/IMG_5232.jpg?w=500&h=500&format=webp';
+	import szinesz3 from '$lib/assets/IMG_5242_AA.jpg?w=500&h=500&format=webp';
+	import szinesz4 from '$lib/assets/IMG_5545_BB.jpg?w=500&h=500&format=webp';
 </script>
 
 <div use:scrollRef={'szereplők'} class="font-heavitas !font-normal text-4xl mb-6 mx-6">
