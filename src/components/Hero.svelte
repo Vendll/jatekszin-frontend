@@ -20,8 +20,11 @@
 			class="block sm:hidden h-full w-full object-cover object-center"
 		/>
 	</div>
-	<div class="z-10 text-5xl text-center py-12">játékszín</div>
 	{#if ready}
+		<div in:fade={{ delay: 150, duration: 300 }} class="z-10 text-5xl text-center py-12">
+			játékszín
+		</div>
+
 		<div
 			class="z-10 text-4xl text-center py-12 h-full justify-start flex flex-col"
 			in:fade={{ delay: 350, duration: 1500 }}
