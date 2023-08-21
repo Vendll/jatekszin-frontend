@@ -9,15 +9,15 @@
 	import TopButton from '$components/TopButton.svelte';
 </script>
 
-<div class="space-y-16">
+<div class="">
 	<Hero />
-	<section class="max-w-7xl mx-auto space-y-16">
+	<div class="max-w-7xl mx-auto space-y-16">
 		<Informaciok />
 		<Szereplok />
 		<Trailer />
 		<Galeria />
 		<Tamogatoink />
-	</section>
+	</div>
 	<Footer />
 	<TopButton />
 </div>
