@@ -13,7 +13,7 @@
 <div
 	class="relative bg-gray-600 text-white !h-screen w-screen font-heavitas flex flex-col justify-between"
 >
-	<div class="absolute inset-0 z-0 overflow-hidden">
+	<div class="absolute inset-0 z-10 overflow-hidden">
 		<img src={hero} alt="Hero" class="hidden sm:block h-full w-full object-cover object-center" />
 		<img
 			src={heroMobile}
@@ -21,12 +21,12 @@
 			class="block sm:hidden h-full w-full object-cover object-center"
 		/>
 	</div>
-	<div class="z-10 text-5xl text-center">
+	<div class="z-20 text-5xl text-center">
 		<Logo />
 	</div>
 	{#if ready}
 		<div
-			class="z-10 text-4xl text-center py-12 h-full justify-start flex flex-col"
+			class="z-20 text-4xl text-center py-12 h-full justify-start flex flex-col"
 			in:fade={{ delay: 350, duration: 1500 }}
 		>
 			<p class="px-12 text-blue-stroke">paolo genovese</p>
@@ -34,7 +34,7 @@
 		</div>
 		<div
 			in:fade={{ delay: 850, duration: 1500 }}
-			class="z-10 grid grid-cols-2 text-2xl lg:text-3xl lg:self-center lg:max-w-lg justify-center items-center px-6 pb-24 lg:pb-12 gap-y-4"
+			class="z-20 grid grid-cols-2 text-2xl lg:text-3xl lg:self-center lg:max-w-lg justify-center items-center px-6 pb-24 lg:pb-12 gap-y-4"
 		>
 			<p
 				use:scrollTo={'jegyvásárlás'}
