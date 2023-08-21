@@ -8,9 +8,10 @@
 <div class="m-6 space-y-4">
 	<div class="font-heavitas !font-normal text-4xl mb-6">támogatóink</div>
 	<swiper-container
-		slides-per-view="5"
+		slides-per-view={2}
 		speed="500"
-		space-between={40}
+		space-between={20}
+		breakpoints={{ 768: { slidesPerView: 5, spaceBetween: 40 } }}
 		centered-slides={true}
 		autoplay={true}
 		autoplay-delay="2500"
