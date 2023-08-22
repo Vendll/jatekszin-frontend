@@ -46,7 +46,7 @@
 	];
 </script>
 
-<Navbar />
+<!-- <Navbar /> -->
 <Drawer class="" position="right" duration={500}>
 	<div class="flex items-center justify-evenly mt-6">
 		<a href="/" class="-mx-2 -my-8 outline-none p-0">
