@@ -1,12 +1,15 @@
 <script lang="ts">
 	import poster from '$lib/assets/poster.jpeg';
 	import { scrollTo } from 'svelte-scrolling';
+	import Szinlap from '$components/Szinlap.svelte';
+	import Trailer from '$components/Trailer.svelte';
+	import Galeria from '$components/Galeria.svelte';
 </script>
 
-<div class="mt-20 lg:mt-20">
+<div class="mt-20">
 	<header class="overflow-hidden bg-white lg:bg-transparent lg:px-5">
 		<div
-			class="mx-auto grid max-w-6xl grid-cols-1 grid-rows-[auto_1fr] gap-y-16 pt-16 md:pt-12 md:gap-y-0 lg:grid-cols-12 lg:px-3 lg:pb-36"
+			class="mx-auto grid max-w-6xl grid-cols-1 grid-rows-[auto_1fr] gap-y-16 pt-16 md:pt-12 md:gap-y-0 lg:grid-cols-12 lg:px-3 lg:pb-16"
 		>
 			<div class="relative flex items-start lg:col-span-5">
 				<div
@@ -52,32 +55,29 @@
 						<div
 							class=" absolute z-[-1] bg-primary-600 -top-4 lg:-top-6 bottom-20 lg:-bottom-2 -left-[100vw] right-[-100vw]"
 						/>
-						<p
-							use:scrollTo={'jegyvásárlás'}
-							class="text-white-stroke-thin col-span-2 text-center text-3xl text-error-500"
-						>
+						<p class="text-white-stroke-thin col-span-2 text-center text-3xl text-error-500">
 							jegyvásárlás
 						</p>
 						<p
-							use:scrollTo={{ ref: 'információk', offset: -50, duration: 1000 }}
+							use:scrollTo={{ ref: 'színlap', offset: -150, duration: 1000 }}
 							class="text-white-stroke-thin text-error-500"
 						>
 							színlap
 						</p>
 						<p
-							use:scrollTo={{ ref: 'szereplők', offset: -50, duration: 1000 }}
+							use:scrollTo={{ ref: 'szereplők', offset: -150, duration: 1000 }}
 							class="text-white-stroke-thin text-error-500 text-right"
 						>
 							szereplők
 						</p>
 						<p
-							use:scrollTo={{ ref: 'trailer', offset: -50, duration: 1000 }}
+							use:scrollTo={{ ref: 'trailer', offset: -150, duration: 1000 }}
 							class="text-white-stroke-thin text-error-500"
 						>
 							trailer
 						</p>
 						<p
-							use:scrollTo={{ ref: 'galéria', offset: -50, duration: 1000 }}
+							use:scrollTo={{ ref: 'galéria', offset: -150, duration: 1000 }}
 							class="text-white-stroke-thin text-error-500 text-right"
 						>
 							galéria
@@ -88,5 +88,9 @@
 		</div>
 	</header>
 
-	<div class="max-w-7xl mx-auto h-16" />
+	<div class="max-w-7xl mx-auto space-y-16">
+		<Szinlap />
+		<Trailer />
+		<Galeria />
+	</div>
 </div>
