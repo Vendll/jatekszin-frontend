@@ -9,7 +9,7 @@
 	import TopButton from '$components/TopButton.svelte';
 </script>
 
-<div class="">
+<div class="space-y-16">
 	<Hero mainPage={false} />
 	<div class="max-w-7xl mx-auto space-y-16">
 		<Informaciok />

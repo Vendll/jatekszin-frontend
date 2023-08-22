@@ -3,7 +3,7 @@
 	import poster from '$lib/assets/poster.jpeg?w=785&h=1100&format=webp';
 </script>
 
-<div use:scrollRef={'jegyvásárlás'} class="lg:grid lg:grid-cols-7">
+<div class="lg:grid lg:grid-cols-7">
 	<div use:scrollRef={'információk'} class="m-6 space-y-4 lg:col-span-5">
 		<div class="font-heavitas !font-normal text-4xl mb-6">információk</div>
 		<div class="lg:flex lg:space-x-6 space-y-4 lg:space-y-0">

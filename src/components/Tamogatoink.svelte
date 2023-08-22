@@ -1,8 +1,9 @@
 <script lang="ts">
 	import { register } from 'swiper/element/bundle';
-	import { Autoplay } from 'swiper/modules';
-
 	register();
+	const onSlideChange = (e: any) => {
+		console.log('slide changed');
+	};
 </script>
 
 <div class="m-6 space-y-4">
@@ -17,6 +18,7 @@
 		autoplay-delay="2500"
 		autoplay-disable-on-interaction="false"
 		loop="true"
+		on:slidechange={onSlideChange}
 		class="snap-x scroll-px-4 snap-mandatory scroll-smooth flex gap-4 overflow-x-auto px-4 py-10"
 	>
 		{#each Array.from({ length: 8 }) as _, i}
