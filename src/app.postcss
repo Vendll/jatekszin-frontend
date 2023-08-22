@@ -240,20 +240,82 @@
 	font-style: normal;
 }
 .text-blue-stroke {
+	stroke: 2px rgb(var(--color-primary-500));
 	-webkit-text-stroke: 2px rgb(var(--color-primary-500));
 }
 .text-blue-stroke-thin {
+	stroke: 1px rgb(var(--color-primary-500));
 	-webkit-text-stroke: 1px rgb(var(--color-primary-500));
 }
 .text-red-stroke {
+	stroke: 2px rgb(var(--color-error-500));
 	-webkit-text-stroke: 2px rgb(var(--color-error-500));
 }
 .text-red-stroke-thin {
+	stroke: 1px rgb(var(--color-error-500));
 	-webkit-text-stroke: 1px rgb(var(--color-error-500));
 }
 .text-white-stroke {
+	stroke: 2px #ffffff;
 	-webkit-text-stroke: 2px #ffffff;
 }
 .text-white-stroke-thin {
+	stroke: 1px #ffffff;
 	-webkit-text-stroke: 1px #ffffff;
+}
+.fc {
+	& .fc-button-primary {
+		background-color: transparent !important;
+		border: none !important;
+		color: white;
+	}
+}
+.fc .fc-toolbar.fc-header-toolbar {
+	background: rgb(var(--color-error-600));
+	color: white;
+	font-family: 'Heavitas Neue';
+	margin-bottom: 0 !important;
+	padding-bottom: 1.5rem;
+	padding-top: 1.5rem;
+	border-radius: 0.5rem 0.5rem 0 0;
+}
+.fc-icon {
+	color: white !important;
+	font-weight: 700 !important;
+}
+.fc .fc-button {
+	font-size: 1rem !important;
+}
+.fc-direction-ltr .fc-list-day-side-text,
+.fc-direction-rtl .fc-list-day-text {
+	float: left;
+	margin-left: 0.5rem;
+}
+.fc-theme-standard {
+	border-radius: 0.5rem;
+}
+.fc-theme-standard .fc-list-day-cushion {
+	background-color: rgb(var(--color-primary-600)) !important;
+	color: white;
+}
+.fc-theme-standard .fc-list {
+	border-color: rgb(var(--color-primary-500));
+	border-radius: 0 0 0.5rem 0.5rem;
+	overflow: hidden;
+}
+.fc-theme-standard td,
+.fc-theme-standard th {
+	border: none;
+}
+.fc .fc-list-day-cushion,
+.fc .fc-list-table td {
+	padding: 12px 14px;
+}
+.fc-list-event-graphic {
+	display: none;
+}
+.fc .fc-list-empty {
+	background-color: white !important;
+	font-size: 1rem;
+	font-family: 'Heavitas Neue';
 }

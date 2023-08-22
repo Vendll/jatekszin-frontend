@@ -4,6 +4,7 @@
 	import Szinlap from '$components/Szinlap.svelte';
 	import Trailer from '$components/Trailer.svelte';
 	import Galeria from '$components/Galeria.svelte';
+	import CalendarJs from '$components/CalendarJS.svelte';
 </script>
 
 <div class="mt-20">
@@ -92,5 +93,6 @@
 		<Szinlap />
 		<Trailer />
 		<Galeria />
+		<CalendarJs />
 	</div>
 </div>

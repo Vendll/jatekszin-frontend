@@ -38,6 +38,8 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@fullcalendar/core": "^6.1.8",
+		"@fullcalendar/list": "^6.1.8",
 		"dotenv": "^16.3.1",
 		"svelte-icons-pack": "^2.1.0",
 		"svelte-scrolling": "^1.2.2",
