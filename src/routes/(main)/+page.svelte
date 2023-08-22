@@ -1,8 +1,10 @@
 <script lang="ts">
 	import Hero from '$components/Hero.svelte';
+	import Kiemelt from '$components/Kiemelt.svelte';
 </script>
 
 <Hero mainPage={true} />
+<Kiemelt />
 <div class="container h-full mx-auto flex flex-col justify-center items-center">
 	<div class="space-y-5 h-screen w-screen">
 		<p>Start by exploring:</p>
