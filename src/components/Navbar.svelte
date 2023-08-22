@@ -48,7 +48,7 @@
 		screenHeight = window.innerHeight;
 	});
 
-	$: if ($page.url.pathname === '/') {
+	$: if ($page.url.pathname === '/' || $page.url.pathname === '/hirek') {
 		if (y > screenHeight / 8) {
 			navColor = true;
 		} else {
@@ -67,7 +67,8 @@
 <svelte:window bind:scrollY={y} />
 <header
 	class="fixed top-0 z-[30] inset-x-0"
-	style="background: rgba(255, 255, 255, {$page.url.pathname === '/'
+	style="background: rgba(255, 255, 255, {$page.url.pathname === '/' ||
+	$page.url.pathname === '/hirek'
 		? y / screenHeight
 		: 1});  transition: opacity 0.5s ease;"
 >
