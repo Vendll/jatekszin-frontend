@@ -35,33 +35,33 @@
 			<p class="px-12 text-blue-stroke">paolo genovese</p>
 			<p class="text-5xl text-error-500 text-white-stroke">teljesen idegenek</p>
 		</div>
-		<div
+		<nav
 			in:fade={{ delay: 850, duration: 1500 }}
 			class="z-20 grid grid-cols-2 text-2xl lg:text-3xl lg:self-center lg:max-w-lg justify-center items-center px-6 pb-24 lg:pb-12 gap-y-4"
 		>
 			<p class="col-span-2 text-center text-3xl text-error-500 text-white-stroke">jegyvásárlás</p>
-			<p
+			<a
 				use:scrollTo={{ ref: 'információk', offset: -50, duration: 1000 }}
 				class="text-blue-stroke"
 			>
 				információk
-			</p>
-			<p
+			</a>
+			<a
 				use:scrollTo={{ ref: 'szereplők', offset: -50, duration: 1000 }}
 				class="text-blue-stroke text-right"
 			>
 				szereplők
-			</p>
-			<p use:scrollTo={{ ref: 'trailer', offset: -50, duration: 1000 }} class="text-blue-stroke">
+			</a>
+			<a use:scrollTo={{ ref: 'trailer', offset: -50, duration: 1000 }} class="text-blue-stroke">
 				trailer
-			</p>
-			<p
+			</a>
+			<a
 				use:scrollTo={{ ref: 'galéria', offset: -50, duration: 1000 }}
 				class="text-blue-stroke text-right"
 			>
 				galéria
-			</p>
-		</div>
+			</a>
+		</nav>
 	{:else}
 		<div class="absolute inset-0">
 			<swiper-container
