@@ -1,7 +1,7 @@
 <script lang="ts">
 </script>
 
-<div class="relative overflow-hidden bg-white py-16">
+<div class="relative overflow-hidden bg-white py-16 mt-10">
 	<div
 		class="hidden lg:absolute lg:inset-y-0 lg:block lg:h-full lg:w-full lg:[overflow-anchor:none]"
 	/>
