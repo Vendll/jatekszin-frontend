@@ -17,7 +17,7 @@
 		<div class="z-10 text-error-500 text-xl lg:text-xl text-white-stroke-thin font-heavitas">
 			Eva
 		</div>
-		<div class="z-10 text-white font-">Dobó Kata</div>
+		<div class="z-10 text-white">Dobó Kata</div>
 	</div>
 	<div
 		class="w-full h-full aspect-square lg:w-96 lg:h-96 overflow-hidden rounded-md flex flex-col relative justify-end px-6 py-3 bg-gray-300"
@@ -26,7 +26,7 @@
 		<div class="z-10 text-error-500 text-xl lg:text-xl text-white-stroke-thin font-heavitas">
 			Rocco
 		</div>
-		<div class="z-10 text-white font-">Kolovracnic Krisztián</div>
+		<div class="z-10 text-white">Kolovracnic Krisztián</div>
 	</div>
 	<div
 		class="w-full h-full aspect-square lg:w-96 lg:h-96 overflow-hidden rounded-md flex flex-col relative justify-end px-6 py-3 bg-gray-300"
@@ -35,7 +35,7 @@
 		<div class="z-10 text-error-500 text-xl lg:text-xl text-white-stroke-thin font-heavitas">
 			Carlotta
 		</div>
-		<div class="z-10 text-white font-">Lévay Viktória</div>
+		<div class="z-10 text-white">Lévay Viktória</div>
 	</div>
 	<div
 		class="w-full h-full aspect-square lg:w-96 lg:h-96 overflow-hidden rounded-md flex flex-col relative justify-end px-6 py-3 bg-gray-300"
@@ -44,7 +44,7 @@
 		<div class="z-10 text-error-500 text-xl lg:text-xl text-white-stroke-thin font-heavitas">
 			Lele
 		</div>
-		<div class="z-10 text-white font-">Debreczeny Csaba</div>
+		<div class="z-10 text-white">Debreczeny Csaba</div>
 	</div>
 	<div
 		class="w-full h-full aspect-square lg:w-96 lg:h-96 overflow-hidden rounded-md flex flex-col relative justify-end px-6 py-3 bg-gray-300"
@@ -53,7 +53,7 @@
 		<div class="z-10 text-error-500 text-xl lg:text-xl text-white-stroke-thin font-heavitas">
 			Bianka
 		</div>
-		<div class="z-10 text-white font-">Erdélyi Tímea</div>
+		<div class="z-10 text-white">Erdélyi Tímea</div>
 	</div>
 	<div
 		class="w-full h-full aspect-square lg:w-96 lg:h-96 overflow-hidden rounded-md flex flex-col relative justify-end px-6 py-3 bg-gray-300"
@@ -62,7 +62,7 @@
 		<div class="z-10 text-error-500 text-xl lg:text-xl text-white-stroke-thin font-heavitas">
 			Cosimó
 		</div>
-		<div class="z-10 text-white font-">Makranczi Zalán</div>
+		<div class="z-10 text-white">Makranczi Zalán</div>
 	</div>
 	<div
 		class="w-full h-full aspect-square lg:w-96 lg:h-96 overflow-hidden rounded-md flex flex-col relative justify-end px-6 py-3 bg-gray-300"
@@ -71,6 +71,6 @@
 		<div class="z-10 text-error-500 text-xl lg:text-xl text-white-stroke-thin font-heavitas">
 			Peppe
 		</div>
-		<div class="z-10 text-white font-">Nagy Sándor</div>
+		<div class="z-10 text-white">Nagy Sándor</div>
 	</div>
 </div>
