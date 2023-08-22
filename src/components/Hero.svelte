@@ -38,7 +38,7 @@
 			class="z-20 grid grid-cols-2 text-2xl lg:text-3xl lg:self-center lg:max-w-lg justify-center items-center px-6 pb-24 lg:pb-12 gap-y-4"
 		>
 			<p class="col-span-2 text-center text-3xl text-error-500 text-white-stroke">jegyvásárlás</p>
-			<p
+			<a
 				use:scrollTo={{ ref: 'információk', offset: -50, duration: 1000 }}
 				class="text-blue-stroke"
 			>
