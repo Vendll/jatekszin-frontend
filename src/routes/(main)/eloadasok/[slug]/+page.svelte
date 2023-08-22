@@ -1,7 +1,6 @@
 <script lang="ts">
 	import poster from '$lib/assets/poster.jpeg';
 	import { scrollTo } from 'svelte-scrolling';
-	import { fade } from 'svelte/transition';
 </script>
 
 <div class="mt-20 lg:mt-20">
@@ -51,7 +50,7 @@
 						class="z-10 relative grid grid-cols-2 text-2xl font-heavitas mt-8 lg:text-3xl lg:self-center lg:max-w-lg justify-center items-center px-6 pb-24 lg:pb-6 gap-y-4"
 					>
 						<div
-							class=" absolute z-[-1] bg-primary-600 -top-4 lg:-top-6 bottom-12 lg:-bottom-4 -left-[100vw] right-[-100vw]"
+							class=" absolute z-[-1] bg-primary-600 -top-4 lg:-top-6 bottom-20 lg:-bottom-2 -left-[100vw] right-[-100vw]"
 						/>
 						<p
 							use:scrollTo={'jegyvásárlás'}
