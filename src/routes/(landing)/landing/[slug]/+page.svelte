@@ -7,17 +7,25 @@
 	import Tamogatoink from '$components/Tamogatoink.svelte';
 	import Footer from '$components/Footer.svelte';
 	import TopButton from '$components/TopButton.svelte';
+	import { onMount } from 'svelte';
+	let visibe = false;
+	onMount(() => {
+		console.log('mounted');
+		visibe = true;
+	});
 </script>
 
-<div class="space-y-16">
-	<Hero mainPage={false} />
-	<div class="max-w-7xl mx-auto space-y-16">
-		<Informaciok />
-		<Szereplok />
-		<Trailer />
-		<Galeria />
-		<Tamogatoink />
+{#if visibe}
+	<div class="space-y-16">
+		<Hero mainPage={false} />
+		<div class="max-w-7xl mx-auto space-y-16">
+			<Informaciok />
+			<Szereplok />
+			<Trailer />
+			<Galeria />
+			<Tamogatoink />
+		</div>
+		<Footer />
+		<TopButton />
 	</div>
-	<Footer />
-	<TopButton />
-</div>
+{/if}
