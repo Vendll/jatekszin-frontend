@@ -10,7 +10,7 @@
 </script>
 
 <div class="">
-	<Hero />
+	<Hero mainPage={false} />
 	<div class="max-w-7xl mx-auto space-y-16">
 		<Informaciok />
 		<Szereplok />

@@ -48,12 +48,14 @@
 		screenHeight = window.innerHeight;
 	});
 
-	$: {
+	$: if ($page.url.pathname === '/') {
 		if (y > screenHeight / 8) {
 			navColor = true;
 		} else {
 			navColor = false;
 		}
+	} else {
+		navColor = true;
 	}
 
 	const drawerSettings: DrawerSettings = {
@@ -70,7 +72,9 @@
 		: 1});  transition: opacity 0.5s ease;"
 >
 	<div class="flex justify-between lg:justify-evenly max-w-7xl mx-auto items-center">
-		<Logo color={navColor} height={'6rem'} slideUp={false} width={'15rem'} />
+		<a href="/" class="block">
+			<Logo color={navColor} height={'6rem'} slideUp={false} width={'15rem'} />
+		</a>
 		{#each navItems as item}
 			<a
 				href={item.href}
