@@ -1,65 +1,69 @@
 <script lang="ts">
 	import { scrollRef } from 'svelte-scrolling';
-	import gallery1 from '$lib/assets/gallery1.jpg?format=webp';
-	import gallery2 from '$lib/assets/gallery2.jpg?format=webp';
-	import gallery3 from '$lib/assets/gallery3.jpg?format=webp';
-	import gallery4 from '$lib/assets/gallery4.jpg?format=webp';
-	import gallery5 from '$lib/assets/gallery5.jpg?format=webp';
-	import gallery6 from '$lib/assets/gallery6.jpg?format=webp';
-	import gallery7 from '$lib/assets/gallery7.jpg?format=webp';
-	import gallery8 from '$lib/assets/gallery8.jpg?format=webp';
-	import gallery9 from '$lib/assets/gallery9.jpg?format=webp';
-	import gallery10 from '$lib/assets/gallery10.jpg?format=webp';
-	import gallery11 from '$lib/assets/gallery11.jpg?format=webp';
-	import gallery12 from '$lib/assets/gallery12.jpg?format=webp';
+	import FaSolidAngleLeft from 'svelte-icons-pack/fa/FaSolidAngleLeft';
+	import FaSolidAngleRight from 'svelte-icons-pack/fa/FaSolidAngleRight';
+	import Icon from 'svelte-icons-pack/Icon.svelte';
+
+	let elemCarousel: HTMLDivElement;
+
+	function carouselLeft(): void {
+		const x =
+			elemCarousel.scrollLeft === 0
+				? elemCarousel.clientWidth * elemCarousel.childElementCount // loop
+				: elemCarousel.scrollLeft - elemCarousel.clientWidth; // step left
+		elemCarousel.scroll(x, 0);
+	}
+
+	function carouselRight(): void {
+		const x =
+			elemCarousel.scrollLeft === elemCarousel.scrollWidth - elemCarousel.clientWidth
+				? 0 // loop
+				: elemCarousel.scrollLeft + elemCarousel.clientWidth; // step right
+		elemCarousel.scroll(x, 0);
+	}
+
+	function carouselThumbnail(index: number) {
+		elemCarousel.scroll(elemCarousel.clientWidth * index, 0);
+	}
+
+	export let eloadas: any;
 </script>
 
 <div use:scrollRef={'galéria'} class="m-6 space-y-4">
 	<div class="font-heavitas !font-normal text-4xl mb-6">galéria</div>
-	<section class="grid grid-cols-2 md:grid-cols-4 gap-2">
-		<div class="grid gap-4">
-			<div>
-				<img class="h-auto max-w-full rounded-lg" src={gallery1} />
-			</div>
-			<div>
-				<img class="h-auto max-w-full rounded-lg" src={gallery2} alt="" />
-			</div>
-			<div>
-				<img class="h-auto max-w-full rounded-lg" src={gallery3} alt="" />
-			</div>
+
+	<div class="card p-4 grid grid-cols-[auto_1fr_auto] gap-4 items-center">
+		<!-- Button: Left -->
+		<button type="button" class="btn-icon variant-ringed-primary" on:click={carouselLeft}>
+			<Icon className="h-6 w-6 -ml-1 fill-primary-600" src={FaSolidAngleLeft} />
+		</button>
+		<!-- Full Images -->
+		<div bind:this={elemCarousel} class="snap-x snap-mandatory scroll-smooth flex overflow-x-auto">
+			{#each eloadas.galeria as image}
+				<img
+					class="snap-center w-full rounded-container-token"
+					src={image.image.sizes.large.url}
+					alt={image.image.alt}
+					loading="lazy"
+				/>
+			{/each}
 		</div>
-		<div class="grid gap-4">
-			<div>
-				<img class="h-auto max-w-full rounded-lg" src={gallery4} alt="" />
-			</div>
-			<div>
-				<img class="h-auto max-w-full rounded-lg" src={gallery5} alt="" />
-			</div>
-			<div>
-				<img class="h-auto max-w-full rounded-lg" src={gallery6} alt="" />
-			</div>
-		</div>
-		<div class="grid gap-4">
-			<div>
-				<img class="h-auto max-w-full rounded-lg" src={gallery7} alt="" />
-			</div>
-			<div>
-				<img class="h-auto max-w-full rounded-lg" src={gallery8} alt="" />
-			</div>
-			<div>
-				<img class="h-auto max-w-full rounded-lg" src={gallery9} alt="" />
-			</div>
-		</div>
-		<div class="grid gap-4">
-			<div>
-				<img class="h-auto max-w-full rounded-lg" src={gallery10} alt="" />
-			</div>
-			<div>
-				<img class="h-auto max-w-full rounded-lg" src={gallery11} alt="" />
-			</div>
-			<div>
-				<img class="h-auto max-w-full rounded-lg" src={gallery12} alt="" />
-			</div>
-		</div>
-	</section>
+		<!-- Button: Right -->
+		<button type="button" class="btn-icon variant-ringed-primary" on:click={carouselRight}>
+			<Icon className="h-6 w-6 -mr-1 fill-primary-600" src={FaSolidAngleRight} />
+		</button>
+	</div>
+
+	<div class="card p-4 grid grid-cols-6 gap-4">
+		{#each eloadas.galeria as image, i}
+			<button type="button" on:click={() => carouselThumbnail(i)}>
+				<img
+					class="rounded-container-token"
+					src={image.image.sizes.small.url}
+					alt={image.image.alt}
+					loading="lazy"
+				/>
+			</button>
+		{/each}
+	</div>
 </div>

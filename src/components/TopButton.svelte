@@ -10,7 +10,7 @@
 	onMount(() => {
 		screenHeight = window.innerHeight;
 	});
-	$: if (scrollY >= screenHeight) {
+	$: if (scrollY >= screenHeight / 2) {
 		topBtn = true;
 	} else {
 		topBtn = false;
@@ -20,14 +20,14 @@
 <svelte:window bind:scrollY />
 {#if topBtn}
 	<button
-		transition:fade={{ duration: 1000, delay: 0 }}
-		class="btn variant-filled-primary hidden fixed bottom-6 right-6 z-[9999] font-heavitas font-bold text-white text-sm rounded-full m-0 p-0"
+		transition:fade={{ duration: 300, delay: 0 }}
+		class="btn variant-filled-error hidden fixed bottom-6 right-6 z-[9999] font-heavitas font-bold text-white text-sm rounded-full m-0 p-0"
 		class:topBtn
 		on:click={() => scrollTop({ duration: 1000 })}
 	>
 		<Icon
 			color="white"
-			className="text-5xl stroke-white stroke-[10px]  fill-error-500"
+			className="text-5xl stroke-white stroke-[10px]  fill-primary-500"
 			src={FaSolidArrowAltCircleUp}
 		/>
 	</button>

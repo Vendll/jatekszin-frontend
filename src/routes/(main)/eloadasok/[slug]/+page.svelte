@@ -5,6 +5,12 @@
 	import Trailer from '$components/Trailer.svelte';
 	import Galeria from '$components/Galeria.svelte';
 	import CalendarJs from '$components/CalendarJS.svelte';
+	import type { PageData } from './$types';
+	export let data: PageData;
+	console.log(data);
+
+	const eloadas = data.props.eloadasok.docs[0];
+	const musor = data.props.musor.docs;
 </script>
 
 <div class="mt-20">
@@ -42,7 +48,7 @@
 				<div
 					class="relative z-20 mx-auto flex w-64 rounded-xl bg-slate-600 shadow-xl md:mb-4 md:w-80 lg:w-auto"
 				>
-					<img src={poster} alt="" class="" />
+					<img src={eloadas.poster.sizes.medium.url} alt="" class="" />
 				</div>
 			</div>
 			<!-- <div
@@ -54,23 +60,11 @@
 			<div class="bg-white pt-16 lg:col-span-7 lg:bg-transparent lg:pt-0 lg:pl-16 xl:pl-20">
 				<div class="mx-auto px-4 sm:px-6 md:max-w-2xl md:px-4 lg:px-0">
 					<h1 class="font-display text-5xl font-heavitas text-slate-900 sm:text-6xl">
-						teljesen idegenek
+						{eloadas.title}
 					</h1>
 
-					<p class="text-lg font-light font-sans mt-6">
-						Különös játékot talál ki egy baráti társaság: bárkinek megszólal a telefonja, képes vagy
-						szöveges Üzenetet kap, együtt hallgatják, olvassák, nézik...
-					</p>
-					<p class="text-lg font-light font-sans">
-						A hétköznapi estén váratlan titkok pattannak föl, évtizedes szövetségek kapcsai kezdenek
-						kilazulni... Pedig eddig úgy gondolták, jól ismerik egymást - am lassanként elszabadul a
-						pokol... Paolo Genovese 2016-os filmie szinte percek alatt hóditotta meg Európa
-						mozijait, st több országban a helyi remake-jet is leforgattak. A görög, spanyol, török,
-						francia, mexikói, koreai, kínai változat mellett a magyar is elkészült.
-					</p>
-					<p class="text-lg font-light font-sans mb-14">
-						Most pedig végre szinpadon is látható ez a fursa, egyszerre vicces és drámai történet,
-						Magyarorszagon elóször a Játékszinben.
+					<p class="text-lg font-light font-sans mt-6 prose">
+						{eloadas.description}
 					</p>
 
 					<div
@@ -105,9 +99,9 @@
 	</header>
 
 	<div class="max-w-7xl mx-auto space-y-16">
-		<Szinlap />
+		<Szinlap {eloadas} />
 		<Trailer />
-		<Galeria />
-		<CalendarJs />
+		<Galeria {eloadas} />
+		<CalendarJs {musor} />
 	</div>
 </div>

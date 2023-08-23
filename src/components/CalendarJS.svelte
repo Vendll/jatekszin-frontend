@@ -2,6 +2,16 @@
 	import { Calendar } from '@fullcalendar/core';
 	import { onMount } from 'svelte';
 	import listPlugin from '@fullcalendar/list';
+	export let musor: any;
+	console.log(musor);
+
+	const show = musor.map((show: any) => {
+		return {
+			title: show.eloadasok.title,
+			start: show.date,
+			link: show.jegyLink
+		};
+	});
 
 	let calendarEl: any;
 	onMount(() => {
@@ -16,16 +26,23 @@
 					center: 'title',
 					right: 'next'
 				},
-				events: [
-					{
-						title: 'Meeting',
-						start: '2023-08-22T14:30:00'
-					},
-					{
-						title: 'Birthday Party',
-						start: '2023-08-23T07:00:00'
-					}
-				],
+				events: show,
+				eventContent: function (args: any, event: any, createElement: any) {
+					console.log(args);
+					const jegyLink =
+						args.event._def.title +
+						`<a href='${args.event._def.extendedProps.link}' target='_blank' class='btn variant-filled-error float-right !text-white font-heavitas'>jegyvásárlás</a>`;
+
+					/* element
+						.find('.fc-list-event-title')
+						.append(
+							`<a href={${event.link}} class='btn variant-filled-error font-heavitas'>jegyvásárlás</a>`
+						); */
+
+					return {
+						html: jegyLink
+					};
+				},
 				locale: 'hu',
 				buttonText: {
 					next: 'Következő hónap',
