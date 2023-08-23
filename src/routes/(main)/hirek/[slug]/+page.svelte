@@ -3,6 +3,7 @@
 	import Richtext from '$components/Richtext.svelte';
 	export let data;
 	const hir = data.props.hirek.docs[0];
+	console.log(hir);
 </script>
 
 <svelte:head>

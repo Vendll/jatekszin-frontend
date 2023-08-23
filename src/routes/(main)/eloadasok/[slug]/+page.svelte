@@ -7,8 +7,10 @@
 	import CalendarJs from '$components/CalendarJS.svelte';
 	import type { PageData } from './$types';
 	export let data: PageData;
+	console.log(data);
 
 	const eloadas = data.props.eloadasok.docs[0];
+	const musor = data.props.musor.docs;
 </script>
 
 <div class="mt-20">
@@ -100,6 +102,6 @@
 		<Szinlap {eloadas} />
 		<Trailer />
 		<Galeria {eloadas} />
-		<CalendarJs {eloadas} />
+		<CalendarJs {musor} />
 	</div>
 </div>

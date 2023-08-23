@@ -2,16 +2,17 @@
 	import { Calendar } from '@fullcalendar/core';
 	import { onMount } from 'svelte';
 	import listPlugin from '@fullcalendar/list';
-	export let eloadas: any;
-	console.log(eloadas);
+	export let musor: any;
+	console.log(musor);
 
-	const musor = eloadas.musor.map((musor: any) => {
+	const show = musor.map((show: any) => {
 		return {
-			title: eloadas.title,
-			start: musor.value.date
+			title: show.eloadasok.title,
+			start: show.date,
+			link: show.jegyLink
 		};
 	});
-	console.log(musor);
+
 	let calendarEl: any;
 	onMount(() => {
 		if (document !== undefined) {
@@ -25,7 +26,23 @@
 					center: 'title',
 					right: 'next'
 				},
-				events: musor,
+				events: show,
+				eventContent: function (args: any, event: any, createElement: any) {
+					console.log(args);
+					const jegyLink =
+						args.event._def.title +
+						`<a href='${args.event._def.extendedProps.link}' target='_blank' class='btn variant-filled-error float-right !text-white font-heavitas'>jegyvásárlás</a>`;
+
+					/* element
+						.find('.fc-list-event-title')
+						.append(
+							`<a href={${event.link}} class='btn variant-filled-error font-heavitas'>jegyvásárlás</a>`
+						); */
+
+					return {
+						html: jegyLink
+					};
+				},
 				locale: 'hu',
 				buttonText: {
 					next: 'Következő hónap',

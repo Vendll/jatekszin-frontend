@@ -6,7 +6,6 @@
 	import Galeria from '$components/Galeria.svelte';
 	import Tamogatoink from '$components/Tamogatoink.svelte';
 	import Footer from '$components/Footer.svelte';
-	import TopButton from '$components/TopButton.svelte';
 	import { onMount } from 'svelte';
 	let visibe = false;
 	onMount(() => {
@@ -26,6 +25,5 @@
 			<Tamogatoink />
 		</div>
 		<Footer />
-		<TopButton />
 	</div>
 {/if}

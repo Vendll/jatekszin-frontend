@@ -1,9 +1,12 @@
 <script lang="ts">
 	import CalendarJs from '$components/CalendarJS.svelte';
 	import bannerImage from '$lib/assets/banner.jpg';
-	/* import type { PageData } from './$types';
+	import type { PageData } from './$types';
+	import { page } from '$app/stores';
 	export let data: PageData;
-	const musor = data.props.musor.docs; */
+	console.log(data);
+
+	const musor = data.props.musor.docs;
 </script>
 
 <div class="relative bg-indigo-800">
@@ -21,5 +24,5 @@
 </div>
 
 <div class="mx-auto xl:max-w-7xl px-6 mt-16">
-	<CalendarJs />
+	<CalendarJs {musor} />
 </div>

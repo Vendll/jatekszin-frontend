@@ -3,6 +3,7 @@
 	import type { PageData } from './$types';
 	export let data: PageData;
 	const eloadasok = data.props.eloadasok.docs;
+	console.log(eloadasok);
 </script>
 
 <div class="relative bg-indigo-800">

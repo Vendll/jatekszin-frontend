@@ -5,9 +5,15 @@ export async function load({ params }: any) {
 	const { data } = await api.get(`/eloadasok/slug/${params.slug}`, {
 		params: { depth: 6 }
 	});
+	console.log(data);
+
+	const { data: musordata } = await api.get(`/musor/eloadasszerint/${data.docs[0].id}`);
+	console.log(musordata);
+
 	return {
 		props: {
-			eloadasok: data
+			eloadasok: data,
+			musor: musordata
 		}
 	};
 }
