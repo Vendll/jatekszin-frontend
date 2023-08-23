@@ -36,6 +36,7 @@
 	import Icon from 'svelte-icons-pack/Icon.svelte';
 	import FaBrandsFacebookF from 'svelte-icons-pack/fa/FaBrandsFacebookF';
 	import FaBrandsInstagram from 'svelte-icons-pack/fa/FaBrandsInstagram';
+	import FaBrandsTiktok from 'svelte-icons-pack/fa/FaBrandsTiktok';
 	import FaEnvelope from 'svelte-icons-pack/fa/FaEnvelope';
 	import FaSolidBars from 'svelte-icons-pack/fa/FaSolidBars';
 	import type { DrawerSettings } from '@skeletonlabs/skeleton';
@@ -85,21 +86,43 @@
 				{item.title}
 			</a>
 		{/each}
-		<a href="/hirek" class="hidden lg:block text-white text-xl" class:navColor>
+		<a
+			href="https://www.facebook.com/jatekszin"
+			target="_blank"
+			class="hidden lg:block text-white text-xl"
+			class:navColor
+		>
 			<Icon
 				color={navColor ? 'rgb(37,64,143)' : 'white'}
 				src={FaBrandsFacebookF}
 				className="transition-color duration-300 ease-in-out"
 			/>
 		</a>
-		<a href="/hirek" class="hidden lg:block text-white text-xl" class:navColor>
+		<a
+			href="https://www.instagram.com/jatekszin/"
+			target="_blank"
+			class="hidden lg:block text-white text-xl"
+			class:navColor
+		>
 			<Icon
 				color={navColor ? 'rgb(37,64,143)' : 'white'}
 				src={FaBrandsInstagram}
 				className="transition-color duration-300 ease-in-out"
 			/>
 		</a>
-		<a href="/hirek" class="hidden lg:block text-white text-xl" class:navColor>
+		<a
+			href="https://www.tiktok.com/@jatekszin"
+			target="_blank"
+			class="hidden lg:block text-white text-xl"
+			class:navColor
+		>
+			<Icon
+				color={navColor ? 'rgb(37,64,143)' : 'white'}
+				src={FaBrandsTiktok}
+				className="transition-color duration-300 ease-in-out"
+			/>
+		</a>
+		<a href="mailto:info@jatekszin.hu" class="hidden lg:block text-white text-xl" class:navColor>
 			<Icon
 				color={navColor ? 'rgb(37,64,143)' : 'white'}
 				src={FaEnvelope}

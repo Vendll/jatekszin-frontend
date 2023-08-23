@@ -71,15 +71,21 @@
 						<h3 class="text-sm font-semibold leading-6 text-white">Hasznos linkek</h3>
 						<ul class="mt-6 space-y-4">
 							<li>
-								<a href="#" class="text-sm leading-6 text-gray-300 hover:text-white">IMPRESSZUM</a>
+								<a href="/impresszum" class="text-sm leading-6 text-gray-300 hover:text-white"
+									>IMPRESSZUM</a
+								>
 							</li>
 
 							<li>
-								<a href="#" class="text-sm leading-6 text-gray-300 hover:text-white">KÖZADATOK</a>
+								<a href="/kozadatok" class="text-sm leading-6 text-gray-300 hover:text-white"
+									>KÖZADATOK</a
+								>
 							</li>
 
 							<li>
-								<a href="#" class="text-sm leading-6 text-gray-300 hover:text-white">PRÓBATÁBLA</a>
+								<a href="/probatabla" class="text-sm leading-6 text-gray-300 hover:text-white"
+									>PRÓBATÁBLA</a
+								>
 							</li>
 						</ul>
 					</div>
@@ -87,19 +93,20 @@
 						<h3 class="text-sm font-semibold leading-6 text-white">Elérhetőségek:</h3>
 						<ul class="mt-6 space-y-4">
 							<li>
-								<a href="#" class="text-sm leading-6 text-gray-300 hover:text-white"
+								<a href="/kapcsolat" class="text-sm leading-6 text-gray-300 hover:text-white"
 									>1066 Budapest, Teréz krt. 48.</a
 								>
 							</li>
 
 							<li>
-								<a href="#" class="text-sm leading-6 text-gray-300 hover:text-white"
-									>info@jatekszin.hu</a
+								<a
+									href="mailto:info@jatekszin.hu"
+									class="text-sm leading-6 text-gray-300 hover:text-white">info@jatekszin.hu</a
 								>
 							</li>
 
 							<li>
-								<a href="#" class="text-sm leading-6 text-gray-300 hover:text-white"
+								<a href="tel:+3613318925" class="text-sm leading-6 text-gray-300 hover:text-white"
 									>+36 (1) 331-8925</a
 								>
 							</li>
