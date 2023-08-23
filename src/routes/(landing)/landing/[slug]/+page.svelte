@@ -17,7 +17,7 @@
 
 {#if visibe}
 	<div class="space-y-16">
-		<Hero mainPage={false} />
+		<Hero />
 		<div class="max-w-7xl mx-auto space-y-16">
 			<Informaciok />
 			<Szereplok />
