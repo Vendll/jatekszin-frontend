@@ -2,7 +2,16 @@
 	import { Calendar } from '@fullcalendar/core';
 	import { onMount } from 'svelte';
 	import listPlugin from '@fullcalendar/list';
+	export let eloadas: any;
+	console.log(eloadas);
 
+	const musor = eloadas.musor.map((musor: any) => {
+		return {
+			title: eloadas.title,
+			start: musor.value.date
+		};
+	});
+	console.log(musor);
 	let calendarEl: any;
 	onMount(() => {
 		if (document !== undefined) {
@@ -16,16 +25,7 @@
 					center: 'title',
 					right: 'next'
 				},
-				events: [
-					{
-						title: 'Meeting',
-						start: '2023-08-22T14:30:00'
-					},
-					{
-						title: 'Birthday Party',
-						start: '2023-08-23T07:00:00'
-					}
-				],
+				events: musor,
 				locale: 'hu',
 				buttonText: {
 					next: 'Következő hónap',
