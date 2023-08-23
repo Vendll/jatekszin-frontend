@@ -28,16 +28,8 @@
 				},
 				events: show,
 				eventContent: function (args: any, event: any, createElement: any) {
-					console.log(args);
-					const jegyLink =
-						args.event._def.title +
-						`<a href='${args.event._def.extendedProps.link}' target='_blank' class='btn variant-filled-error float-right !text-white font-heavitas'>jegyvásárlás</a>`;
-
-					/* element
-						.find('.fc-list-event-title')
-						.append(
-							`<a href={${event.link}} class='btn variant-filled-error font-heavitas'>jegyvásárlás</a>`
-						); */
+					console.log(args.event._def.title);
+					const jegyLink = `<div class="flex flex-row justify-between content-center w-full bg-slate-200"><span class="bg-slate-400">${args.event._def.title}</span> <a href='${args.event._def.extendedProps.link}' target='_blank' class='btn variant-filled-error !text-white font-heavitas'>jegyvásárlás</a></div>`;
 
 					return {
 						html: jegyLink
