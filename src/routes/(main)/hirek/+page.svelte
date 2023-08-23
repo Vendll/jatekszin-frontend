@@ -55,17 +55,19 @@
 		</div>
 	</div>
 
-	<Paginator
-		class="mt-12"
-		bind:settings={page}
-		showFirstLastButtons={false}
-		showNumerals
-		maxNumerals={1}
-		amountText=""
-		select="variant-ringed-primary rounded-md focus:outline-none focus:ring-primary-500 border-0 py-1.5 pl-3 pr-7"
-		controlVariant="variant-ringed-primary"
-		controlSeparator="rounded-md"
-		active="variant-soft-primary rounded-md"
-		showPreviousNextButtons={true}
-	/>
+	<div class="max-w-7xl">
+		<Paginator
+			class="mt-12"
+			bind:settings={page}
+			showFirstLastButtons={false}
+			showNumerals
+			maxNumerals={1}
+			amountText=""
+			select="variant-ringed-primary rounded-md focus:outline-none focus:ring-primary-500 border-0 py-1.5 pl-3 pr-7"
+			controlVariant="variant-ringed-primary"
+			controlSeparator="rounded-md"
+			active="variant-soft-primary rounded-md"
+			showPreviousNextButtons={true}
+		/>
+	</div>
 </div>
