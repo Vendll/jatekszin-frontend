@@ -14,7 +14,7 @@
 		<h1
 			class="text-5xl font-heavitas text-error-500 text-white-stroke tracking-tigh sm:text-5xl lg:text-5xl"
 		>
-			Hírek
+			Előadások
 		</h1>
 	</div>
 </div>
