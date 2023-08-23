@@ -1,9 +1,9 @@
 <script lang="ts">
-	import Hero from '$components/Hero.svelte';
+	import MainHero from '$components/MainHero.svelte';
 	import Kiemelt from '$components/Kiemelt.svelte';
 </script>
 
-<Hero mainPage={true} />
+<MainHero />
 <Kiemelt />
 <div class="container h-full mx-auto bg-surface-300 flex flex-col justify-center items-center">
 	<div class="space-y-5 h-screen w-screen">
