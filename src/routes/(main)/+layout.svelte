@@ -4,8 +4,10 @@
 	import type { LayoutData } from './$types';
 	export let data;
 	console.log(data);
+	const navItems = data.props.menu.navItems;
+	console.log(navItems);
 </script>
 
-<Navbar />
+<Navbar {navItems} />
 <slot />
 <MainFooter />

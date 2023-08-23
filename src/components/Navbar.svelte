@@ -1,34 +1,4 @@
 <script lang="ts">
-	let navItems = [
-		{
-			title: 'Hírek',
-			href: '/hirek'
-		},
-		{
-			title: 'Előadások',
-			href: '/eloadasok'
-		},
-		{
-			title: 'Műsor',
-			href: '/musor'
-		},
-		{
-			title: 'Társulat',
-			href: '/tarsulat'
-		},
-		{
-			title: 'Jegyek',
-			href: '/jegyek'
-		},
-		{
-			title: 'Játékszín',
-			href: '/jatekszin'
-		},
-		{
-			title: 'Kapcsolat',
-			href: '/kapcsolat'
-		}
-	];
 	import { onMount } from 'svelte';
 	import { drawerStore } from '@skeletonlabs/skeleton';
 	import { page } from '$app/stores';
@@ -40,6 +10,8 @@
 	import FaEnvelope from 'svelte-icons-pack/fa/FaEnvelope';
 	import FaSolidBars from 'svelte-icons-pack/fa/FaSolidBars';
 	import type { DrawerSettings } from '@skeletonlabs/skeleton';
+	export let navItems: any;
+	console.log(navItems);
 
 	let y: number;
 	let screenHeight: any;
@@ -84,7 +56,7 @@
 		</a>
 		{#each navItems as item}
 			<a
-				href={item.href}
+				href={item.link}
 				class="hidden lg:block text-white hover:text-white-stroke transition-color duration-300 ease-in-out"
 				class:navColor
 			>
