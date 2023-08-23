@@ -3,6 +3,19 @@
 	import type { PageData } from './$types';
 	export let data: PageData;
 	const hirek = data.props.hirek.docs;
+	import { Paginator } from '@skeletonlabs/skeleton';
+	const source = hirek;
+	let page = {
+		offset: 0,
+		limit: 5,
+		size: source.length,
+		amounts: [1, 2, 5, 10]
+	};
+
+	$: paginatedSource = source.slice(
+		page.offset * page.limit, // start
+		page.offset * page.limit + page.limit // end
+	);
 </script>
 
 <div class="relative bg-indigo-800">
@@ -22,7 +35,7 @@
 <div class="bg-gray-50 px-6 pb-20 lg:px-8 lg:pt-10 lg:pb-28">
 	<div class="relative mx-auto max-w-7xl">
 		<div class="mx-auto mt-12 grid max-w-lg gap-5 lg:max-w-none lg:grid-cols-3">
-			{#each hirek as hir}
+			{#each paginatedSource as hir}
 				<div class="flex flex-col overflow-hidden rounded-lg shadow-lg">
 					<div class="flex-shrink-0">
 						<img class="h-64 w-full object-cover" src={hir.thumbnail.sizes.medium.url} alt="" />
@@ -41,4 +54,11 @@
 			{/each}
 		</div>
 	</div>
+	<Paginator
+		bind:settings={page}
+		showFirstLastButtons={false}
+		showNumerals
+		maxNumerals={1}
+		showPreviousNextButtons={true}
+	/>
 </div>
