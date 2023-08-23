@@ -59,11 +59,11 @@
 					easing: quintOut
 				}}
 			>
-				<div class="absolute bottom-4 left-6">
-					<h1 class="text-error-500 text-xl lg:text-2xl text-white-stroke-thin font-heavitas">
+				<div class="absolute bottom-10 left-6">
+					<h1 class="text-error-500 text-xl lg:text-2xl text-white-stroke font-heavitas">
 						Paolo Genovese
 					</h1>
-					<h1 class="text-error-500 text-xl lg:text-3xl text-white-stroke-thin font-heavitas">
+					<h1 class="text-error-500 text-xl lg:text-3xl text-white-stroke font-heavitas">
 						teljesen idegenek
 					</h1>
 					<div class="gap-4 flex mt-4">
