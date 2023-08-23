@@ -1,4 +1,4 @@
-<script lanf="ts">
+<script lang="ts">
 	import escapeHTML from 'escape-html';
 	import { Text } from 'slate';
 
