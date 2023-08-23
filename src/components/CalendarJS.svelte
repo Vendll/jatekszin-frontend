@@ -29,7 +29,7 @@
 				events: show,
 				eventContent: function (args: any, event: any, createElement: any) {
 					console.log(args.event._def.title);
-					const jegyLink = `<div class="flex flex-row justify-between content-center w-full bg-slate-200"><span class="bg-slate-400">${args.event._def.title}</span> <a href='${args.event._def.extendedProps.link}' target='_blank' class='btn variant-filled-error !text-white font-heavitas'>jegyvásárlás</a></div>`;
+					const jegyLink = `<div class="flex flex-row justify-between items-center w-full"><span class="">${args.event._def.title}</span> <a href='${args.event._def.extendedProps.link}' target='_blank' class='btn ml-2 variant-filled-error !text-white text-sm font-heavitas'>jegyvásárlás</a></div>`;
 
 					return {
 						html: jegyLink

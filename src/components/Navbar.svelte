@@ -44,7 +44,7 @@
 
 <svelte:window bind:scrollY={y} />
 <header
-	class="fixed top-0 z-[30] inset-x-0"
+	class="fixed top-0 z-[30] inset-x-0 w-screen"
 	style="background: rgba(255, 255, 255, {$page.url.pathname === '/' ||
 	$page.url.pathname === '/hirek' ||
 	$page.url.pathname === '/musor' ||
