@@ -329,3 +329,14 @@
 .swiper-pagination-bullet-active {
 	background: rgb(var(--color-primary-600)) !important;
 }
+@media only screen and (max-width: 640px) {
+	.fc-toolbar-chunk:first-of-type {
+		float: left;
+	}
+	.fc-toolbar-chunk:nth-of-type(2) {
+		flex-grow: 1;
+	}
+	.fc-toolbar-chunk:last-of-type {
+		float: right;
+	}
+}

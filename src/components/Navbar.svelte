@@ -49,7 +49,11 @@
 		screenHeight = window.innerHeight;
 	});
 
-	$: if ($page.url.pathname === '/' || $page.url.pathname === '/hirek') {
+	$: if (
+		$page.url.pathname === '/' ||
+		$page.url.pathname === '/hirek' ||
+		$page.url.pathname === '/musor'
+	) {
 		if (y > screenHeight / 8) {
 			navColor = true;
 		} else {
@@ -69,7 +73,8 @@
 <header
 	class="fixed top-0 z-[30] inset-x-0"
 	style="background: rgba(255, 255, 255, {$page.url.pathname === '/' ||
-	$page.url.pathname === '/hirek'
+	$page.url.pathname === '/hirek' ||
+	$page.url.pathname === '/musor'
 		? y / screenHeight
 		: 1});  transition: opacity 0.5s ease;"
 >
