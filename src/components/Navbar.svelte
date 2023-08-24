@@ -74,10 +74,10 @@
 			</a>
 		{/each}
 		<a
-			href="https://www.facebook.com/jatekszin"
 			target="_blank"
-			class="hidden lg:block text-white text-xl"
+			class="hidden lg:block text-white text-xl cursor-pointer"
 			class:navColor
+			href={navItems.facebookLink}
 		>
 			<Icon
 				color={navColor ? 'rgb(37,64,143)' : 'white'}
@@ -86,9 +86,9 @@
 			/>
 		</a>
 		<a
-			href="https://www.instagram.com/jatekszin/"
+			href={navItems.instagramLink}
 			target="_blank"
-			class="hidden lg:block text-white text-xl"
+			class="hidden lg:block text-white text-xl cursor-pointer"
 			class:navColor
 		>
 			<Icon
@@ -98,9 +98,9 @@
 			/>
 		</a>
 		<a
-			href="https://www.tiktok.com/@jatekszin"
+			href={navItems.tiktokLink}
 			target="_blank"
-			class="hidden lg:block text-white text-xl"
+			class="hidden lg:block text-white text-xl cursor-pointer"
 			class:navColor
 		>
 			<Icon
