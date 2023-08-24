@@ -11,9 +11,7 @@
 	import FaBrandsFacebookF from 'svelte-icons-pack/fa/FaBrandsFacebookF';
 	import FaBrandsInstagram from 'svelte-icons-pack/fa/FaBrandsInstagram';
 	import FaEnvelope from 'svelte-icons-pack/fa/FaEnvelope';
-	console.log(data);
 	const navItems = data.props.menu.navItems;
-	console.log(navItems);
 </script>
 
 <Navbar {navItems} />
