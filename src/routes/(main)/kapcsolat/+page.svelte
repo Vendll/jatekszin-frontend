@@ -1,12 +1,16 @@
 <script lang="ts">
+	import Icon from 'svelte-icons-pack/Icon.svelte';
+	import FaSolidMapMarkerAlt from 'svelte-icons-pack/fa/FaSolidMapMarkerAlt';
+	import FaEnvelope from 'svelte-icons-pack/fa/FaEnvelope';
+	import FaSolidPhone from 'svelte-icons-pack/fa/FaSolidPhone';
+	import FaSolidUser from 'svelte-icons-pack/fa/FaSolidUser';
 	import { PUBLIC_SITE_URL } from '$env/static/public';
 	import { page } from '$app/stores';
 	import type { PageData } from './$types';
 
 	export let data: PageData;
 	const kapcsolat = data.props.kapcsolat;
-
-	console.log(kapcsolat);
+	const contactInfos = data.props.kapcsolat.contactInfos;
 </script>
 
 <svelte:head>
@@ -38,97 +42,68 @@
 	<div class="mx-auto max-w-7xl py-16 px-6 lg:py-24 lg:px-8">
 		<div class="divide-y-2 divide-gray-200">
 			<div class="lg:grid lg:grid-cols-3 lg:gap-8">
-				<h2 class="text-2xl font-bold text-gray-900 sm:text-3xl sm:tracking-tight">Get in touch</h2>
+				<h2 class="text-2xl font-bold text-gray-900 sm:text-3xl sm:tracking-tight">
+					Elérhetőségek:
+				</h2>
 				<div
 					class="mt-8 grid grid-cols-1 gap-12 sm:grid-cols-2 sm:gap-x-8 sm:gap-y-12 lg:col-span-2 lg:mt-0"
 				>
-					<div class="p-12 variant-filled-primary rounded-md">
-						<h3 class="text-lg font-medium leading-6 text-white">Collaborate</h3>
-						<dl class="mt-2 text-base text-white">
-							<div>
-								<dt class="sr-only">Email</dt>
-								<dd>support@example.com</dd>
-							</div>
-							<div class="mt-1">
-								<dt class="sr-only">Phone number</dt>
-								<dd>+1 (555) 123-4567</dd>
-							</div>
-						</dl>
-					</div>
-					<div class="p-12 variant-filled-primary rounded-md">
-						<h3 class="text-lg font-medium leading-6 text-white">Press</h3>
-						<dl class="mt-2 text-base text-white">
-							<div>
-								<dt class="sr-only">Email</dt>
-								<dd>support@example.com</dd>
-							</div>
-							<div class="mt-1">
-								<dt class="sr-only">Phone number</dt>
-								<dd>+1 (555) 123-4567</dd>
-							</div>
-						</dl>
-					</div>
-					<div class="p-12 variant-filled-primary rounded-md">
-						<h3 class="text-lg font-medium leading-6 text-white">Join our team</h3>
-						<dl class="mt-2 text-base text-white">
-							<div>
-								<dt class="sr-only">Email</dt>
-								<dd>support@example.com</dd>
-							</div>
-							<div class="mt-1">
-								<dt class="sr-only">Phone number</dt>
-								<dd>+1 (555) 123-4567</dd>
-							</div>
-						</dl>
-					</div>
-					<div class="p-12 variant-filled-primary rounded-md">
-						<h3 class="text-lg font-medium leading-6 text-white">Say hello</h3>
-						<dl class="mt-2 text-base text-white">
-							<div>
-								<dt class="sr-only">Email</dt>
-								<dd>support@example.com</dd>
-							</div>
-							<div class="mt-1">
-								<dt class="sr-only">Phone number</dt>
-								<dd>+1 (555) 123-4567</dd>
-							</div>
-						</dl>
-					</div>
-				</div>
-			</div>
-			<div class="mt-16 pt-16 lg:grid lg:grid-cols-3 lg:gap-8">
-				<h2 class="text-2xl font-bold text-gray-900 sm:text-3xl sm:tracking-tight">Locations</h2>
-				<div
-					class="mt-8 grid grid-cols-1 gap-12 sm:grid-cols-2 sm:gap-x-8 sm:gap-y-12 lg:col-span-2 lg:mt-0"
-				>
-					<div class="p-12 rounded-md variant-filled-primary">
-						<h3 class="text-lg font-medium leading-6 text-white">Los Angeles</h3>
-						<div class="mt-2 text-base text-white">
-							<p>4556 Brendan Ferry</p>
-							<p class="mt-1">Los Angeles, CA 90210</p>
+					{#each contactInfos as contactInfo (contactInfo.id)}
+						<div class="p-12 variant-filled-primary rounded-md">
+							<h3 class="text-lg md:text-xl font-medium text-white">
+								{contactInfo.title}
+							</h3>
+							<dl class="mt-4 text-base text-white">
+								{#if contactInfo.name}
+									<div class="flex gap-x-3">
+										<dt class="sr-only">Név</dt>
+										<Icon className="h-5 w-5 fill-white" src={FaSolidUser} />
+										<dd>contactInfo.name</dd>
+									</div>
+								{/if}
+								{#if contactInfo.address}
+									<div class="flex gap-x-3">
+										<dt class="sr-only">Cím</dt>
+										<Icon className="h-5 w-5 fill-white" src={FaSolidUser} />
+										<dd>{contactInfo.address}</dd>
+									</div>
+								{/if}
+								{#if contactInfo.email}
+									<div class="flex gap-x-3">
+										<dt class="sr-only">Cím</dt>
+										<Icon className="h-5 w-5 fill-white" src={FaSolidUser} />
+										<dd>
+											<a class="hover:underline" href={`mailto:${contactInfo.email}`}>
+												{contactInfo.email}
+											</a>
+										</dd>
+									</div>
+								{/if}
+								{#if contactInfo.phone}
+									<div class="flex gap-x-3">
+										<dt class="sr-only">Cím</dt>
+										<Icon className="h-5 w-5 fill-white" src={FaSolidUser} />
+										<dd>
+											<a class="hover:underline" href={`tel:${contactInfo.phone}`}>
+												{contactInfo.phone}
+											</a>
+										</dd>
+									</div>
+								{/if}
+								{#if contactInfo.phone2}
+									<div class="flex gap-x-3">
+										<dt class="sr-only">Cím</dt>
+										<Icon className="h-5 w-5 fill-white" src={FaSolidUser} />
+										<dd>
+											<a class="hover:underline" href={`tel:${contactInfo.phone2}`}>
+												{contactInfo.phone2}
+											</a>
+										</dd>
+									</div>
+								{/if}
+							</dl>
 						</div>
-					</div>
-					<div class="p-12 rounded-md variant-filled-primary">
-						<h3 class="text-lg font-medium leading-6 text-white">New York</h3>
-						<div class="mt-2 text-base text-white">
-							<p>886 Walter Streets</p>
-							<p class="mt-1">New York, NY 12345</p>
-						</div>
-					</div>
-					<div class="p-12 rounded-md variant-filled-primary">
-						<h3 class="text-lg font-medium leading-6 text-white">Toronto</h3>
-						<div class="mt-2 text-base text-white">
-							<p>7363 Cynthia Pass</p>
-							<p class="mt-1">Toronto, ON N3Y 4H8</p>
-						</div>
-					</div>
-					<div class="p-12 rounded-md variant-filled-primary">
-						<h3 class="text-lg font-medium leading-6 text-white">Chicago</h3>
-						<div class="mt-2 text-base text-white">
-							<p>726 Mavis Island</p>
-							<p class="mt-1">Chicago, IL 60601</p>
-						</div>
-					</div>
+					{/each}
 				</div>
 			</div>
 		</div>

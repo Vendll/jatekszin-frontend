@@ -10,9 +10,9 @@
 	let commonPage: any;
 	import type { PageData } from './$types';
 	export let data: PageData;
-	console.log(data);
 
 	const eloadas = data.props.eloadasok.docs[0];
+	console.log(eloadas);
 	const musor = data.props.musor.docs;
 </script>
 
@@ -116,7 +116,7 @@
 
 	<div class="max-w-7xl mx-auto space-y-16">
 		<Szinlap {eloadas} />
-		<Trailer />
+		<Trailer {eloadas} />
 		<Galeria {eloadas} />
 		<CalendarJs {musor} />
 	</div>

@@ -38,7 +38,7 @@
 <div class="bg-gray-50 px-6 pb-20 lg:px-8 lg:pt-10 lg:pb-28">
 	<div class="relative mx-auto max-w-7xl">
 		<div class="mx-auto mt-12 grid max-w-lg gap-5 lg:max-w-none lg:grid-cols-3">
-			{#each eloadasok as eloadas}
+			{#each eloadasok as eloadas (eloadas.id)}
 				<a
 					href={`eloadasok/${eloadas.slug}`}
 					class="flex flex-col overflow-hidden rounded-lg shadow-lg"
