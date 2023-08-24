@@ -5,7 +5,7 @@
 	import { PUBLIC_SITE_URL } from '$env/static/public';
 	import { page } from '$app/stores';
 	import type { PageData } from './$types';
-	let commonPage: any;
+
 	export let data: PageData;
 	const kiemelt = data.props.kezdolap.kiemelt;
 	const kiemeltHirek = data.props.kiemeltHirek.docs;

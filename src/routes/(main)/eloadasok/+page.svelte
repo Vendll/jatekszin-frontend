@@ -5,20 +5,21 @@
 	import { page } from '$app/stores';
 	let commonPage: any;
 	export let data: PageData;
+	const pageMeta = data.props.pageMeta;
 	const eloadasok = data.props.eloadasok.docs;
 </script>
 
 <svelte:head>
-	<title>{commonPage?.meta.title}</title>
-	<meta name="description" content={commonPage?.meta.description} />
-	<meta property="og:title" content={commonPage?.meta.title} />
-	<meta property="og:description" content={commonPage?.meta.description} />
-	<meta property="og:image" content={commonPage?.banner.sizes.medium.url} />
+	<title>{pageMeta?.meta.title}</title>
+	<meta name="description" content={pageMeta?.meta.description} />
+	<meta property="og:title" content={pageMeta?.meta.title} />
+	<meta property="og:description" content={pageMeta?.meta.description} />
+	<meta property="og:image" content={pageMeta?.banner.sizes.medium.url} />
 	<meta property="og:url" content={`${PUBLIC_SITE_URL}${$page.url.pathname}`} />
 	<meta property="og:type" content="article" />
 	<meta property="og:locale" content="hu_HU" />
-	<meta property="article:published_time" content={commonPage?.date} />
-	<meta property="article:modified_time" content={commonPage?.date} />
+	<meta property="article:published_time" content={pageMeta?.date} />
+	<meta property="article:modified_time" content={pageMeta?.date} />
 </svelte:head>
 
 <div class="relative bg-indigo-800">

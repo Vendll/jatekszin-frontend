@@ -55,23 +55,23 @@
 							</h3>
 							<dl class="mt-4 text-base text-white">
 								{#if contactInfo.name}
-									<div class="flex gap-x-3">
+									<div class="flex gap-x-3 mt-2">
 										<dt class="sr-only">Név</dt>
 										<Icon className="h-5 w-5 fill-white" src={FaSolidUser} />
 										<dd>contactInfo.name</dd>
 									</div>
 								{/if}
 								{#if contactInfo.address}
-									<div class="flex gap-x-3">
+									<div class="flex gap-x-3 mt-2">
 										<dt class="sr-only">Cím</dt>
-										<Icon className="h-5 w-5 fill-white" src={FaSolidUser} />
+										<Icon className="h-5 w-5 fill-white" src={FaSolidMapMarkerAlt} />
 										<dd>{contactInfo.address}</dd>
 									</div>
 								{/if}
 								{#if contactInfo.email}
-									<div class="flex gap-x-3">
-										<dt class="sr-only">Cím</dt>
-										<Icon className="h-5 w-5 fill-white" src={FaSolidUser} />
+									<div class="flex gap-x-3 mt-2">
+										<dt class="sr-only">Email</dt>
+										<Icon className="h-5 w-5 fill-white" src={FaEnvelope} />
 										<dd>
 											<a class="hover:underline" href={`mailto:${contactInfo.email}`}>
 												{contactInfo.email}
@@ -80,9 +80,9 @@
 									</div>
 								{/if}
 								{#if contactInfo.phone}
-									<div class="flex gap-x-3">
-										<dt class="sr-only">Cím</dt>
-										<Icon className="h-5 w-5 fill-white" src={FaSolidUser} />
+									<div class="flex gap-x-3 mt-2">
+										<dt class="sr-only">Telefon</dt>
+										<Icon className="h-5 w-5 fill-white" src={FaSolidPhone} />
 										<dd>
 											<a class="hover:underline" href={`tel:${contactInfo.phone}`}>
 												{contactInfo.phone}
@@ -91,9 +91,9 @@
 									</div>
 								{/if}
 								{#if contactInfo.phone2}
-									<div class="flex gap-x-3">
-										<dt class="sr-only">Cím</dt>
-										<Icon className="h-5 w-5 fill-white" src={FaSolidUser} />
+									<div class="flex gap-x-3 mt-2">
+										<dt class="sr-only">Telefon</dt>
+										<Icon className="h-5 w-5 fill-white" src={FaSolidPhone} />
 										<dd>
 											<a class="hover:underline" href={`tel:${contactInfo.phone2}`}>
 												{contactInfo.phone2}

@@ -12,21 +12,20 @@
 	export let data: PageData;
 
 	const eloadas = data.props.eloadasok.docs[0];
-	console.log(eloadas);
 	const musor = data.props.musor.docs;
 </script>
 
 <svelte:head>
-	<title>{commonPage?.meta.title}</title>
-	<meta name="description" content={commonPage?.meta.description} />
-	<meta property="og:title" content={commonPage?.meta.title} />
-	<meta property="og:description" content={commonPage?.meta.description} />
-	<meta property="og:image" content={commonPage?.banner.sizes.medium.url} />
+	<title>{eloadas?.meta.title}</title>
+	<meta name="description" content={eloadas?.meta.description} />
+	<meta property="og:title" content={eloadas?.meta.title} />
+	<meta property="og:description" content={eloadas?.meta.description} />
+	<meta property="og:image" content={eloadas?.hero.sizes.medium.url} />
 	<meta property="og:url" content={`${PUBLIC_SITE_URL}${$page.url.pathname}`} />
 	<meta property="og:type" content="article" />
 	<meta property="og:locale" content="hu_HU" />
-	<meta property="article:published_time" content={commonPage?.date} />
-	<meta property="article:modified_time" content={commonPage?.date} />
+	<meta property="article:published_time" content={eloadas?.date} />
+	<meta property="article:modified_time" content={eloadas?.date} />
 </svelte:head>
 
 <div class="mt-20">
@@ -116,7 +115,9 @@
 
 	<div class="max-w-7xl mx-auto space-y-16">
 		<Szinlap {eloadas} />
-		<Trailer {eloadas} />
+		{#if eloadas.video}
+			<Trailer {eloadas} />
+		{/if}
 		<Galeria {eloadas} />
 		<CalendarJs {musor} />
 	</div>

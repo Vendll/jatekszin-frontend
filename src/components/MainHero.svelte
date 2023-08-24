@@ -35,7 +35,6 @@
 
 		swiperEl.initialize();
 	});
-	console.log(heroes);
 </script>
 
 <div
