@@ -6,10 +6,16 @@
 	import FaBrandsTiktok from 'svelte-icons-pack/fa/FaBrandsTiktok';
 </script>
 
-<div class="py-12 bg-primary-500 my-6 space-y-4">
-	<div class="font-heavitas !font-normal text-center text-white text-4xl mb-6">játékszín</div>
+<div class="py-12 bg-primary-500 my-6">
+	<div class="w-full flex justify-center">
+		<a
+			href="/"
+			aria-label="Játékszín kezdőlap"
+			class="font-heavitas !font-normal text-center text-white text-4xl mb-6">játékszín</a
+		>
+	</div>
 	<div
-		class="grid grid-cols-5 gap-4 lg:flex lg:max-w-3xl lg:mx-auto text-center justify-center items-center mx-6"
+		class="grid grid-cols-4 gap-4 lg:flex lg:max-w-3xl lg:mx-auto text-center justify-center items-center mx-6"
 	>
 		<a
 			aria-label="Játékszín facebook oldala"
@@ -47,7 +53,7 @@
 		>
 			<Icon color="white" className="text-3xl" src={FaBrandsTiktok} />
 		</a>
-		<span class="lg:flex-1 lg:justify-items-end">
+		<span class="col-span-4 justify-self-center row-span-1 lg:flex-1 lg:justify-items-end">
 			<svg
 				class="max-h-40 w-40 lg:float-right"
 				width="100%"

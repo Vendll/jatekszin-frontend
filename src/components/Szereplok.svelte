@@ -9,12 +9,12 @@
 <div class="m-6 grid grid-cols-1 gap-4 lg:gap-8 lg:flex lg:flex-wrap">
 	{#each eloadas.szereplok as szereplo}
 		<div
-			class="w-full h-full aspect-square lg:w-96 lg:h-96 overflow-hidden rounded-md flex flex-col relative justify-end px-6 py-3 bg-gray-300"
+			class="w-full h-full relative aspect-square lg:w-96 lg:h-96 overflow-hidden rounded-md flex flex-col justify-end px-6 py-3 bg-gray-300"
 		>
 			<img
 				src={szereplo.value.szinesz.value.thumbnail?.sizes.medium.url}
-				alt=""
-				class="absolute inset-0 rounded-md object-center z-0"
+				alt={szereplo.value.name}
+				class="absolute inset-0 rounded-md object-contain w-full object-center z-0"
 			/>
 			<div class="z-10 text-error-500 text-xl lg:text-xl text-white-stroke-thin font-heavitas">
 				{szereplo.value.name}

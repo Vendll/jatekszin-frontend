@@ -1,14 +1,10 @@
 <script lang="ts">
 	import { scrollRef } from 'svelte-scrolling';
 	import FaSolidPlay from 'svelte-icons-pack/fa/FaSolidPlay';
-	import { onMount } from 'svelte';
 	import Icon from 'svelte-icons-pack/Icon.svelte';
-	import Hero from './Hero.svelte';
 	export let eloadas: any;
-	console.log(eloadas);
 
 	let play: boolean = false;
-
 	let paused: boolean = true;
 
 	$: {
