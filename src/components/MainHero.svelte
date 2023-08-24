@@ -3,11 +3,7 @@
 	import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 	import { onMount } from 'svelte';
 	export let heroes: any;
-	import pic from '$lib/assets/IMG_8154.jpg';
-	import pic2 from '$lib/assets/gallery1.jpg';
-	import pic3 from '$lib/assets/gallery2.jpg';
-	import pic4 from '$lib/assets/IMG_8078.jpg';
-	let pics = [pic, pic2, pic3];
+
 	onMount(() => {
 		register();
 		const swiperEl: any = document.querySelector('swiper-container');
@@ -39,6 +35,7 @@
 
 		swiperEl.initialize();
 	});
+	console.log(heroes);
 </script>
 
 <div
@@ -83,16 +80,36 @@
 					class:rightTop={hero.position === 'right-top'}
 					class:rightMiddle={hero.position === 'right-middle'}
 					class:rightBottom={hero.position === 'right-bottom'}
-					class="absolute inset-0 flex my-20 mx-5 lg:mx-20 z-10"
+					class="absolute inset-0 flex my-20 lg:my-40 mx-5 lg:mx-20 z-10"
 				>
-					<div class="">
-						<h1 class="text-error-500 text-xl md:text-4xl white-stroke font-heavitas">
-							Paolo genovese
+					<div
+						class:textLeft={hero.position === 'left-top' ||
+							hero.position === 'left-middle' ||
+							hero.position === 'left-bottom'}
+						class:textRight={hero.position === 'right-top' ||
+							hero.position === 'right-middle' ||
+							hero.position === 'right-bottom'}
+					>
+						{#if hero.hero.value.author}
+							<h1 class="text-error-500 text-xl md:text-5xl white-stroke font-heavitas">
+								{hero.hero.value.author}
+							</h1>
+						{/if}
+						<h1 class="text-error-500 text-xl md:text-6xl white-stroke font-heavitas">
+							{hero.hero.value.title}
 						</h1>
-						<h1 class="text-error-500 text-xl md:text-5xl white-stroke font-heavitas">
-							teljesen idegenek
-						</h1>
-						<div class="gap-4 flex mt-4">
+						<div
+							class="gap-4 flex mt-4"
+							class:btnCenter={hero.position === 'top-middle' ||
+								hero.position === 'bottom-middle' ||
+								hero.position === 'middle'}
+							class:btnLeft={hero.position === 'left-top' ||
+								hero.position === 'left-middle' ||
+								hero.position === 'left-bottom'}
+							class:btnRight={hero.position === 'right-top' ||
+								hero.position === 'right-middle' ||
+								hero.position === 'right-bottom'}
+						>
 							<a href="/hirek" class="btn variant-filled-error text-white font-heavitas"
 								>jegyvásárlás</a
 							>
@@ -108,6 +125,21 @@
 </div>
 
 <style>
+	.textLeft {
+		text-align: left;
+	}
+	.textRight {
+		text-align: right;
+	}
+	.btnCenter {
+		justify-content: center;
+	}
+	.btnLeft {
+		justify-content: flex-start;
+	}
+	.btnRight {
+		justify-content: flex-end;
+	}
 	.middle {
 		justify-content: center;
 		align-items: center;
@@ -148,6 +180,59 @@
 		stroke: white;
 		stroke-width: 1;
 		-webkit-text-stroke: 1px #ffffff;
+	}
+	@media screen and (max-width: 1023px) {
+		.textLeft {
+			text-align: center;
+		}
+		.textRight {
+			text-align: center;
+		}
+		.btnCenter {
+			justify-content: center;
+		}
+		.btnLeft {
+			justify-content: center;
+		}
+		.btnRight {
+			justify-content: center;
+		}
+		.middle {
+			justify-content: center;
+			align-items: center;
+		}
+		.middleTop {
+			justify-content: center;
+			align-items: flex-start;
+		}
+		.middleBottom {
+			justify-content: center;
+			align-items: flex-end;
+		}
+		.leftTop {
+			justify-content: center;
+			align-items: flex-start;
+		}
+		.leftMiddle {
+			justify-content: center;
+			align-items: center;
+		}
+		.leftBottom {
+			justify-content: center;
+			align-items: flex-end;
+		}
+		.rightBottom {
+			justify-content: center;
+			align-items: flex-end;
+		}
+		.rightTop {
+			justify-content: center;
+			align-items: flex-start;
+		}
+		.rightMiddle {
+			justify-content: center;
+			align-items: center;
+		}
 	}
 	@media screen and (min-width: 768px) {
 		.white-stroke {

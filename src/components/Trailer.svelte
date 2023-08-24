@@ -1,8 +1,21 @@
 <script lang="ts">
 	import { scrollRef } from 'svelte-scrolling';
 	import FaSolidPlay from 'svelte-icons-pack/fa/FaSolidPlay';
-	import hero from '$lib/assets/IMG_8154.jpg';
+	import { onMount } from 'svelte';
 	import Icon from 'svelte-icons-pack/Icon.svelte';
+	import Hero from './Hero.svelte';
+	export let eloadas: any;
+	console.log(eloadas);
+
+	let play: boolean = false;
+
+	let paused: boolean = true;
+
+	$: {
+		if (!paused) {
+			play = true;
+		}
+	}
 </script>
 
 <div use:scrollRef={'trailer'} class="m-6 space-y-4">
@@ -13,19 +26,29 @@
 		>
 			<div class="absolute z-0 inset-0 bg-black/20">
 				<div class="absolute z-0 inset-0 bg-black/20" />
-				<img src={hero} alt="Hero" class="h-full w-full object-cover object-center" />
+				<video
+					controls={play}
+					controlslist="nodownload"
+					src={eloadas.video.url}
+					poster={eloadas.hero.sizes.medium.url}
+					class="h-full w-full object-cover object-center"
+					bind:paused
+				>
+					<track kind="captions" />
+				</video>
 			</div>
 
-			<button
-				aria-label="Play"
-				on:click|preventDefault={() => {}}
-				class="bg-black/40 rounded-full z-10 p-4"
-				><Icon
-					src={FaSolidPlay}
-					className="fill-error-500 !stroke-white !stroke-[20px] text-4xl pl-1.5"
-				/></button
-			>
-			>
+			{#if paused}
+				<button
+					on:click={() => ((paused = !paused), (play = !play))}
+					aria-label={paused ? 'play' : 'pause'}
+					class="bg-black/40 rounded-full z-10 p-4"
+					><Icon
+						src={FaSolidPlay}
+						className="fill-error-500 !stroke-white !stroke-[20px] text-4xl pl-1.5"
+					/></button
+				>
+			{/if}
 		</div>
 	</div>
 	<button

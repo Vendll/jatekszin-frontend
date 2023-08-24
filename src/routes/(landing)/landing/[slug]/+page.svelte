@@ -40,7 +40,7 @@
 			<Informaciok {eloadas} />
 			<Szereplok {eloadas} />
 			{#if eloadas?.video}
-				<Trailer />
+				<Trailer {eloadas} />
 			{/if}
 			<Galeria {eloadas} />
 			<Tamogatoink />
