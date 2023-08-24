@@ -47,14 +47,23 @@
 		>
 			szereplők
 		</a>
-		<a use:scrollTo={{ ref: 'trailer', offset: -50, duration: 1000 }} class="text-blue-stroke">
-			trailer
-		</a>
-		<a
-			use:scrollTo={{ ref: 'galéria', offset: -50, duration: 1000 }}
-			class="text-blue-stroke text-right"
-		>
-			galéria
-		</a>
+		{#if eloadas.video}
+			<a use:scrollTo={{ ref: 'trailer', offset: -50, duration: 1000 }} class="text-blue-stroke">
+				trailer
+			</a>
+			<a
+				use:scrollTo={{ ref: 'galéria', offset: -50, duration: 1000 }}
+				class="text-blue-stroke text-right"
+			>
+				galéria
+			</a>
+		{:else}
+			<a
+				use:scrollTo={{ ref: 'galéria', offset: -50, duration: 1000 }}
+				class="text-blue-stroke text-center col-span-2"
+			>
+				galéria
+			</a>
+		{/if}
 	</nav>
 </div>

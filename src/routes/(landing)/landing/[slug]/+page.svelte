@@ -13,14 +13,11 @@
 	export let data: PageData;
 	const eloadas = data.props.eloadasok.docs[0];
 
-	let commonPage: any;
-
 	let visibe = false;
 	onMount(() => {
 		console.log('mounted');
 		visibe = true;
 	});
-	console.log(eloadas);
 </script>
 
 <svelte:head>
@@ -42,7 +39,9 @@
 		<div class="max-w-7xl mx-auto space-y-16">
 			<Informaciok {eloadas} />
 			<Szereplok {eloadas} />
-			<Trailer />
+			{#if eloadas?.video}
+				<Trailer />
+			{/if}
 			<Galeria {eloadas} />
 			<Tamogatoink />
 		</div>

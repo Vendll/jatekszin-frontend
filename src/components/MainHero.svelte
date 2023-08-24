@@ -65,13 +65,13 @@
 					src={hero.hero.value.hero.sizes.large.url}
 					alt=""
 					class="portrait:hidden object-cover h-full w-full"
-					loading="eager"
+					loading="lazy"
 				/>
 				<img
 					src={hero.hero.value.heroMobile.sizes.medium.url}
 					alt=""
 					class="landscape:hidden object-cover h-full w-full"
-					loading="eager"
+					loading="lazy"
 				/>
 				<div
 					class:middleTop={hero.position === 'top-middle'}
