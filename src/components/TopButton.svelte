@@ -21,7 +21,7 @@
 {#if topBtn}
 	<button
 		transition:fade={{ duration: 300, delay: 0 }}
-		class="btn variant-filled-error hidden fixed bottom-6 right-6 z-[9999] font-heavitas font-bold text-white text-sm rounded-full m-0 p-0"
+		class="btn variant-filled-error hidden fixed bottom-16 right-4 z-[9999] font-heavitas font-bold text-white text-sm rounded-full m-0 p-0"
 		class:topBtn
 		on:click={() => scrollTop({ duration: 1000 })}
 	>

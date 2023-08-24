@@ -6,7 +6,41 @@
 	// Most of your app wide CSS should be put in this file
 	import '../app.postcss';
 	import TopButton from '$components/TopButton.svelte';
+	import '@beyonk/gdpr-cookie-consent-banner/style.css';
+	import { Banner as GdprBanner } from '@beyonk/gdpr-cookie-consent-banner';
 </script>
 
 <slot />
 <TopButton />
+<GdprBanner
+	cookieName="gdpr_consent"
+	heading="Ez a weboldal sütiket használ"
+	description="A www.jatekszin.hu oldal kizárólag az oldal működéséhez szükséges sütiket és HTTP sütiket használ. Az oldal böngészésével hozzájárul a sütik használatához.
+Elolvastam és elfogadom a www.jatekszin.hu oldal Süti szabályzatát.
+"
+	acceptLabel="Elfogadom"
+	settingsLabel="Cookie beállítások"
+	choices={{
+		necessary: {
+			label: 'Szükséges cookiek',
+			description:
+				'Az elengedhetetlen sütik segítenek használhatóvá tenni a weboldalunkat azáltal, hogy engedélyeznek olyan alapvető funkciókat, mint az oldalon való navigáció és a weboldal biztonságos területeihez való hozzáférés. A weboldal ezen sütik nélkül nem tud megfelelően működni.',
+			value: true
+		},
+		tracking: {
+			label: 'Hírdetési cookiek',
+			description: '',
+			value: true
+		},
+		analytics: {
+			label: 'Statisztikai cookiek',
+			description: '',
+			value: true
+		},
+		marketing: {
+			label: 'Marketing cookiek',
+			description: '',
+			value: true
+		}
+	}}
+/>
