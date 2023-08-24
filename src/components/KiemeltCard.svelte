@@ -5,24 +5,33 @@
 	export let ke: any;
 	export let scrolling: boolean;
 	let hovered = false;
+
+	let hoverTimeout: any;
+	let safeTimeout: any;
+
+	function safeTimeoutFunc() {
+		safeTimeout = setTimeout(() => {
+			scrolling = false;
+		}, 2000);
+	}
+
+	function handleMouseEnter() {
+		hoverTimeout = setTimeout(() => {
+			hovered = true;
+		}, 500);
+	}
+	function handleMouseLeave() {
+		clearTimeout(hoverTimeout);
+		setTimeout(() => {
+			hovered = false;
+		}, 500);
+	}
 </script>
 
 <li
-	class="snap-start shrink-0 group relative rounded-md w-[21rem] h-[28rem] aspect-[4/3] hover:w-[42rem] hover:aspect-[2/3] overflow-hidden transition-all duration-[350ms] ease-in-out"
-	on:mouseenter={() => {
-		if (!scrolling) {
-			hovered = true;
-		}
-	}}
-	on:focus={() => {
-		if (!scrolling) {
-			hovered = true;
-		}
-	}}
-	on:mouseleave={() =>
-		setTimeout(() => {
-			hovered = false;
-		}, 200)}
+	class="snap-start shrink-0 group relative rounded-md w-[21rem] h-[28rem] aspect-[4/3] hover:w-[42rem] hover:aspect-[2/3] overflow-hidden transition-all delay-500 duration-[350ms] ease-in-out"
+	on:mouseenter={() => handleMouseEnter()}
+	on:pointerleave={() => handleMouseLeave()}
 >
 	{#if !hovered}
 		<div
