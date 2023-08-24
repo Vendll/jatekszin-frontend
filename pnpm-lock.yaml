@@ -34,6 +34,9 @@ dependencies:
     version: 10.2.0
 
 devDependencies:
+  '@beyonk/gdpr-cookie-consent-banner':
+    specifier: ^10.1.1
+    version: 10.1.1(svelte@3.59.2)
   '@floating-ui/dom':
     specifier: ^1.5.1
     version: 1.5.1
@@ -123,6 +126,15 @@ packages:
   /@alloc/quick-lru@5.2.0:
     resolution: {integrity: sha512-UrcABB+4bUrFABwbluTIBErXwvbsU/V7TZWfmbgJfbkwiBuziS9gxdODUyuiecfdGQ85jglMW6juS3+z5TsKLw==}
     engines: {node: '>=10'}
+    dev: true
+
+  /@beyonk/gdpr-cookie-consent-banner@10.1.1(svelte@3.59.2):
+    resolution: {integrity: sha512-tk7VZBDIupJKjsOVeoaybbhIGN499A4rYh3S+2xWVdpGJKy2dgnXBVYJbqJ4RcaKX6t+Oz6nMTwZ52VcDaMrUQ==}
+    peerDependencies:
+      svelte: ^3.54.0 || ^4.0.0
+    dependencies:
+      js-cookie: 3.0.5
+      svelte: 3.59.2
     dev: true
 
   /@esbuild/android-arm64@0.18.20:
@@ -1694,6 +1706,11 @@ packages:
   /jiti@1.19.1:
     resolution: {integrity: sha512-oVhqoRDaBXf7sjkll95LHVS6Myyyb1zaunVwk4Z0+WPSW4gjS0pl01zYKHScTuyEhQsFxV5L4DR5r+YqSyqyyg==}
     hasBin: true
+    dev: true
+
+  /js-cookie@3.0.5:
+    resolution: {integrity: sha512-cEiJEAEoIbWfCZYKWhVwFuvPX1gETRYPw6LlaTKoxD3s2AkXzkCjnp6h0V77ozyqj0jakteJ4YqDJT830+lVGw==}
+    engines: {node: '>=14'}
     dev: true
 
   /js-yaml@4.1.0:
