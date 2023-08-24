@@ -3,12 +3,22 @@
 	import { fade, fly } from 'svelte/transition';
 
 	export let ke: any;
+	export let scrolling: boolean;
 	let hovered = false;
 </script>
 
 <li
 	class="snap-start shrink-0 group relative rounded-md w-[21rem] h-[28rem] aspect-[4/3] hover:w-[42rem] hover:aspect-[2/3] overflow-hidden transition-all duration-[350ms] ease-in-out"
-	on:mouseenter={() => (hovered = true)}
+	on:mouseenter={() => {
+		if (!scrolling) {
+			hovered = true;
+		}
+	}}
+	on:focus={() => {
+		if (!scrolling) {
+			hovered = true;
+		}
+	}}
 	on:mouseleave={() =>
 		setTimeout(() => {
 			hovered = false;
@@ -23,7 +33,7 @@
 		>
 			<img
 				class="absolute rounded-md object-cover object-center inset-0"
-				src={ke.value.heroMobile.sizes.medium.url}
+				src={ke.value.poster.sizes.medium.url}
 				alt="sad"
 			/>
 		</div>

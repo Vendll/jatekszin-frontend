@@ -29,6 +29,7 @@
 				>
 			</h1>
 			<p class="mt-8 text-xl leading-8 text-gray-500">
+				<img class="rounded-md" src={hir.thumbnail.sizes.medium.url} alt={hir.thumbnail.alt} />
 				<Richtext content={hir.content} />
 			</p>
 		</div>
