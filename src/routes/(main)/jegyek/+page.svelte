@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { onMount } from 'svelte';
+	import { invalidateAll } from '$app/navigation';
 	import { PUBLIC_SITE_URL } from '$env/static/public';
 	import { page } from '$app/stores';
 	import Richtext from '$components/Richtext.svelte';

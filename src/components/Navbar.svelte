@@ -21,7 +21,15 @@
 		screenHeight = window.innerHeight;
 	});
 
-	$: if ($page.url.pathname !== '/kapcsolat') {
+	$: if (
+		$page.url.pathname === '/' ||
+		$page.url.pathname === '/hirek' ||
+		$page.url.pathname === '/musor' ||
+		$page.url.pathname === '/eloadasok' ||
+		$page.url.pathname === '/rolunk' ||
+		$page.url.pathname === '/jegyek' ||
+		$page.url.pathname === '/tarsulat'
+	) {
 		if (y > screenHeight / 8) {
 			navColor = true;
 		} else {
@@ -40,7 +48,14 @@
 <svelte:window bind:scrollY={y} />
 <header
 	class="fixed top-0 z-[30] inset-x-0 w-screen"
-	style="background: rgba(255, 255, 255, {$page.url.pathname !== '/kapcsolat'
+	style="background: rgba(255, 255, 255, {$page.url.pathname === '/' ||
+	$page.url.pathname === '/hirek' ||
+	$page.url.pathname === '/musor' ||
+	$page.url.pathname === '/eloadasok' ||
+	$page.url.pathname === '/eloadasok' ||
+	$page.url.pathname === '/rolunk' ||
+	$page.url.pathname === '/jegyek' ||
+	$page.url.pathname === '/tarsulat'
 		? y / screenHeight
 		: 1});  transition: opacity 0.5s ease;"
 >

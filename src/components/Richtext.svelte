@@ -2,9 +2,9 @@
 	import escapeHTML from 'escape-html';
 	import { Text } from 'slate';
 
-	function serialize(children) {
+	function serialize(children: any) {
 		return children
-			.map((node) => {
+			.map((node: any) => {
 				if (Text.isText(node)) {
 					let text = `<span>${escapeHTML(node.text)}</span>`;
 
@@ -48,8 +48,32 @@
 							node.url
 						)}">${serialize(node.children)}</a>`;
 					case 'upload':
-						return `<img class="rounded-md" src="${escapeHTML(
-							node.value.sizes.medium.url
+						const getImage = (size: string) => {
+							switch (size) {
+								case 'small':
+									return node.value.sizes.small.url;
+								case 'medium':
+									return node.value.sizes.medium.url;
+								case 'large':
+									return node.value.sizes.large.url;
+								case 'xlarge':
+									return node.value.sizes.xlarge.url;
+								default:
+									return node.value.sizes.medium.url;
+							}
+						};
+						const getPosition = (position: string) => {
+							switch (position) {
+								case 'left':
+									return 'mr-auto';
+								case 'right':
+									return 'ml-auto';
+								default:
+									return 'mx-auto';
+							}
+						};
+						return `<img class="rounded-md ${getPosition(node.value.position)}" src="${escapeHTML(
+							getImage(node.value.size)
 						)}" alt="${escapeHTML(node.alt || '')}" />`;
 					default:
 						return `<p>${serialize(node.children)}</p>`;
@@ -61,4 +85,6 @@
 	const renderedConent = serialize(content);
 </script>
 
-{@html renderedConent}
+<div>
+	{@html renderedConent}
+</div>
