@@ -1,5 +1,6 @@
 <script lang="ts">
 	import bannerImage from '$lib/assets/banner.jpg';
+	import HirCard from '$components/HirCard.svelte';
 	import type { PageData } from './$types';
 	export let data: PageData;
 	const hirek = data.props.hirek.docs;
@@ -36,21 +37,12 @@
 	<div class="relative mx-auto max-w-7xl">
 		<div class="mx-auto mt-12 grid max-w-lg gap-5 lg:max-w-none lg:grid-cols-3">
 			{#each paginatedSource as hir}
-				<a href={`hirek/${hir.slug}`} class="flex flex-col overflow-hidden rounded-lg shadow-lg">
-					<div class="flex-shrink-0">
-						<img class="h-64 w-full object-cover" src={hir.thumbnail.sizes.medium.url} alt="" />
-					</div>
-					<div class="flex flex-1 flex-col justify-between bg-white p-6">
-						<div class="flex-1">
-							<div class="mt-2 block">
-								<p class="text-xl font-semibold text-gray-900">{hir.title}</p>
-								<p class="mt-3 text-base text-gray-500 line-clamp-3">
-									{hir.description}
-								</p>
-							</div>
-						</div>
-					</div>
-				</a>
+				<HirCard
+					desc={hir.description}
+					link={hir.slug}
+					img={hir.thumbnail.sizes.medium.url}
+					title={hir.title}
+				/>
 			{/each}
 		</div>
 	</div>
