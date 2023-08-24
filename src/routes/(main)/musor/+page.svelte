@@ -4,11 +4,10 @@
 	import { PUBLIC_SITE_URL } from '$env/static/public';
 	import { page } from '$app/stores';
 	import type { PageData } from './$types';
-	let commonPage: any;
+	import { Accordion, AccordionItem } from '@skeletonlabs/skeleton';
 	export let data: PageData;
-	console.log(data);
-
 	const musor = data.props.musor.docs;
+	const { commonPage } = data.props;
 </script>
 
 <svelte:head>
@@ -33,11 +32,29 @@
 		<h1
 			class="text-5xl font-heavitas text-error-500 text-white-stroke tracking-tigh sm:text-5xl lg:text-5xl"
 		>
-			Műsor
+			{commonPage.title}
 		</h1>
 	</div>
 </div>
 
 <div class="mx-auto xl:max-w-7xl px-6 mt-16">
 	<CalendarJs {musor} />
+	<Accordion class="my-6">
+		<AccordionItem>
+			<svelte:fragment slot="lead">*penz ikon*</svelte:fragment>
+			<svelte:fragment slot="summary">Jegyarak</svelte:fragment>
+			<svelte:fragment slot="content">(content)</svelte:fragment>
+		</AccordionItem>
+		<AccordionItem>
+			<svelte:fragment slot="lead">*letoltes ikon*</svelte:fragment>
+			<svelte:fragment slot="summary">Letöltheto musorok</svelte:fragment>
+			<svelte:fragment slot="content">(content)</svelte:fragment>
+		</AccordionItem>
+		<AccordionItem>
+			<svelte:fragment slot="lead">*terkep ikon*</svelte:fragment>
+			<svelte:fragment slot="summary">Nezoteri alaprajz</svelte:fragment>
+			<svelte:fragment slot="content">(content)</svelte:fragment>
+		</AccordionItem>
+		<!-- ... -->
+	</Accordion>
 </div>

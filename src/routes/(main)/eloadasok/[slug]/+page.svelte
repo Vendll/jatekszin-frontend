@@ -43,7 +43,7 @@
 					xmlns:xlink="http://www.w3.org/1999/xlink"
 					xml:space="preserve"
 					style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;"
-					class="hidden 2xl:block absolute left-[-20vw] top-32 h-96 w-96 fill-error-500 stroke-error-500 z-40"
+					class=" 2xl:block absolute left-[-20vw] top-32 h-96 w-96 fill-error-500 stroke-error-500 z-0"
 				>
 					<g id="Background" transform="matrix(1,0,0,1,-292,-292)">
 						<use xlink:href="#_Image1" x="654" y="565" width="758px" height="1067px" />

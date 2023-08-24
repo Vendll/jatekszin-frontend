@@ -19,9 +19,9 @@
 	<meta property="article:modified_time" content={hir.date} />
 </svelte:head>
 
-<div class="relative overflow-hidden bg-white prose mx-auto my-16">
+<div class="relative overflow-hidden bg-white mx-auto my-16">
 	<div class="relative py-16 px-6 lg:px-8">
-		<div class="mx-auto text-lg">
+		<div class="mx-auto text-lg prose max-w-4xl">
 			<h1>
 				<span
 					class="mt-2 block text-center text-3xl font-bold leading-8 tracking-tight text-gray-900 sm:text-4xl"
@@ -29,7 +29,11 @@
 				>
 			</h1>
 			<p class="mt-8 text-xl leading-8 text-gray-500">
-				<img class="rounded-md" src={hir.thumbnail.sizes.medium.url} alt={hir.thumbnail.alt} />
+				<img
+					class="rounded-md mx-auto"
+					src={hir.thumbnail.sizes.medium.url}
+					alt={hir.thumbnail.alt}
+				/>
 				<Richtext content={hir.content} />
 			</p>
 		</div>
