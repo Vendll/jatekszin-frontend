@@ -1,12 +1,12 @@
-import type { LayoutLoad } from './$types';
+import type { PageLoad } from './$types';
 import api from '$lib/api';
 
-export async function load() {
-	const { data } = await api.get('/globals/jegyek-oldal').catch((err) => console.log(err));
+export const load: PageLoad = async () => {
+	const { data } = await api.get('/globals/jegyek-oldal', { params: { depth: '5' } });
 
 	return {
 		props: {
-			menu: data
+			commonPage: data
 		}
 	};
-}
+};

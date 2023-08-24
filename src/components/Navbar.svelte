@@ -21,12 +21,7 @@
 		screenHeight = window.innerHeight;
 	});
 
-	$: if (
-		$page.url.pathname === '/' ||
-		$page.url.pathname === '/hirek' ||
-		$page.url.pathname === '/musor' ||
-		$page.url.pathname === '/eloadasok'
-	) {
+	$: if ($page.url.pathname !== '/kapcsolat') {
 		if (y > screenHeight / 8) {
 			navColor = true;
 		} else {
@@ -45,10 +40,7 @@
 <svelte:window bind:scrollY={y} />
 <header
 	class="fixed top-0 z-[30] inset-x-0 w-screen"
-	style="background: rgba(255, 255, 255, {$page.url.pathname === '/' ||
-	$page.url.pathname === '/hirek' ||
-	$page.url.pathname === '/musor' ||
-	$page.url.pathname === '/eloadasok'
+	style="background: rgba(255, 255, 255, {$page.url.pathname !== '/kapcsolat'
 		? y / screenHeight
 		: 1});  transition: opacity 0.5s ease;"
 >
