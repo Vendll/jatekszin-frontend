@@ -2,6 +2,7 @@
 	import { register } from 'swiper/element/bundle';
 	import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 	import { onMount } from 'svelte';
+	export let heroes: any;
 	import pic from '$lib/assets/IMG_8154.jpg';
 	import pic2 from '$lib/assets/gallery1.jpg';
 	import pic3 from '$lib/assets/gallery2.jpg';
@@ -38,6 +39,7 @@
 
 		swiperEl.initialize();
 	});
+	console.log(heroes);
 </script>
 
 <div
@@ -58,18 +60,21 @@
 		navigation={true}
 		class="absolute inset-0"
 	>
-		{#each pics as pic, i}
+		{#each heroes as hero (hero.hero.value.id)}
 			<swiper-slide class="w-full !h-full text-center">
-				<img src={pic} alt="" class="portrait:hidden object-cover h-full w-full" loading="eager" />
 				<img
-					src={pic4}
+					src={hero.hero.value.hero.sizes.large.url}
+					alt=""
+					class="portrait:hidden object-cover h-full w-full"
+					loading="eager"
+				/>
+				<img
+					src={hero.hero.value.heroMobile.sizes.large.url}
 					alt=""
 					class="landscape:hidden object-cover h-full w-full"
 					loading="eager"
 				/>
-				<div
-					class="absolute inset-0 flex justify-center items-center lg:justify-end my-20 mx-5 lg:mx-20 z-10"
-				>
+				<div class:middle={hero.position} class="absolute inset-0 flex my-20 mx-5 lg:mx-20 z-10">
 					<div class="">
 						<h1 class="text-error-500 text-xl md:text-4xl white-stroke font-heavitas">
 							Paolo genovese
@@ -93,6 +98,10 @@
 </div>
 
 <style>
+	.middle {
+		justify-content: center;
+		align-items: center;
+	}
 	.white-stroke {
 		stroke: white;
 		stroke-width: 1;
