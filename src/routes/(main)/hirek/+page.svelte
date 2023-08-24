@@ -55,7 +55,7 @@
 		</div>
 	</div>
 
-	<div class="max-w-7xl">
+	<div class="max-w-7xl mx-auto">
 		<Paginator
 			class="mt-12"
 			bind:settings={page}
