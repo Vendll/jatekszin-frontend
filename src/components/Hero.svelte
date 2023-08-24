@@ -1,25 +1,24 @@
 <script lang="ts">
 	import { scrollTo } from 'svelte-scrolling';
 	import { fade } from 'svelte/transition';
-	import hero from '$lib/assets/IMG_8154.jpg';
-	import heroMobile from '$lib/assets/IMG_8078.jpg';
 	import Logo from './Logo.svelte';
-	import { register } from 'swiper/element/bundle';
-	import pic from '$lib/assets/IMG_8154.jpg';
-	import pic2 from '$lib/assets/gallery1.jpg';
-	import pic3 from '$lib/assets/gallery2.jpg';
-	let pics = [pic, pic2, pic3];
-	register();
+
+	export let eloadas: any;
 </script>
 
 <div
 	class="relative bg-gray-600 text-white !h-screen w-screen font-heavitas flex flex-col justify-between"
 >
 	<div class="absolute inset-0 z-10 overflow-hidden">
-		<img src={hero} alt="Hero" class="hidden sm:block h-full w-full object-cover object-center" />
 		<img
-			src={heroMobile}
-			alt="Hero"
+			src={eloadas.hero.sizes.large.url}
+			alt={eloadas.hero.alt}
+			class="hidden sm:block h-full w-full object-cover object-center"
+			loading="eager"
+		/>
+		<img
+			src={eloadas.heroMobile.sizes.medium.url}
+			alt={eloadas.heroMobile.alt}
 			class="block sm:hidden h-full w-full object-cover object-center"
 		/>
 	</div>
@@ -31,8 +30,8 @@
 		class="z-20 text-4xl text-center py-12 h-full justify-start flex flex-col"
 		in:fade={{ delay: 350, duration: 1500 }}
 	>
-		<p class="px-12 text-blue-stroke">paolo genovese</p>
-		<p class="text-5xl text-error-500 text-white-stroke">teljesen idegenek</p>
+		<p class="px-12 text-blue-stroke">{eloadas.author}</p>
+		<p class="text-5xl text-error-500 text-white-stroke">{eloadas.title}</p>
 	</div>
 	<nav
 		in:fade={{ delay: 850, duration: 1500 }}

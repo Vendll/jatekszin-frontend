@@ -4,7 +4,6 @@
 	import FaBrandsInstagram from 'svelte-icons-pack/fa/FaBrandsInstagram';
 	import FaBrandsYoutube from 'svelte-icons-pack/fa/FaBrandsYoutube';
 	import FaBrandsTiktok from 'svelte-icons-pack/fa/FaBrandsTiktok';
-	import tenYears from '$lib/assets/10éve_együtt_logo.svg';
 </script>
 
 <div class="py-12 bg-primary-500 my-6 space-y-4">
@@ -13,6 +12,7 @@
 		class="grid grid-cols-5 gap-4 lg:flex lg:max-w-3xl lg:mx-auto text-center justify-center items-center mx-6"
 	>
 		<a
+			aria-label="Játékszín facebook oldala"
 			class="justify-center flex"
 			href="https://www.facebook.com/jatekszin"
 			target="_blank"
@@ -21,6 +21,7 @@
 			<Icon color="white" className="text-3xl" src={FaBrandsFacebook} />
 		</a>
 		<a
+			aria-label="Játékszín instagram oldala"
 			class="justify-center flex"
 			href="https://www.instagram.com/jatekszin/"
 			target="_blank"
@@ -29,6 +30,7 @@
 			<Icon color="white" className="text-3xl" src={FaBrandsInstagram} />
 		</a>
 		<a
+			aria-label="Játékszín youtube oldala"
 			class="justify-center flex"
 			href="https://www.youtube.com/jatekszin"
 			target="_blank"
@@ -37,6 +39,7 @@
 			<Icon color="white" className="text-3xl" src={FaBrandsYoutube} />
 		</a>
 		<a
+			aria-label="Játékszín tiktok oldala"
 			class="justify-center flex"
 			href="https://www.tiktok.com/@jatekszin"
 			target="_blank"

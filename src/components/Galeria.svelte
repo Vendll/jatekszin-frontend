@@ -34,7 +34,12 @@
 
 	<div class="card p-4 grid grid-cols-[auto_1fr_auto] gap-4 items-center">
 		<!-- Button: Left -->
-		<button type="button" class="btn-icon variant-ringed-primary" on:click={carouselLeft}>
+		<button
+			aria-label="Előző kép"
+			type="button"
+			class="btn-icon variant-ringed-primary"
+			on:click={carouselLeft}
+		>
 			<Icon className="h-6 w-6 -ml-1 fill-primary-600" src={FaSolidAngleLeft} />
 		</button>
 		<!-- Full Images -->
@@ -49,14 +54,19 @@
 			{/each}
 		</div>
 		<!-- Button: Right -->
-		<button type="button" class="btn-icon variant-ringed-primary" on:click={carouselRight}>
+		<button
+			aria-label="Következő kép"
+			type="button"
+			class="btn-icon variant-ringed-primary"
+			on:click={carouselRight}
+		>
 			<Icon className="h-6 w-6 -mr-1 fill-primary-600" src={FaSolidAngleRight} />
 		</button>
 	</div>
 
 	<div class="card p-4 grid grid-cols-6 gap-4">
 		{#each eloadas.galeria as image, i}
-			<button type="button" on:click={() => carouselThumbnail(i)}>
+			<button aria-label="Kép" type="button" on:click={() => carouselThumbnail(i)}>
 				<img
 					class="rounded-container-token"
 					src={image.image.sizes.small.url}

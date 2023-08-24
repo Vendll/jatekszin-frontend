@@ -1,4 +1,4 @@
-import type { LayoutLoad } from './$types';
+import type { PageLoad } from './$types';
 import api from '$lib/api';
 
 export async function load() {
@@ -6,7 +6,7 @@ export async function load() {
 
 	return {
 		props: {
-			menu: data
+			commonPage: data
 		}
 	};
 }

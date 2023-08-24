@@ -39,7 +39,6 @@
 
 		swiperEl.initialize();
 	});
-	console.log(heroes);
 </script>
 
 <div
@@ -69,12 +68,23 @@
 					loading="eager"
 				/>
 				<img
-					src={hero.hero.value.heroMobile.sizes.large.url}
+					src={hero.hero.value.heroMobile.sizes.medium.url}
 					alt=""
 					class="landscape:hidden object-cover h-full w-full"
 					loading="eager"
 				/>
-				<div class:middle={hero.position} class="absolute inset-0 flex my-20 mx-5 lg:mx-20 z-10">
+				<div
+					class:middleTop={hero.position === 'top-middle'}
+					class:middle={hero.position === 'middle'}
+					class:middleBottom={hero.position === 'bottom-middle'}
+					class:leftTop={hero.position === 'left-top'}
+					class:leftMiddle={hero.position === 'left-middle'}
+					class:leftBottom={hero.position === 'left-bottom'}
+					class:rightTop={hero.position === 'right-top'}
+					class:rightMiddle={hero.position === 'right-middle'}
+					class:rightBottom={hero.position === 'right-bottom'}
+					class="absolute inset-0 flex my-20 mx-5 lg:mx-20 z-10"
+				>
 					<div class="">
 						<h1 class="text-error-500 text-xl md:text-4xl white-stroke font-heavitas">
 							Paolo genovese
@@ -100,6 +110,38 @@
 <style>
 	.middle {
 		justify-content: center;
+		align-items: center;
+	}
+	.middleTop {
+		justify-content: center;
+		align-items: flex-start;
+	}
+	.middleBottom {
+		justify-content: center;
+		align-items: flex-end;
+	}
+	.leftTop {
+		justify-content: flex-start;
+		align-items: flex-start;
+	}
+	.leftMiddle {
+		justify-content: flex-start;
+		align-items: center;
+	}
+	.leftBottom {
+		justify-content: flex-start;
+		align-items: flex-end;
+	}
+	.rightBottom {
+		justify-content: flex-end;
+		align-items: flex-end;
+	}
+	.rightTop {
+		justify-content: flex-end;
+		align-items: flex-start;
+	}
+	.rightMiddle {
+		justify-content: flex-end;
 		align-items: center;
 	}
 	.white-stroke {

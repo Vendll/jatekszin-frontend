@@ -21,13 +21,13 @@
 {#if topBtn}
 	<button
 		transition:fade={{ duration: 300, delay: 0 }}
-		class="btn variant-filled-error hidden fixed bottom-16 right-4 z-[9999] font-heavitas font-bold text-white text-sm rounded-full m-0 p-0"
+		class="btn variant-filled-error hidden fixed bottom-5 right-5 z-[9999] text-white rounded-full m-0 p-0"
 		class:topBtn
 		on:click={() => scrollTop({ duration: 1000 })}
 	>
 		<Icon
 			color="white"
-			className="text-5xl stroke-white stroke-[10px]  fill-primary-500"
+			className="text-[2.5rem] stroke-white stroke-[10px]  fill-primary-500"
 			src={FaSolidArrowAltCircleUp}
 		/>
 	</button>

@@ -233,7 +233,31 @@
 	font-style: normal;
 	font-display: swap;
 }
-
+.cookieConsentToggle {
+	left: 20px !important;
+}
+.cookieConsentWrapper {
+	background-color: rgb(var(--color-primary-500)) !important;
+}
+.cookieConsent__Button:hover {
+	opacity: 1 !important;
+	--tw-brightness: brightness(1.15);
+	filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale)
+		var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+.cookieConsent__Button {
+	background-color: rgb(var(--color-error-500)) !important;
+	font-family: 'Heavitas Neue';
+	color: white !important;
+	border-radius: var(--theme-rounded-base);
+}
+.cookieConsentOperations__List {
+	border-radius: var(--theme-rounded-container);
+}
+.cookieConsent__Button--Close {
+	margin-left: auto !important;
+	margin-right: auto !important;
+}
 .font-heavitas {
 	font-family: 'Heavitas Neue';
 	font-weight: 700;

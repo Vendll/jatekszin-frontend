@@ -20,6 +20,7 @@ Elolvastam és elfogadom a www.jatekszin.hu oldal Süti szabályzatát.
 "
 	acceptLabel="Elfogadom"
 	settingsLabel="Cookie beállítások"
+	closeLabel="Beállítások mentése"
 	choices={{
 		necessary: {
 			label: 'Szükséges cookiek',

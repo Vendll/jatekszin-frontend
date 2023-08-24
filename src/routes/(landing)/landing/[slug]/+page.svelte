@@ -7,21 +7,43 @@
 	import Tamogatoink from '$components/Tamogatoink.svelte';
 	import Footer from '$components/Footer.svelte';
 	import { onMount } from 'svelte';
+	import type { PageData } from './$types';
+	import { PUBLIC_SITE_URL } from '$env/static/public';
+	import { page } from '$app/stores';
+	export let data: PageData;
+	const eloadas = data.props.eloadasok.docs[0];
+
+	let commonPage: any;
+
 	let visibe = false;
 	onMount(() => {
 		console.log('mounted');
 		visibe = true;
 	});
+	console.log(eloadas);
 </script>
+
+<svelte:head>
+	<title>{eloadas?.meta.title}</title>
+	<meta name="description" content={eloadas?.meta.description} />
+	<meta property="og:title" content={eloadas?.meta.title} />
+	<meta property="og:description" content={eloadas?.meta.description} />
+	<meta property="og:image" content={eloadas?.meta.image.sizes.medium.url} />
+	<meta property="og:url" content={`${PUBLIC_SITE_URL}${$page.url.pathname}`} />
+	<meta property="og:type" content="article" />
+	<meta property="og:locale" content="hu_HU" />
+	<meta property="article:published_time" content={eloadas?.date} />
+	<meta property="article:modified_time" content={eloadas?.date} />
+</svelte:head>
 
 {#if visibe}
 	<div class="space-y-16">
-		<Hero />
+		<Hero {eloadas} />
 		<div class="max-w-7xl mx-auto space-y-16">
-			<Informaciok />
-			<Szereplok />
+			<Informaciok {eloadas} />
+			<Szereplok {eloadas} />
 			<Trailer />
-			<Galeria />
+			<Galeria {eloadas} />
 			<Tamogatoink />
 		</div>
 		<Footer />

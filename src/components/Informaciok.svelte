@@ -1,6 +1,37 @@
 <script lang="ts">
 	import { scrollRef } from 'svelte-scrolling';
-	import poster from '$lib/assets/poster.jpeg?w=785&h=1100&format=webp';
+	import Time from 'svelte-time';
+
+	export let eloadas: any;
+	function findPosition(value: any) {
+		const options = [
+			{ label: 'Rendező', value: 'rendezo' },
+			{ label: 'Dramaturg', value: 'dramaturg' },
+			{ label: 'Díszlettervező', value: 'diszlettervezo' },
+			{ label: 'Jelmeztervező', value: 'jelmeztervezo' },
+			{ label: 'Díszlet- és jelmeztervező', value: 'diszlettervezo-jelmeztervezo' },
+			{ label: 'Zenei vezető', value: 'zenei_vezeto' },
+			{ label: 'Zeneszerző', value: 'zeneszerzo' },
+			{ label: 'Koreográfus', value: 'koreografus' },
+			{ label: 'Ügyelő', value: 'ugyelo' },
+			{ label: 'Súgó', value: 'sugo' },
+			{ label: 'Fénytervező', value: 'fenytervezo' },
+			{ label: 'Hangmérnök', value: 'hangmernok' },
+			{ label: 'Videó', value: 'video' },
+			{ label: 'Rendezőasszisztens', value: 'rendezoasszisztens' },
+			{ label: 'Dramaturgasszisztens', value: 'dramaturgasszisztens' },
+			{ label: 'Fordító', value: 'fordito' }
+		];
+
+		return options.find((option) => option.value === value);
+	}
+
+	const rendezo = eloadas.kozremukodok.find(
+		(kozremukodo: any) => kozremukodo.value.pozicio === 'rendezo'
+	);
+	const kozremukodok = eloadas.kozremukodok.filter(
+		(kozremukodo: any) => kozremukodo.value.pozicio !== 'rendezo'
+	);
 </script>
 
 <div class="lg:grid lg:grid-cols-7">
@@ -8,53 +39,34 @@
 		<div class="font-heavitas !font-normal text-4xl mb-6">információk</div>
 		<div class="lg:flex lg:space-x-6 space-y-4 lg:space-y-0">
 			<div class="text-2xl font-bold font-sans">
-				Rendező: <span class="font-light">Czukor Balázs</span>
+				Rendező: <span class="font-light">{rendezo.value.munkatars.value.name}</span>
 			</div>
 			<div class="text-2xl font-bold font-sans">
-				Bemutató: <span class="font-light">2019. november 23.</span>
+				Bemutató: <span class="font-light">
+					<Time timestamp={eloadas.bemutatoDatum} format="YYYY. MMMM DD." />
+				</span>
 			</div>
 		</div>
 		<div class="lg:flex lg:gap-x-6 space-y-4 lg:space-y-0 lg:flex-wrap">
-			<div class="text-2xl font-bold font-sans">
-				Díszlet- és jelmeztervező: <span class="font-light">Kovács Yvette Alida</span>
-			</div>
-			<div class="text-2xl font-bold font-sans">
-				Dramaturg: <span class="font-light">Lőkös Ildikó</span>
-			</div>
-			<div class="text-2xl font-bold font-sans">
-				Fordította: <span class="font-light">Sediánszky Nóra</span>
-			</div>
-			<div class="text-2xl font-bold font-sans">
-				Zeneszerző: <span class="font-light">Gulyás Levente</span>
-			</div>
-			<div class="text-2xl font-bold font-sans">
-				Ügyelő: <span class="font-light">Kis-Kádi Judit</span>
-			</div>
-			<div class="text-2xl font-bold font-sans">
-				Súgó: <span class="font-light">Sajben Anita / Dobos Erika</span>
-			</div>
-			<div class="text-2xl font-bold font-sans">
-				Rendezőasszisztens: <span class="font-light">Petyi János</span>
-			</div>
+			{#each kozremukodok as kozremukodo}
+				<div class="text-2xl font-bold font-sans">
+					{findPosition(kozremukodo.value.pozicio)?.label}:
+					<span class="font-light">
+						{kozremukodo.value.munkatars.value.name}
+					</span>
+				</div>
+			{/each}
 		</div>
 		<div class="text-2xl font-bold font-sans">Leírás:</div>
-		<p class="text-lg font-light font-sans">
-			Különös játékot talál ki egy baráti társaság: bárkinek megszólal a telefonja, képes vagy
-			szöveges Üzenetet kap, együtt hallgatják, olvassák, nézik...
-		</p>
-		<p class="text-lg font-light font-sans">
-			A hétköznapi estén váratlan titkok pattannak föl, évtizedes szövetségek kapcsai kezdenek
-			kilazulni... Pedig eddig úgy gondolták, jól ismerik egymást - am lassanként elszabadul a
-			pokol... Paolo Genovese 2016-os filmie szinte percek alatt hóditotta meg Európa mozijait, st
-			több országban a helyi remake-jet is leforgattak. A görög, spanyol, török, francia, mexikói,
-			koreai, kínai változat mellett a magyar is elkészült.
-		</p>
-		<p class="text-lg font-light font-sans">
-			Most pedig végre szinpadon is látható ez a fursa, egyszerre vicces és drámai történet,
-			Magyarorszagon elóször a Játékszinben.
+		<p class="text-lg font-light prose font-sans">
+			{eloadas.description}
 		</p>
 	</div>
 	<div class="col-span-2 mx-6">
-		<img src={poster} alt="Poster" class="w-full h-full object-contain object-center" />
+		<img
+			src={eloadas.poster.sizes.medium.url}
+			alt="Poster"
+			class="w-full h-full object-contain object-center"
+		/>
 	</div>
 </div>

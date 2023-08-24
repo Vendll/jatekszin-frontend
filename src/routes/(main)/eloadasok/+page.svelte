@@ -6,7 +6,6 @@
 	let commonPage: any;
 	export let data: PageData;
 	const eloadasok = data.props.eloadasok.docs;
-	console.log(eloadasok);
 </script>
 
 <svelte:head>

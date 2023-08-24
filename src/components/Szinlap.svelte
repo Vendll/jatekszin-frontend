@@ -2,10 +2,6 @@
 	import { scrollRef } from 'svelte-scrolling';
 	import Time from 'svelte-time';
 
-	import szinesz1 from '$lib/assets/IMG_5202.jpg?w=500&h=500&format=webp';
-	import szinesz2 from '$lib/assets/IMG_5232.jpg?w=500&h=500&format=webp';
-	import szinesz3 from '$lib/assets/IMG_5242_AA.jpg?w=500&h=500&format=webp';
-	import szinesz4 from '$lib/assets/IMG_5545_BB.jpg?w=500&h=500&format=webp';
 	export let eloadas;
 
 	function findPosition(value) {
