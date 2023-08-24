@@ -1,12 +1,12 @@
-import type { LayoutLoad } from './$types';
+import type { PageLoad } from './$types';
 import api from '$lib/api';
 
 export async function load() {
-	const { data } = await api.get('/globals/kapcsolat-oldal').catch((err) => console.log(err));
+	const { data } = await api.get('/globals/Kapcsolat-oldal');
 
 	return {
 		props: {
-			menu: data
+			kapcsolat: data
 		}
 	};
 }

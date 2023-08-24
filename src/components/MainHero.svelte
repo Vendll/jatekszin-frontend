@@ -95,9 +95,15 @@
 								{hero.hero.value.author}
 							</h1>
 						{/if}
-						<h1 class="text-error-500 text-xl md:text-6xl white-stroke font-heavitas">
-							{hero.hero.value.title}
-						</h1>
+						{#if !hero.hero.value.author}
+							<h1 class="text-error-500 max-w-3xl text-xl md:text-6xl white-stroke font-heavitas">
+								{hero.hero.value.title}
+							</h1>
+						{:else}
+							<h1 class="text-error-500 text-xl md:text-6xl white-stroke font-heavitas">
+								{hero.hero.value.title}
+							</h1>
+						{/if}
 						<div
 							class="gap-4 flex mt-4"
 							class:btnCenter={hero.position === 'top-middle' ||
