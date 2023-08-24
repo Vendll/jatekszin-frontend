@@ -2,8 +2,7 @@
 	import { quintOut } from 'svelte/easing';
 	import { fade, fly } from 'svelte/transition';
 
-	import pic from '$lib/assets/poster.jpeg';
-	import pic2 from '$lib/assets/IMG_8154.jpg';
+	export let ke: any;
 	let hovered = false;
 </script>
 
@@ -22,7 +21,11 @@
 				duration: 100
 			}}
 		>
-			<img class="absolute rounded-md object-cover object-center inset-0" src={pic} alt="sad" />
+			<img
+				class="absolute rounded-md object-cover object-center inset-0"
+				src={ke.value.heroMobile.sizes.medium.url}
+				alt="sad"
+			/>
 		</div>
 	{:else}
 		<div
@@ -45,7 +48,7 @@
 		>
 			<img
 				class="absolute rounded-md object-cover top-0 left-0 w-[42rem] h-[28rem]"
-				src={pic2}
+				src={ke.value.hero.sizes.medium.url}
 				alt="sad"
 			/>
 			<div
@@ -61,16 +64,20 @@
 			>
 				<div class="absolute bottom-10 left-6">
 					<h1 class="text-error-500 text-xl lg:text-2xl text-white-stroke font-heavitas">
-						Paolo Genovese
+						{ke.value.author}
 					</h1>
 					<h1 class="text-error-500 text-xl lg:text-3xl text-white-stroke font-heavitas">
-						teljesen idegenek
+						{ke.value.title}
 					</h1>
 					<div class="gap-4 flex mt-4">
-						<a href="/hirek" class="btn variant-filled-error text-white font-heavitas"
-							>jegyvásárlás</a
+						<a
+							href="https://jatekszin.jegy.hu/"
+							class="btn variant-filled-error text-white font-heavitas">jegyvásárlás</a
 						>
-						<a href="/hirek" class="btn variant-filled-error text-white font-heavitas">részletek</a>
+						<a
+							href={`/eloadasok/${ke.value.slug}`}
+							class="btn variant-filled-error text-white font-heavitas">részletek</a
+						>
 					</div>
 				</div>
 			</div>
