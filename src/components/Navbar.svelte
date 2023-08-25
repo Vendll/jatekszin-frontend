@@ -11,11 +11,14 @@
 	import FaSolidBars from 'svelte-icons-pack/fa/FaSolidBars';
 	import type { DrawerSettings } from '@skeletonlabs/skeleton';
 	export let navItems: any;
-	console.log(navItems);
-
 	let y: number;
 	let screenHeight: any;
 	let navColor: boolean = false;
+	export let facebookLink;
+	export let instagramLink;
+	export let tiktokLink;
+	export let emailLink;
+	export let jegyLink;
 
 	onMount(() => {
 		screenHeight = window.innerHeight;

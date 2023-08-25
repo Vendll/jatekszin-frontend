@@ -29,7 +29,7 @@
 <div class="relative bg-indigo-800 mt-24">
 	<iframe
 		title="Térkép"
-		src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5390.125927209287!2d19.058721!3d47.508165!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4741dc72a60254d1%3A0x387b562fdf1f2009!2zSsOhdMOpa3N6w61u!5e0!3m2!1sen!2sus!4v1692882778207!5m2!1sen!2sus"
+		src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10780.251874957516!2d19.0587207!3d47.5081649!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4741dc72a60254d1%3A0x387b562fdf1f2009!2zSsOhdMOpa3N6w61u!5e0!3m2!1sen!2shu!4v1692944736316!5m2!1sen!2shu"
 		width="100%"
 		height="288px"
 		style="border:0;"
