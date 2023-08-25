@@ -90,16 +90,18 @@
 							hero.position === 'right-bottom'}
 					>
 						{#if hero.hero.value.author}
-							<h1 class="text-error-500 text-xl md:text-5xl white-stroke font-heavitas">
+							<h1 class="lowercase text-error-500 text-xl md:text-5xl white-stroke font-heavitas">
 								{hero.hero.value.author}
 							</h1>
 						{/if}
 						{#if !hero.hero.value.author}
-							<h1 class="text-error-500 max-w-3xl text-xl md:text-6xl white-stroke font-heavitas">
+							<h1
+								class="lowercase text-error-500 max-w-3xl text-xl md:text-6xl white-stroke font-heavitas"
+							>
 								{hero.hero.value.title}
 							</h1>
 						{:else}
-							<h1 class="text-error-500 text-xl md:text-6xl white-stroke font-heavitas">
+							<h1 class="lowercase text-error-500 text-xl md:text-6xl white-stroke font-heavitas">
 								{hero.hero.value.title}
 							</h1>
 						{/if}

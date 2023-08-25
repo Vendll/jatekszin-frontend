@@ -43,11 +43,14 @@
 			<Icon className="h-6 w-6 -ml-1 fill-primary-600" src={FaSolidAngleLeft} />
 		</button>
 		<!-- Full Images -->
-		<div bind:this={elemCarousel} class="snap-x snap-mandatory scroll-smooth flex overflow-x-auto">
+		<div
+			bind:this={elemCarousel}
+			class="snap-x snap-mandatory scroll-smooth flex gap-x-4 overflow-x-auto"
+		>
 			{#each eloadas.galeria as image}
 				<img
-					class="snap-center w-full rounded-container-token"
-					src={image.image.sizes.large.url}
+					class="snap-center w-full h-full rounded-container-token"
+					src={image.image.sizes.medium.url}
 					alt={image.image.alt}
 					loading="lazy"
 				/>

@@ -11,9 +11,9 @@
 	const source = hirek;
 	let pagePagination = {
 		offset: 0,
-		limit: 5,
+		limit: 9,
 		size: source.length,
-		amounts: [1, 2, 5, 10]
+		amounts: [9, 18, 27]
 	};
 
 	$: paginatedSource = source.slice(

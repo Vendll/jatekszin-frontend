@@ -32,7 +32,9 @@
 		$page.url.pathname === '/tarsulat' ||
 		$page.url.pathname === '/adatkezelesi-szabalyzat' ||
 		$page.url.pathname === '/kep-es-hangfelvetel' ||
-		$page.url.pathname === '/nyeremenyjatek-szabalyzatok'
+		$page.url.pathname === '/nyeremenyjatek-szabalyzatok' ||
+		$page.url.pathname === '/impresszum' ||
+		$page.url.pathname === '/kozadatok'
 	) {
 		if (y > screenHeight / 8) {
 			navColor = true;
@@ -64,7 +66,8 @@
 	$page.url.pathname === '/adatkezelesi-szabalyzat' ||
 	$page.url.pathname === '/kep-es-hangfelvetel' ||
 	$page.url.pathname === '/nyeremenyjatek-szabalyzatok' ||
-	
+	$page.url.pathname === '/impresszum' ||
+	$page.url.pathname === '/kozadatok'
 		? y / screenHeight
 		: 1});  transition: opacity 0.5s ease;"
 >

@@ -31,7 +31,7 @@
 		in:fade={{ delay: 350, duration: 1500 }}
 	>
 		<p class="px-12 text-blue-stroke">{eloadas.author}</p>
-		<p class="text-5xl text-error-500 text-white-stroke">{eloadas.title}</p>
+		<p class="lowercase text-5xl text-error-500 text-white-stroke">{eloadas.title}</p>
 	</div>
 	<nav
 		in:fade={{ delay: 850, duration: 1500 }}

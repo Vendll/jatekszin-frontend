@@ -50,10 +50,14 @@
 			}}
 		>
 			<div class="absolute bottom-10 left-2 right-2 text-center">
-				<h1 class="text-error-500 text-xl lg:text-2xl text-white-stroke-thin font-heavitas">
+				<h1
+					class="lowercase text-error-500 text-xl lg:text-2xl text-white-stroke-thin font-heavitas"
+				>
 					{ke.value.author}
 				</h1>
-				<h1 class="text-error-500 text-xl lg:text-3xl text-white-stroke-thin font-heavitas">
+				<h1
+					class="lowercase text-error-500 text-xl lg:text-3xl text-white-stroke-thin font-heavitas"
+				>
 					{ke.value.title}
 				</h1>
 				<div class="gap-3 flex justify-center mt-4">
@@ -124,10 +128,10 @@
 				}}
 			>
 				<div class="absolute bottom-10 left-6">
-					<h1 class="text-error-500 text-xl lg:text-3xl text-white-stroke font-heavitas">
+					<h1 class="lowercase text-error-500 text-xl lg:text-3xl text-white-stroke font-heavitas">
 						{ke.value.author}
 					</h1>
-					<h1 class="text-error-500 text-xl lg:text-4xl text-white-stroke font-heavitas">
+					<h1 class="lowercase text-error-500 text-xl lg:text-4xl text-white-stroke font-heavitas">
 						{ke.value.title}
 					</h1>
 					<div class="gap-4 flex mt-4">
