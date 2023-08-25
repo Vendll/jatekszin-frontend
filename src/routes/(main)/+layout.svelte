@@ -13,9 +13,10 @@
 	import FaBrandsTiktok from 'svelte-icons-pack/fa/FaBrandsTiktok';
 	import FaEnvelope from 'svelte-icons-pack/fa/FaEnvelope';
 	const navItems = data.props.menu;
+	console.log(navItems);
 </script>
 
-<Navbar {navItems} {facebookLink} {instagramLink} {tiktokLink} {emailLink} {jegyLink} />
+<Navbar {navItems} />
 <Drawer class="" position="right" duration={500}>
 	<div class="flex items-center justify-evenly mt-6">
 		<a href="/" class="-mx-2 -my-8 outline-none p-0">

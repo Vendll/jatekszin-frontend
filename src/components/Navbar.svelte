@@ -15,11 +15,6 @@
 	let y: number;
 	let screenHeight: any;
 	let navColor: boolean = false;
-	export let facebookLink;
-	export let instagramLink;
-	export let tiktokLink;
-	export let emailLink;
-	export let jegyLink;
 
 	onMount(() => {
 		screenHeight = window.innerHeight;
@@ -113,14 +108,22 @@
 				className="transition-color duration-300 ease-in-out"
 			/>
 		</a>
-		<a href="mailto:info@jatekszin.hu" class="hidden lg:block text-white text-xl" class:navColor>
+		<a
+			href={navItems.mailchimpLink}
+			target="_blank"
+			class="hidden lg:block text-white text-xl"
+			class:navColor
+		>
 			<Icon
 				color={navColor ? 'rgb(37,64,143)' : 'white'}
 				src={FaEnvelope}
 				className="transition-color duration-300 ease-in-out"
 			/>
 		</a>
-		<a href="/hirek" class="hidden lg:block btn variant-filled-error text-white font-heavitas">
+		<a
+			href={navItems.jegyLink}
+			class="hidden lg:block btn variant-filled-error text-white font-heavitas"
+		>
 			jegyvásárlás
 		</a>
 		<button on:click={() => drawerStore.open(drawerSettings)} class="block lg:hidden text-xl mr-10">

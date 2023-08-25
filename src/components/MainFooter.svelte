@@ -34,7 +34,7 @@
 				<div class="flex justify-between">
 					<a
 						class="justify-center flex"
-						href={navItems.navItems.facebookLink}
+						href={navItems.facebookLink}
 						target="_blank"
 						rel="noopener noreferrer"
 					>
@@ -42,7 +42,7 @@
 					</a>
 					<a
 						class="justify-center flex"
-						href={navItems.navItems.instagramLink}
+						href={navItems.instagramLink}
 						target="_blank"
 						rel="noopener noreferrer"
 					>
@@ -50,7 +50,7 @@
 					</a>
 					<a
 						class="justify-center flex"
-						href={navItems.navItems.youtubeLink}
+						href={navItems.youtubeLink}
 						target="_blank"
 						rel="noopener noreferrer"
 					>
@@ -58,7 +58,7 @@
 					</a>
 					<a
 						class="justify-center flex"
-						href={navItems.navItems.tiktokLink}
+						href={navItems.tiktokLink}
 						target="_blank"
 						rel="noopener noreferrer"
 					>
