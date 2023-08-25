@@ -25,6 +25,7 @@
 		$page.url.pathname === '/hirek' ||
 		$page.url.pathname === '/musor' ||
 		$page.url.pathname === '/eloadasok' ||
+		$page.url.pathname === '/eloadasok/archivum' ||
 		$page.url.pathname === '/jatekszin' ||
 		$page.url.pathname === '/rolunk' ||
 		$page.url.pathname === '/jegyek' ||
@@ -55,6 +56,7 @@
 	$page.url.pathname === '/hirek' ||
 	$page.url.pathname === '/musor' ||
 	$page.url.pathname === '/eloadasok' ||
+	$page.url.pathname === '/eloadasok/archivum' ||
 	$page.url.pathname === '/jatekszin' ||
 	$page.url.pathname === '/rolunk' ||
 	$page.url.pathname === '/jegyek' ||
