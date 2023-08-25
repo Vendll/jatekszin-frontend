@@ -8,6 +8,9 @@
 	import TopButton from '$components/TopButton.svelte';
 	import '@beyonk/gdpr-cookie-consent-banner/style.css';
 	import { Banner as GdprBanner } from '@beyonk/gdpr-cookie-consent-banner';
+	import { computePosition, autoUpdate, offset, shift, flip, arrow } from '@floating-ui/dom';
+	import { storePopup } from '@skeletonlabs/skeleton';
+	storePopup.set({ computePosition, autoUpdate, offset, shift, flip, arrow });
 </script>
 
 <slot />

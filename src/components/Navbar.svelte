@@ -11,6 +11,7 @@
 	import FaSolidBars from 'svelte-icons-pack/fa/FaSolidBars';
 	import type { DrawerSettings } from '@skeletonlabs/skeleton';
 	export let navItems: any;
+
 	let y: number;
 	let screenHeight: any;
 	let navColor: boolean = false;
@@ -67,7 +68,7 @@
 		<a href="/" class="block">
 			<Logo color={navColor} height={'6rem'} slideUp={false} width={'15rem'} />
 		</a>
-		{#each navItems as item}
+		{#each navItems.navItems as item}
 			<a
 				href={item.link}
 				class="hidden lg:block text-white hover:text-white-stroke transition-color duration-300 ease-in-out"

@@ -1,6 +1,12 @@
 <script lang="ts">
 	import CalendarJs from '$components/CalendarJS.svelte';
 	import bannerImage from '$lib/assets/banner.jpg';
+	import FaSolidTicketAlt from 'svelte-icons-pack/fa/FaSolidTicketAlt';
+	import FaSolidDownload from 'svelte-icons-pack/fa/FaSolidDownload';
+	import FaSolidMap from 'svelte-icons-pack/fa/FaSolidMap';
+	import FaFilePdf from 'svelte-icons-pack/fa/FaFilePdf';
+	import Icon from 'svelte-icons-pack/Icon.svelte';
+	import nezoter from '$lib/assets/Jatekszin_nezoter2019.svg';
 	import { PUBLIC_SITE_URL } from '$env/static/public';
 	import { page } from '$app/stores';
 	import type { PageData } from './$types';
@@ -41,20 +47,39 @@
 	<CalendarJs {musor} />
 	<Accordion class="my-6">
 		<AccordionItem>
-			<svelte:fragment slot="lead">*penz ikon*</svelte:fragment>
-			<svelte:fragment slot="summary">Jegyarak</svelte:fragment>
-			<svelte:fragment slot="content">(content)</svelte:fragment>
+			<svelte:fragment slot="lead">
+				<Icon src={FaSolidTicketAlt} className="fill-primary-500" />
+			</svelte:fragment>
+			<svelte:fragment slot="summary">Jegyárak</svelte:fragment>
+			<svelte:fragment slot="content">
+				<a target="_blank" href={commonPage.jegyarak.url} class="flex gap-2 items-center">
+					<Icon src={FaFilePdf} className="ml-2 fill-primary-500" />
+					<p class="hover:underline grow">{commonPage.jegyarak.name}</p>
+				</a>
+			</svelte:fragment>
 		</AccordionItem>
 		<AccordionItem>
-			<svelte:fragment slot="lead">*letoltes ikon*</svelte:fragment>
-			<svelte:fragment slot="summary">Letöltheto musorok</svelte:fragment>
-			<svelte:fragment slot="content">(content)</svelte:fragment>
+			<svelte:fragment slot="lead">
+				<Icon src={FaSolidDownload} className="fill-primary-500" />
+			</svelte:fragment>
+			<svelte:fragment slot="summary">Letölthető műsorok</svelte:fragment>
+			<svelte:fragment slot="content">
+				{#each commonPage.letolthetoMusorok as musor}
+					<a target="_blank" href={musor.file.url} class="flex gap-2 items-center">
+						<Icon src={FaFilePdf} className="ml-2 fill-primary-500" />
+						<p class="hover:underline grow">{musor.file.name}</p>
+					</a>
+				{/each}
+			</svelte:fragment>
 		</AccordionItem>
 		<AccordionItem>
-			<svelte:fragment slot="lead">*terkep ikon*</svelte:fragment>
-			<svelte:fragment slot="summary">Nezoteri alaprajz</svelte:fragment>
-			<svelte:fragment slot="content">(content)</svelte:fragment>
+			<svelte:fragment slot="lead">
+				<Icon src={FaSolidMap} className="fill-primary-500" />
+			</svelte:fragment>
+			<svelte:fragment slot="summary">Nézőtéri alaprajz</svelte:fragment>
+			<svelte:fragment slot="content">
+				<img class="w-full" alt="Nézőtér alaprajz" src={nezoter} />
+			</svelte:fragment>
 		</AccordionItem>
-		<!-- ... -->
 	</Accordion>
 </div>

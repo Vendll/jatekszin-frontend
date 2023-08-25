@@ -10,13 +10,9 @@
 	import Icon from 'svelte-icons-pack/Icon.svelte';
 	import FaBrandsFacebookF from 'svelte-icons-pack/fa/FaBrandsFacebookF';
 	import FaBrandsInstagram from 'svelte-icons-pack/fa/FaBrandsInstagram';
+	import FaBrandsTiktok from 'svelte-icons-pack/fa/FaBrandsTiktok';
 	import FaEnvelope from 'svelte-icons-pack/fa/FaEnvelope';
-	const navItems = data.props.menu.navItems;
-	const facebookLink = data.props.menu.facebookLink;
-	const instagramLink = data.props.menu.instagramLink;
-	const tiktokLink = data.props.menu.tiktokLink;
-	const emailLink = data.props.menu.emailLink;
-	const jegyLink = data.props.menu.jegyLink;
+	const navItems = data.props.menu;
 </script>
 
 <Navbar {navItems} {facebookLink} {instagramLink} {tiktokLink} {emailLink} {jegyLink} />
@@ -38,7 +34,7 @@
 	<div class="m-6 flow-root">
 		<div class="-my-6 divide-y divide-gray-500/10">
 			<div class="space-y-2 py-6">
-				{#each navItems as item}
+				{#each navItems.navItems as item}
 					<a
 						on:click={() => drawerStore.close()}
 						href={item.link}
@@ -50,21 +46,28 @@
 			</div>
 		</div>
 		<div class="flex justify-evenly mt-6">
-			<a href="/hirek" class=" text-xl">
+			<a href={navItems.facebookLink} class=" text-xl">
 				<Icon
 					color={'rgb(37,64,143)'}
 					src={FaBrandsFacebookF}
 					className="transition-color duration-300 ease-in-out"
 				/>
 			</a>
-			<a href="/hirek" class=" text-xl">
+			<a href={navItems.instagramLink} class=" text-xl">
 				<Icon
 					color={'rgb(37,64,143)'}
 					src={FaBrandsInstagram}
 					className="transition-color duration-300 ease-in-out"
 				/>
 			</a>
-			<a href="/hirek" class=" text-xl">
+			<a href={navItems.tiktokLink} class=" text-xl">
+				<Icon
+					color={'rgb(37,64,143)'}
+					src={FaBrandsTiktok}
+					className="transition-color duration-300 ease-in-out"
+				/>
+			</a>
+			<a href="mailto:info@jatekszin.hu" class=" text-xl">
 				<Icon
 					color={'rgb(37,64,143)'}
 					src={FaEnvelope}
@@ -80,4 +83,4 @@
 	</div>
 </Drawer>
 <slot />
-<MainFooter />
+<MainFooter {navItems} />

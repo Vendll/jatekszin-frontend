@@ -30,10 +30,47 @@
 </script>
 
 <li
-	class="snap-start shrink-0 group relative rounded-md w-[21rem] h-[28rem] aspect-[4/3] hover:w-[42rem] hover:aspect-[2/3] overflow-hidden transition-all delay-500 duration-[350ms] ease-in-out"
+	class="snap-start shrink-0 group relative rounded-md w-[21rem] h-[28rem] aspect-[4/3] md:hover:w-[42rem] md:hover:aspect-[2/3] overflow-hidden transition-all delay-500 duration-[350ms] ease-in-out"
 	on:mouseenter={() => handleMouseEnter()}
 	on:pointerleave={() => handleMouseLeave()}
 >
+	<div>
+		<img
+			class="block md:hidden absolute rounded-md object-cover top-0 left-0 w-[42rem] h-[28rem]"
+			src={ke.value.heroMobile.sizes.medium.url}
+			alt="sad"
+		/>
+		<div
+			class="z-10 absolute bottom-0 left-0 inset-0"
+			in:fly={{
+				delay: 400,
+				duration: 500,
+				x: 0,
+				y: 250,
+				opacity: 0,
+				easing: quintOut
+			}}
+		>
+			<div class="absolute bottom-10 left-2 right-2 text-center">
+				<h1 class="text-error-500 text-xl lg:text-2xl text-white-stroke-thin font-heavitas">
+					{ke.value.author}
+				</h1>
+				<h1 class="text-error-500 text-xl lg:text-3xl text-white-stroke-thin font-heavitas">
+					{ke.value.title}
+				</h1>
+				<div class="gap-3 flex justify-center mt-4">
+					<a
+						href="https://jatekszin.jegy.hu/"
+						class="btn !px-4 variant-filled-error text-white font-heavitas">jegyvásárlás</a
+					>
+					<a
+						href={`/eloadasok/${ke.value.slug}`}
+						class="btn !px-4 variant-filled-error text-white font-heavitas">részletek</a
+					>
+				</div>
+			</div>
+		</div>
+	</div>
 	{#if !hovered}
 		<div
 			in:fade={{
@@ -42,7 +79,7 @@
 			}}
 		>
 			<img
-				class="absolute rounded-md object-cover object-center inset-0"
+				class="hidden md:block absolute rounded-md object-cover object-center inset-0"
 				src={ke.value.poster.sizes.medium.url}
 				alt="sad"
 			/>
@@ -67,7 +104,7 @@
 			}}
 		>
 			<img
-				class="absolute rounded-md object-cover top-0 left-0 w-[42rem] h-[28rem]"
+				class="hidden md:block absolute rounded-md object-cover top-0 left-0 w-[42rem] h-[28rem]"
 				src={ke.value.hero.sizes.medium.url}
 				alt="sad"
 			/>
