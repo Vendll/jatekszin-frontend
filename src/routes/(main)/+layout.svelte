@@ -13,7 +13,6 @@
 	import FaBrandsTiktok from 'svelte-icons-pack/fa/FaBrandsTiktok';
 	import FaEnvelope from 'svelte-icons-pack/fa/FaEnvelope';
 	const navItems = data.props.menu;
-	console.log(navItems);
 </script>
 
 <Navbar {navItems} />
