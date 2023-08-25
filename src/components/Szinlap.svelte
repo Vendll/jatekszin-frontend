@@ -35,7 +35,7 @@
 	);
 </script>
 
-<div class="" use:scrollRef={'színlap'}>
+<div class="mt-4" use:scrollRef={'színlap'}>
 	<div class="font-heavitas !font-normal text-4xl mb-6 mx-6">színlap</div>
 	<div class="lg:flex lg:space-x-6 space-y-4 lg:space-y-0 mx-6">
 		<div class="text-2xl font-bold font-sans">
