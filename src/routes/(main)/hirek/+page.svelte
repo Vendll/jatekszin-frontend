@@ -63,9 +63,9 @@
 		</div>
 	</div>
 
-	<div class="max-w-7xl mx-auto">
+	<div class="max-w-7xl mx-auto mt-12">
 		<Paginator
-			class="mt-12"
+			class=""
 			bind:settings={pagePagination}
 			showFirstLastButtons={false}
 			showNumerals

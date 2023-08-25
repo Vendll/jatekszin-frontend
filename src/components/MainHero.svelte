@@ -79,7 +79,7 @@
 					class:rightTop={hero.position === 'right-top'}
 					class:rightMiddle={hero.position === 'right-middle'}
 					class:rightBottom={hero.position === 'right-bottom'}
-					class="absolute inset-0 flex my-20 lg:my-40 mx-5 lg:mx-20 z-10"
+					class="absolute inset-0 flex mt-20 mb-24 lg:my-40 mx-5 lg:mx-20 z-10"
 				>
 					<div
 						class:textLeft={hero.position === 'left-top' ||

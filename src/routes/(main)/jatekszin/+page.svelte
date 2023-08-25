@@ -35,7 +35,7 @@
 	</div>
 </div>
 
-<div class="relative overflow-hidden bg-white prose max-w-4xl mx-auto my-8">
+<div class="relative overflow-hidden bg-white px-6 prose max-w-4xl mx-auto my-8">
 	<div class="relative py-16 px-6 lg:px-8">
 		<div class="mx-auto text-lg">
 			<p class="mt-8 text-xl leading-8 text-gray-500">

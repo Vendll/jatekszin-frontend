@@ -72,7 +72,7 @@
 				<div class="hidden lg:absolute lg:bottom-0 lg:block lg:bg-white" />
 			</div> -->
 
-			<div class="bg-white pt-16 lg:col-span-7 lg:bg-transparent lg:pt-0 lg:pl-16 xl:pl-20">
+			<div class="bg-white pt-0 lg:col-span-7 lg:bg-transparent lg:pl-16 xl:pl-20">
 				<div class="grid lg:block mx-auto px-4 sm:px-6 md:max-w-2xl md:px-4 lg:px-0">
 					<h1 class="lowercase font-display text-5xl font-heavitas text-slate-900 sm:text-6xl">
 						{eloadas.title}
