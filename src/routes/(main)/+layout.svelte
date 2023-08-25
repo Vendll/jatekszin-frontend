@@ -15,11 +15,11 @@
 	const navItems = data.props.menu;
 </script>
 
-<Navbar {navItems} />
+<Navbar {navItems} {facebookLink} {instagramLink} {tiktokLink} {emailLink} {jegyLink} />
 <Drawer class="" position="right" duration={500}>
 	<div class="flex items-center justify-evenly mt-6">
 		<a href="/" class="-mx-2 -my-8 outline-none p-0">
-			<span class="sr-only">Your Company</span>
+			<span class="sr-only">Játészín</span>
 			<Logo color height={'8rem'} slideUp={false} width={'15rem'} />
 		</a>
 		<button

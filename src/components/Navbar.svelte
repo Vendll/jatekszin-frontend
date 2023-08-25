@@ -15,6 +15,11 @@
 	let y: number;
 	let screenHeight: any;
 	let navColor: boolean = false;
+	export let facebookLink;
+	export let instagramLink;
+	export let tiktokLink;
+	export let emailLink;
+	export let jegyLink;
 
 	onMount(() => {
 		screenHeight = window.innerHeight;
