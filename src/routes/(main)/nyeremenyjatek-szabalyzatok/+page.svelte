@@ -36,7 +36,7 @@
 <div class="relative overflow-hidden prose max-w-4xl mx-auto my-8">
 	<div class="mx-auto text-lg">
 		<p class="mt-8 text-xl leading-8 text-gray-500">
-			{#each commonPage.files as file}
+			{#each commonPage.files.reverse() as file}
 				<a target="_blank" href={file.file.url} class="flex gap-2 items-center">
 					<Icon src={FaFilePdf} className="ml-2 fill-primary-500" />
 					<p class="hover:underline grow">{file.file.name}</p>
