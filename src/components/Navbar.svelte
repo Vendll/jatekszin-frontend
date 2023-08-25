@@ -63,7 +63,8 @@
 	$page.url.pathname === '/tarsulat' ||
 	$page.url.pathname === '/adatkezelesi-szabalyzat' ||
 	$page.url.pathname === '/kep-es-hangfelvetel' ||
-	$page.url.pathname === '/nyeremenyjatek-szabalyzatok'
+	$page.url.pathname === '/nyeremenyjatek-szabalyzatok' ||
+	
 		? y / screenHeight
 		: 1});  transition: opacity 0.5s ease;"
 >
