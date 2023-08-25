@@ -48,7 +48,7 @@
 					if (args.event._def.extendedProps.zartkoru) {
 						jegyLink = `<div class="flex flex-col sm:flex-row justify-between items-center w-full"><span class="mb-2 sm:mb-0">${args.event._def.title}</span> <p class='btn variant-ringed-primary !text-primary-500 text-sm font-heavitas'>Zártkörű</p></div>`;
 					} else if (args.event._def.extendedProps.nincsJegy) {
-						jegyLink = `<div class="flex flex-col sm:flex-row justify-between items-center w-full"><span class="mb-2 sm:mb-0">${args.event._def.title}</span> <p class='btn variant-ringed-error !text-error-600 hover:!brightness-100 !text-white text-sm font-heavitas'>Elfogyott</p> </div>`;
+						jegyLink = `<div class="flex flex-col sm:flex-row justify-between items-center w-full"><span class="mb-2 sm:mb-0">${args.event._def.title}</span> <p class='btn variant-ringed-error !text-error-600 hover:!brightness-100 text-sm font-heavitas'>Elfogyott</p> </div>`;
 					} else if (args.event._def.extendedProps.elmarad) {
 						jegyLink = `<div class="flex flex-col sm:flex-row justify-between items-center w-full"><span class="mb-2 sm:mb-0">${args.event._def.title}</span> <p class='btn variant-ringed-error !text-error-600 hover:!brightness-100 cursor-not-allowed text-sm font-heavitas'>Elmarad</p></div>`;
 					} else {
