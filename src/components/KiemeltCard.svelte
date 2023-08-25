@@ -30,13 +30,11 @@
 </script>
 
 <li
-	class="snap-start shrink-0 group relative rounded-md w-[21rem] h-[28rem] aspect-[4/3] md:hover:w-[42rem] md:hover:aspect-[2/3] overflow-hidden transition-all delay-500 duration-[350ms] ease-in-out"
-	on:mouseenter={() => handleMouseEnter()}
-	on:pointerleave={() => handleMouseLeave()}
+	class="block md:hidden snap-start shrink-0 group relative rounded-md w-[21rem] h-[28rem] aspect-[4/3] md:hover:w-[42rem] md:hover:aspect-[2/3] overflow-hidden transition-all delay-500 duration-[350ms] ease-in-out"
 >
 	<div>
 		<img
-			class="block md:hidden absolute rounded-md object-cover top-0 left-0 w-[42rem] h-[28rem]"
+			class=" absolute rounded-md object-cover top-0 left-0 w-[42rem] h-[28rem]"
 			src={ke.value.heroMobile.sizes.medium.url}
 			alt="sad"
 		/>
@@ -71,6 +69,12 @@
 			</div>
 		</div>
 	</div>
+</li>
+<li
+	class="hidden md:block snap-start shrink-0 group relative rounded-md w-[21rem] h-[28rem] aspect-[4/3] md:hover:w-[42rem] md:hover:aspect-[2/3] overflow-hidden transition-all delay-500 duration-[350ms] ease-in-out"
+	on:mouseenter={() => handleMouseEnter()}
+	on:pointerleave={() => handleMouseLeave()}
+>
 	{#if !hovered}
 		<div
 			in:fade={{
@@ -79,7 +83,7 @@
 			}}
 		>
 			<img
-				class="hidden md:block absolute rounded-md object-cover object-center inset-0"
+				class="absolute rounded-md object-cover object-center inset-0"
 				src={ke.value.poster.sizes.medium.url}
 				alt="sad"
 			/>
@@ -104,7 +108,7 @@
 			}}
 		>
 			<img
-				class="hidden md:block absolute rounded-md object-cover top-0 left-0 w-[42rem] h-[28rem]"
+				class="absolute rounded-md object-cover top-0 left-0 w-[42rem] h-[28rem]"
 				src={ke.value.hero.sizes.medium.url}
 				alt="sad"
 			/>
@@ -120,10 +124,10 @@
 				}}
 			>
 				<div class="absolute bottom-10 left-6">
-					<h1 class="text-error-500 text-xl lg:text-2xl text-white-stroke font-heavitas">
+					<h1 class="text-error-500 text-xl lg:text-3xl text-white-stroke font-heavitas">
 						{ke.value.author}
 					</h1>
-					<h1 class="text-error-500 text-xl lg:text-3xl text-white-stroke font-heavitas">
+					<h1 class="text-error-500 text-xl lg:text-4xl text-white-stroke font-heavitas">
 						{ke.value.title}
 					</h1>
 					<div class="gap-4 flex mt-4">
