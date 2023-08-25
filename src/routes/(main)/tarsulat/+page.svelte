@@ -1,11 +1,11 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
-	import { invalidateAll } from '$app/navigation';
+	import { TabGroup, Tab, TabAnchor } from '@skeletonlabs/skeleton';
 	import { PUBLIC_SITE_URL } from '$env/static/public';
 	import { page } from '$app/stores';
-	import Richtext from '$components/Richtext.svelte';
+	let tabSet: number = 0;
 	export let data: any;
 	const { commonPage } = data.props;
+	console.log(commonPage);
 </script>
 
 <svelte:head>
@@ -34,10 +34,62 @@
 		</h1>
 	</div>
 </div>
-<div class="relative overflow-hidden bg-white prose max-w-4xl mx-auto my-8">
-	<div class="mx-auto text-lg">
-		<p class="mt-8 text-xl leading-8 text-gray-500">
-			<Richtext content={commonPage.content} />
-		</p>
-	</div>
+<div class="relative overflow-hidden max-w-6xl mx-auto my-8">
+	<section class="w-full card bg-surface-200 p-4 text-token">
+		<TabGroup>
+			<Tab
+				class="hover:!variant-soft-primary !border-primary-600-300-token"
+				bind:group={tabSet}
+				name="tab1"
+				value={0}
+			>
+				<span>Színművészek</span>
+			</Tab>
+			<Tab
+				class="hover:!variant-soft-primary !border-primary-600-300-token"
+				bind:group={tabSet}
+				name="tab2"
+				value={1}>Alkotók</Tab
+			>
+			<Tab
+				class="hover:!variant-soft-primary !border-primary-600-300-token"
+				bind:group={tabSet}
+				name="tab3"
+				value={2}>Munkatársak</Tab
+			>
+			<Tab
+				class="hover:!variant-soft-primary !border-primary-600-300-token"
+				bind:group={tabSet}
+				name="tab3"
+				value={3}>Vezetőség</Tab
+			>
+			<!-- Tab Panels --->
+			<svelte:fragment slot="panel">
+				{#if tabSet === 0}
+					<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+						<div class="card relative aspect-square">színés</div>
+						<div class="card relative aspect-square">színés</div>
+						<div class="card relative aspect-square">színés</div>
+						<div class="card relative aspect-square">színés</div>
+						<div class="card relative aspect-square">színés</div>
+						<div class="card relative aspect-square">színés</div>
+						<div class="card relative aspect-square">színés</div>
+						<div class="card relative aspect-square">színés</div>
+						<div class="card relative aspect-square">színés</div>
+						<div class="card relative aspect-square">színés</div>
+						<div class="card relative aspect-square">színés</div>
+						<div class="card relative aspect-square">színés</div>
+						<div class="card relative aspect-square">színés</div>
+						<div class="card relative aspect-square">színés</div>
+					</div>
+				{:else if tabSet === 1}
+					(tab panel 2 contents)
+				{:else if tabSet === 2}
+					(tab panel 3 contents)
+				{:else if tabSet === 3}
+					(tab panel 4 contents)
+				{/if}
+			</svelte:fragment>
+		</TabGroup>
+	</section>
 </div>

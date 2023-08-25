@@ -6,9 +6,6 @@
 </script>
 
 <div class="w-full bg-surface-300 mx-auto px-6 my-16 overflow-hidden">
-	{#if scrolling}
-		<p>scrolllllllll</p>
-	{/if}
 	<ul
 		on:touchstart={() => {
 			scrolling = true;

@@ -43,7 +43,7 @@
 					xmlns:xlink="http://www.w3.org/1999/xlink"
 					xml:space="preserve"
 					style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;"
-					class=" 2xl:block absolute left-[-20vw] top-32 h-96 w-96 fill-error-500 stroke-error-500 z-0"
+					class="hidden 2xl:block absolute left-[-20vw] top-32 h-96 w-96 fill-error-500 stroke-error-500 z-20"
 				>
 					<g id="Background" transform="matrix(1,0,0,1,-292,-292)">
 						<use xlink:href="#_Image1" x="654" y="565" width="758px" height="1067px" />
@@ -73,7 +73,7 @@
 			</div> -->
 
 			<div class="bg-white pt-16 lg:col-span-7 lg:bg-transparent lg:pt-0 lg:pl-16 xl:pl-20">
-				<div class="mx-auto px-4 sm:px-6 md:max-w-2xl md:px-4 lg:px-0">
+				<div class="grid lg:block mx-auto px-4 sm:px-6 md:max-w-2xl md:px-4 lg:px-0">
 					<h1 class="font-display text-5xl font-heavitas text-slate-900 sm:text-6xl">
 						{eloadas.title}
 					</h1>
@@ -83,7 +83,7 @@
 					</p>
 
 					<div
-						class="z-10 relative grid grid-cols-2 text-2xl font-heavitas mt-8 lg:text-3xl lg:self-center lg:max-w-lg justify-center items-center px-6 pb-24 lg:pb-6 gap-y-4"
+						class="row-start-1 z-10 relative grid grid-cols-2 text-2xl font-heavitas mt-8 lg:text-3xl lg:self-center lg:max-w-lg justify-center items-center px-6 pb-24 lg:pb-6 gap-y-4"
 					>
 						<div
 							class=" absolute z-[-1] bg-primary-600 -top-4 lg:-top-6 bottom-20 lg:-bottom-2 -left-[100vw] right-[-100vw]"

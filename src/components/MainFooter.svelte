@@ -5,6 +5,7 @@
 	import FaBrandsInstagram from 'svelte-icons-pack/fa/FaBrandsInstagram';
 	import FaBrandsYoutube from 'svelte-icons-pack/fa/FaBrandsYoutube';
 	import FaBrandsTiktok from 'svelte-icons-pack/fa/FaBrandsTiktok';
+	export let navItems: any;
 	let year = new Date().getFullYear();
 </script>
 
@@ -33,7 +34,7 @@
 				<div class="flex justify-between">
 					<a
 						class="justify-center flex"
-						href="https://www.facebook.com/jatekszin"
+						href={navItems.navItems.facebookLink}
 						target="_blank"
 						rel="noopener noreferrer"
 					>
@@ -41,7 +42,7 @@
 					</a>
 					<a
 						class="justify-center flex"
-						href="https://www.instagram.com/jatekszin/"
+						href={navItems.navItems.instagramLink}
 						target="_blank"
 						rel="noopener noreferrer"
 					>
@@ -49,7 +50,7 @@
 					</a>
 					<a
 						class="justify-center flex"
-						href="https://www.youtube.com/jatekszin"
+						href={navItems.navItems.youtubeLink}
 						target="_blank"
 						rel="noopener noreferrer"
 					>
@@ -57,7 +58,7 @@
 					</a>
 					<a
 						class="justify-center flex"
-						href="https://www.tiktok.com/@jatekszin"
+						href={navItems.navItems.tiktokLink}
 						target="_blank"
 						rel="noopener noreferrer"
 					>
