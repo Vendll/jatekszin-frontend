@@ -12,6 +12,7 @@
 	import { page } from '$app/stores';
 	export let data: PageData;
 	const eloadas = data.props.eloadasok.docs[0];
+	const partners = data.props.partners.docs;
 
 	let visibe = false;
 	onMount(() => {
@@ -43,7 +44,7 @@
 				<Trailer {eloadas} />
 			{/if}
 			<Galeria {eloadas} />
-			<Tamogatoink />
+			<Tamogatoink {partners} />
 		</div>
 		<Footer />
 	</div>

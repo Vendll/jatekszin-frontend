@@ -5,6 +5,8 @@
 	import Trailer from '$components/Trailer.svelte';
 	import Galeria from '$components/Galeria.svelte';
 	import CalendarJs from '$components/CalendarJS.svelte';
+	import Jegyarak from '$components/Jegyarak.svelte';
+	import Tamogatoink from '$components/Tamogatoink.svelte';
 	import { PUBLIC_SITE_URL } from '$env/static/public';
 	import { page } from '$app/stores';
 	let commonPage: any;
@@ -13,6 +15,7 @@
 
 	const eloadas = data.props.eloadasok.docs[0];
 	const musor = data.props.musor.docs;
+	const partners = data.props.partners.docs;
 </script>
 
 <svelte:head>
@@ -113,12 +116,14 @@
 		</div>
 	</header>
 
-	<div class="max-w-7xl mx-auto space-y-16">
+	<div class="max-w-7xl mx-auto space-y-16 mb-16">
 		<Szinlap {eloadas} />
 		{#if eloadas.video}
 			<Trailer {eloadas} />
 		{/if}
 		<Galeria {eloadas} />
+		<Jegyarak {eloadas} />
 		<CalendarJs {musor} />
+		<Tamogatoink {partners} />
 	</div>
 </div>
