@@ -86,10 +86,10 @@
 					</p>
 
 					<div
-						class="row-start-1 z-10 relative grid grid-cols-2 text-2xl font-heavitas mt-8 lg:text-3xl lg:self-center lg:max-w-lg justify-center items-center px-6 pb-24 lg:pb-6 gap-y-4"
+						class="row-start-1 z-10 relative grid grid-cols-2 text-2xl max-w-[100vw] font-heavitas mt-8 lg:text-3xl lg:self-center lg:max-w-lg justify-center items-center px-6 pb-24 lg:pb-6 gap-y-4"
 					>
 						<div
-							class=" absolute z-[-1] bg-primary-600 -top-4 lg:-top-6 bottom-20 lg:-bottom-2 -left-[100vw] right-[-100vw]"
+							class="absolute z-[-1] bg-primary-600 -top-4 lg:-top-6 bottom-20 lg:-bottom-2 -left-[100vw] right-[-100vw]"
 						/>
 						<p class=" col-span-2 text-center text-3xl text-white">jegyvásárlás</p>
 						<p use:scrollTo={{ ref: 'színlap', offset: -150, duration: 1000 }} class=" text-white">
