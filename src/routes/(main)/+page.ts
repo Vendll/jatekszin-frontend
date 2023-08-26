@@ -6,11 +6,13 @@ export const load: PageLoad = async () => {
 	const { data: kiemeltHirek } = await api.get(`/hirek`, {
 		params: { limit: 3, page: 1, depth: 5, sort: '-date' }
 	});
+	const { data: partners } = await api.get('/partner');
 
 	return {
 		props: {
 			kezdolap: data,
-			kiemeltHirek
+			kiemeltHirek,
+			partners
 		}
 	};
 };

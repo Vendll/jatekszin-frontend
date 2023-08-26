@@ -10,16 +10,16 @@
 		{#if eloadas.f1_9 && eloadas.f10_12 && eloadas.f13 && eloadas.f_potszek}
 			<h1 class="text-2xl !font-normal font-heavitas tracking-tigh">Földszint:</h1>
 			<p class="text-lg !font-normal font-heavitas tracking-tigh">
-				{eloadas.f1_9} Ft
+				1-9. sor {eloadas.f1_9} Ft
 			</p>
 			<p class="text-lg !font-normal font-heavitas tracking-tigh">
-				{eloadas.f10_12} Ft
+				10-12. sor {eloadas.f10_12} Ft
 			</p>
 			<p class="text-lg !font-normal font-heavitas tracking-tigh">
-				{eloadas.f13} Ft
+				13. sor {eloadas.f13} Ft
 			</p>
 			<p class="text-lg !font-normal font-heavitas tracking-tigh">
-				{eloadas.f_potszek} Ft
+				pótszék {eloadas.f_potszek} Ft
 			</p>
 		{/if}
 	</div>
@@ -27,16 +27,16 @@
 		{#if eloadas.e1 && eloadas.e2 && eloadas.e3_4 && eloadas.e5}
 			<h1 class="text-2xl !font-normal font-heavitas tracking-tigh">Erkély:</h1>
 			<p class="text-lg !font-normal font-heavitas tracking-tigh">
-				{eloadas.e1} Ft
+				1. sor {eloadas.e1} Ft
 			</p>
 			<p class="text-lg !font-normal font-heavitas tracking-tigh">
-				{eloadas.e2} Ft
+				2. sor {eloadas.e2} Ft
 			</p>
 			<p class="text-lg !font-normal font-heavitas tracking-tigh">
-				{eloadas.e3_4} Ft
+				3-4. sor {eloadas.e3_4} Ft
 			</p>
 			<p class="text-lg !font-normal font-heavitas tracking-tigh">
-				{eloadas.e5} Ft
+				5. pótsor {eloadas.e5} Ft
 			</p>
 		{/if}
 	</div>

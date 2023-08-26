@@ -73,7 +73,7 @@
 	});
 </script>
 
-<div id="calendar" class="!mb-16" />
+<div id="calendar" class="!mb-16 mx-6" />
 <div class="card p-4 w-72 shadow-xl" data-popup="popupFeatured">
 	<div><p>Demo Content</p></div>
 	<div class="arrow bg-surface-100-800-token" />

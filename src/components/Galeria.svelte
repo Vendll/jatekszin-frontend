@@ -47,7 +47,7 @@
 			bind:this={elemCarousel}
 			class="snap-x snap-mandatory scroll-smooth flex gap-x-4 overflow-x-auto"
 		>
-			{#each eloadas.galeria as image}
+			{#each eloadas.galeria as image (image.id)}
 				<img
 					class="snap-center w-full h-full rounded-container-token"
 					src={image.image.sizes.medium.url}
@@ -68,7 +68,7 @@
 	</div>
 
 	<div class="card p-4 grid grid-cols-6 gap-4">
-		{#each eloadas.galeria as image, i}
+		{#each eloadas.galeria as image, i (image.id)}
 			<button aria-label="Kép" type="button" on:click={() => carouselThumbnail(i)}>
 				<img
 					class="rounded-container-token"

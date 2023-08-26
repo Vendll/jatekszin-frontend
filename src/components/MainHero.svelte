@@ -118,8 +118,9 @@
 								hero.position === 'right-middle' ||
 								hero.position === 'right-bottom'}
 						>
-							<a href="/hirek" class="btn variant-filled-error text-white font-heavitas"
-								>jegyvásárlás</a
+							<a
+								href="https://jatekszin.jegy.hu/"
+								class="btn variant-filled-error text-white font-heavitas">jegyvásárlás</a
 							>
 							<a
 								href={`/eloadasok/${hero.hero.value.slug}`}

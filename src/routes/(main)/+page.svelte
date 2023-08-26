@@ -2,6 +2,7 @@
 	import MainHero from '$components/MainHero.svelte';
 	import Kiemelt from '$components/Kiemelt.svelte';
 	import HirCard from '$components/HirCard.svelte';
+	import Tamogatoink from '$components/Tamogatoink.svelte';
 	import { PUBLIC_SITE_URL } from '$env/static/public';
 	import { page } from '$app/stores';
 	import type { PageData } from './$types';
@@ -11,6 +12,7 @@
 	const kiemeltHirek = data.props.kiemeltHirek.docs;
 	const heroes = data.props.kezdolap.heroes;
 	const kezdolap = data.props.kezdolap;
+	const partners = data.props.partners.docs;
 </script>
 
 <svelte:head>
@@ -31,6 +33,7 @@
 
 <div class="bg-gray-50 px-6 pb-20 lg:px-8 lg:pt-10 lg:pb-28">
 	<div class="relative mx-auto max-w-7xl">
+		<h1 class="font-heavitas !font-normal text-center text-4xl mb-6">Kiemelt Hírek</h1>
 		<div class="mx-auto mt-12 grid max-w-lg gap-5 lg:max-w-none lg:grid-cols-3">
 			{#each kiemeltHirek as kiemeltHir (kiemeltHir.id)}
 				<HirCard
@@ -42,4 +45,8 @@
 			{/each}
 		</div>
 	</div>
+</div>
+
+<div class="mx-auto max-w-7xl px-6 h-fit">
+	<Tamogatoink {partners} />
 </div>

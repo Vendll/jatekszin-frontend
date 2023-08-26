@@ -6,6 +6,7 @@
 </script>
 
 <div class="w-full bg-surface-300 mx-auto px-6 my-16 overflow-hidden">
+	<h1 class="font-heavitas !font-normal text-center text-4xl mb-6">Kiemelt előadások</h1>
 	<ul
 		on:touchstart={() => {
 			scrolling = true;
