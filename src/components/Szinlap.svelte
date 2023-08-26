@@ -21,7 +21,23 @@
 			{ label: 'Videó', value: 'video' },
 			{ label: 'Rendezőasszisztens', value: 'rendezoasszisztens' },
 			{ label: 'Dramaturgasszisztens', value: 'dramaturgasszisztens' },
-			{ label: 'Fordító', value: 'fordito' }
+			{ label: 'Fordító', value: 'fordito' },
+			{ label: 'Alkotótárs', value: 'alkototars' },
+			{ label: 'Világítástervező', value: 'vilagitastervezo' },
+			{ label: 'Szakmai konzultáns', value: 'szakmai_konzultans' },
+			{ label: 'Videógrafika', value: 'videografika' },
+			{ label: 'Koreográfus', value: 'koreografus' },
+			{ label: 'Dalszöveg', value: 'dalszoveg' },
+			{ label: 'Konzultáns', value: 'konzultans' },
+			{ label: 'Zene', value: 'zene' },
+			{ label: 'Jelmez', value: 'jelmez' },
+			{ label: 'Díszlet', value: 'diszlet' },
+			{ label: 'Társastánc', value: 'tarstanc' },
+			{ label: 'Szcenikus', value: 'szcenikus' },
+			{ label: 'Konzultáns', value: 'konzultans' },
+			{ label: 'Rendező munkatársa', value: 'rendezo_munkatarsa' },
+			{ label: 'Társszerző', value: 'tarsszerzo' },
+			{ label: 'Producer', value: 'producer' }
 		];
 
 		return options.find((option) => option.value === value);
@@ -39,7 +55,9 @@
 	<div class="font-heavitas !font-normal text-4xl mb-6 mx-6">színlap</div>
 	<div class="lg:flex lg:space-x-6 space-y-4 lg:space-y-0 mx-6">
 		<div class="text-2xl font-bold font-sans">
-			Rendező: <span class="font-light">{rendezo.value.munkatars.value.name}</span>
+			{#if rendezo}
+				Rendező: <span class="font-light">{rendezo.value.munkatars.value.name}</span>
+			{/if}
 		</div>
 		<div class="text-2xl font-bold font-sans">
 			Bemutató: <span class="font-light">
