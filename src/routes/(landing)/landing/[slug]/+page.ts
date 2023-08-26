@@ -5,10 +5,12 @@ export async function load({ params }: any) {
 	const { data } = await api.get(`/eloadasok/slug/${params.slug}`, {
 		params: { depth: 6 }
 	});
+	const { data: partners } = await api.get('/partner');
 
 	return {
 		props: {
-			eloadasok: data
+			eloadasok: data,
+			partners: partners
 		}
 	};
 }

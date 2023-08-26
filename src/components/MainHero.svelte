@@ -4,6 +4,7 @@
 	import { onMount } from 'svelte';
 	export let heroes: any;
 
+	console.log(heroes);
 	onMount(() => {
 		register();
 		const swiperEl: any = document.querySelector('swiper-container');
@@ -120,8 +121,9 @@
 							<a href="/hirek" class="btn variant-filled-error text-white font-heavitas"
 								>jegyvásárlás</a
 							>
-							<a href="/hirek" class="btn variant-filled-error text-white font-heavitas"
-								>részletek</a
+							<a
+								href={`/eloadasok/${hero.hero.value.slug}`}
+								class="btn variant-filled-error text-white font-heavitas">részletek</a
 							>
 						</div>
 					</div>
