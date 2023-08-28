@@ -5,7 +5,7 @@
 	import { page } from '$app/stores';
 	export let data: PageData;
 	const pageMeta = data.props.pageMeta;
-	const eloadasok = data.props.eloadasok.docs;
+	const eloadasok = data.props.eloadasok;
 </script>
 
 <svelte:head>

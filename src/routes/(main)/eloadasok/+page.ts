@@ -7,9 +7,14 @@ export async function load() {
 	});
 	const { data: pageMeta } = await api.get('/globals/eloadasok-oldal');
 
+	console.log(pageMeta);
+
+	const eloadasok = pageMeta.eloadasok;
+	console.log(eloadasok);
+
 	return {
 		props: {
-			eloadasok: data,
+			eloadasok,
 			pageMeta: pageMeta
 		}
 	};
