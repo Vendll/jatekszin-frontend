@@ -23,7 +23,7 @@
 	>
 		{#each partners as partner (partner.id)}
 			<swiper-slide class="card !h-40 !w-40 bg-primary-500 p-4">
-				<img src={partner.logo.sizes.xlarge.url} alt="" class=" !h-40 !w-40 object-contain" />
+				<img src={partner.logo.sizes.medium.url} alt="" class=" !h-40 !w-40 object-contain" />
 			</swiper-slide>
 		{/each}
 	</swiper-container>
