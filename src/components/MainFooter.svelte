@@ -18,7 +18,7 @@
 					<Logo height={'7rem'} slideUp={false} width={'100%'} color={false} />
 				</div>
 				<a
-					aria-label="Budai Magánrendelő"
+					aria-label="A Játékszín egészségéről a Budai Magánorvosi Centrum gondoskodik"
 					href="https://budaimaganrendelo.hu/"
 					target="_blank"
 					class="text-sm leading-6 text-gray-300 hover:text-white"
@@ -26,7 +26,7 @@
 					A Játékszín egészségéről a Budai Magánorvosi Centrum gondoskodik
 				</a><br /><br />
 				<a
-					aria-label="Smart Food"
+					aria-label="A Játékszín tudatos étkezéséről a Smart Food gondoskodik"
 					href="https://smart-food.hu"
 					target="_blank"
 					class="text-sm leading-6 text-gray-300 hover:text-white"
@@ -99,7 +99,7 @@
 						<ul class="mt-6 space-y-4">
 							<li>
 								<a
-									aria-label="Cím"
+									aria-label="1066 Budapest, Teréz krt. 48."
 									href="/kapcsolat"
 									class="text-sm leading-6 text-gray-300 hover:text-white"
 									>1066 Budapest, Teréz krt. 48.</a
@@ -108,7 +108,7 @@
 
 							<li>
 								<a
-									aria-label="emailcím"
+									aria-label="info@jatekszin.hu"
 									href="mailto:info@jatekszin.hu"
 									class="text-sm leading-6 text-gray-300 hover:text-white">info@jatekszin.hu</a
 								>
@@ -116,7 +116,7 @@
 
 							<li>
 								<a
-									aria-label="telefon"
+									aria-label="+36 (1) 331-8925"
 									href="tel:+3613318925"
 									class="text-sm leading-6 text-gray-300 hover:text-white">+36 (1) 331-8925</a
 								>
