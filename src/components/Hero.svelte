@@ -39,6 +39,7 @@
 	>
 		<a
 			href="https://jatekszin.jegy.hu/"
+			target="_blank"
 			class="col-span-2 text-center text-3xl text-error-500 text-white-stroke">jegyvásárlás</a
 		>
 		<a use:scrollTo={{ ref: 'információk', offset: -50, duration: 1000 }} class="text-blue-stroke">

@@ -91,8 +91,10 @@
 						<div
 							class="absolute z-[-1] bg-primary-600 -top-4 lg:-top-6 bottom-20 lg:-bottom-2 -left-[100vw] right-[-100vw]"
 						/>
-						<a href="https://jatekszin.jegy.hu/" class=" col-span-2 text-center text-3xl text-white"
-							>jegyvásárlás</a
+						<a
+							href="https://jatekszin.jegy.hu/"
+							target="_blank"
+							class=" col-span-2 text-center text-3xl text-white">jegyvásárlás</a
 						>
 						<p use:scrollTo={{ ref: 'színlap', offset: -150, duration: 1000 }} class=" text-white">
 							színlap
