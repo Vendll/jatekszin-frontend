@@ -62,6 +62,12 @@
 	const otherInfo = eloadas.otherInfo;
 </script>
 
+{#if otherInfo}
+	<div class="mt-6 font-sans mx-6">
+		<Richtext content={otherInfo} />
+	</div>
+{/if}
+
 <div class="mt-4" use:scrollRef={'színlap'}>
 	<div class="font-heavitas !font-normal text-4xl mb-6 mx-6">színlap</div>
 	<div class="lg:flex lg:space-x-6 space-y-4 mb-6 lg:space-y-0 mx-6">
@@ -99,10 +105,6 @@
 				</span>
 			</div>
 		{/each}
-	</div>
-
-	<div class="mt-6 font-sans mx-6">
-		<Richtext content={otherInfo} />
 	</div>
 
 	<div use:scrollRef={'szereplők'} class="m-6 grid grid-cols-1 gap-4 lg:gap-8 lg:flex lg:flex-wrap">

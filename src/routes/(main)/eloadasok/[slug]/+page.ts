@@ -7,7 +7,7 @@ export async function load({ params }: any) {
 	});
 
 	const { data: musordata } = await api.get(`/musor/eloadasszerint/${data.docs[0].id}`);
-	const { data: partners } = await api.get('/partner');
+	const { data: partners } = await api.get('/partner', { params: { limit: 999999 } });
 
 	return {
 		props: {

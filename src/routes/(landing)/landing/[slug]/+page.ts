@@ -5,7 +5,7 @@ export async function load({ params }: any) {
 	const { data } = await api.get(`/eloadasok/slug/${params.slug}`, {
 		params: { depth: 6 }
 	});
-	const { data: partners } = await api.get('/partner');
+	const { data: partners } = await api.get('/partner', { params: { limit: 999999 } });
 
 	return {
 		props: {

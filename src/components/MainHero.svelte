@@ -3,6 +3,7 @@
 	import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 	import { onMount } from 'svelte';
 	export let heroes: any;
+	let loaded = false;
 
 	console.log(heroes);
 	onMount(() => {
@@ -35,6 +36,7 @@
 		Object.assign(swiperEl, params);
 
 		swiperEl.initialize();
+		loaded = true;
 	});
 </script>
 
@@ -70,67 +72,71 @@
 					class="landscape:hidden object-cover h-full w-full"
 					loading="lazy"
 				/>
-				<div
-					class:middleTop={hero.position === 'top-middle'}
-					class:middle={hero.position === 'middle'}
-					class:middleBottom={hero.position === 'bottom-middle'}
-					class:leftTop={hero.position === 'left-top'}
-					class:leftMiddle={hero.position === 'left-middle'}
-					class:leftBottom={hero.position === 'left-bottom'}
-					class:rightTop={hero.position === 'right-top'}
-					class:rightMiddle={hero.position === 'right-middle'}
-					class:rightBottom={hero.position === 'right-bottom'}
-					class="absolute inset-0 flex mt-20 mb-24 lg:my-40 mx-5 lg:mx-20 z-10"
-				>
+				{#if loaded}
 					<div
-						class:textLeft={hero.position === 'left-top' ||
-							hero.position === 'left-middle' ||
-							hero.position === 'left-bottom'}
-						class:textRight={hero.position === 'right-top' ||
-							hero.position === 'right-middle' ||
-							hero.position === 'right-bottom'}
+						class:middleTop={hero.position === 'top-middle'}
+						class:middle={hero.position === 'middle'}
+						class:middleBottom={hero.position === 'bottom-middle'}
+						class:leftTop={hero.position === 'left-top'}
+						class:leftMiddle={hero.position === 'left-middle'}
+						class:leftBottom={hero.position === 'left-bottom'}
+						class:rightTop={hero.position === 'right-top'}
+						class:rightMiddle={hero.position === 'right-middle'}
+						class:rightBottom={hero.position === 'right-bottom'}
+						class="absolute inset-0 flex mt-20 mb-24 lg:my-40 mx-5 lg:mx-20 z-10"
 					>
-						{#if hero.hero.value.author}
-							<h1
-								class="lowercase text-error-500 my-2 text-xl md:text-5xl white-stroke font-heavitas"
-							>
-								{hero.hero.value.author}
-							</h1>
-						{/if}
-						{#if !hero.hero.value.author}
-							<h1
-								class="lowercase text-error-500 my-2 max-w-3xl text-2xl md:text-6xl white-stroke font-heavitas"
-							>
-								{hero.hero.value.title}
-							</h1>
-						{:else}
-							<h1 class="lowercase text-error-500 text-3xl md:text-6xl white-stroke font-heavitas">
-								{hero.hero.value.title}
-							</h1>
-						{/if}
 						<div
-							class="gap-4 flex mt-4"
-							class:btnCenter={hero.position === 'top-middle' ||
-								hero.position === 'bottom-middle' ||
-								hero.position === 'middle'}
-							class:btnLeft={hero.position === 'left-top' ||
+							class:textLeft={hero.position === 'left-top' ||
 								hero.position === 'left-middle' ||
 								hero.position === 'left-bottom'}
-							class:btnRight={hero.position === 'right-top' ||
+							class:textRight={hero.position === 'right-top' ||
 								hero.position === 'right-middle' ||
 								hero.position === 'right-bottom'}
 						>
-							<a
-								href="https://jatekszin.jegy.hu/"
-								class="btn variant-filled-error text-white font-heavitas">jegyvásárlás</a
+							{#if hero.hero.value.author}
+								<h1
+									class="lowercase text-error-500 my-2 text-xl md:text-5xl white-stroke font-heavitas"
+								>
+									{hero.hero.value.author}
+								</h1>
+							{/if}
+							{#if !hero.hero.value.author}
+								<h1
+									class="lowercase text-error-500 my-2 max-w-3xl text-2xl md:text-6xl white-stroke font-heavitas"
+								>
+									{hero.hero.value.title}
+								</h1>
+							{:else}
+								<h1
+									class="lowercase text-error-500 text-3xl md:text-6xl white-stroke font-heavitas"
+								>
+									{hero.hero.value.title}
+								</h1>
+							{/if}
+							<div
+								class="gap-4 flex mt-4"
+								class:btnCenter={hero.position === 'top-middle' ||
+									hero.position === 'bottom-middle' ||
+									hero.position === 'middle'}
+								class:btnLeft={hero.position === 'left-top' ||
+									hero.position === 'left-middle' ||
+									hero.position === 'left-bottom'}
+								class:btnRight={hero.position === 'right-top' ||
+									hero.position === 'right-middle' ||
+									hero.position === 'right-bottom'}
 							>
-							<a
-								href={`/eloadasok/${hero.hero.value.slug}`}
-								class="btn variant-filled-error text-white font-heavitas">részletek</a
-							>
+								<a
+									href="https://jatekszin.jegy.hu/"
+									class="btn variant-filled-error text-white font-heavitas">jegyvásárlás</a
+								>
+								<a
+									href={`/eloadasok/${hero.hero.value.slug}`}
+									class="btn variant-filled-error text-white font-heavitas">részletek</a
+								>
+							</div>
 						</div>
 					</div>
-				</div>
+				{/if}
 			</swiper-slide>
 		{/each}
 	</swiper-container>
