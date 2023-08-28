@@ -1,10 +1,11 @@
 <script lang="ts">
 	import { scrollRef } from 'svelte-scrolling';
 	import Time from 'svelte-time';
+	import Richtext from './Richtext.svelte';
 
-	export let eloadas;
+	export let eloadas: any;
 
-	function findPosition(value) {
+	function findPosition(value: any) {
 		const options = [
 			{ label: 'Rendező', value: 'rendezo' },
 			{ label: 'Dramaturg', value: 'dramaturg' },
@@ -43,16 +44,40 @@
 		return options.find((option) => option.value === value);
 	}
 
+	function durationFormatter(value: any) {
+		const hours = Math.floor(value / 60);
+		const minutes = value % 60;
+
+		return `${hours} óra ${minutes} perc`;
+	}
+
 	const rendezo = eloadas.kozremukodok.find(
-		(kozremukodo) => kozremukodo.value.pozicio === 'rendezo'
+		(kozremukodo: any) => kozremukodo.value.pozicio === 'rendezo'
 	);
 	const kozremukodok = eloadas.kozremukodok.filter(
-		(kozremukodo) => kozremukodo.value.pozicio !== 'rendezo'
+		(kozremukodo: any) => kozremukodo.value.pozicio !== 'rendezo'
 	);
+	const eloadasHossza = eloadas.eloadasHossza;
+	const szunetekSzama = eloadas.szunetekSzama;
+	const otherInfo = eloadas.otherInfo;
 </script>
 
 <div class="mt-4" use:scrollRef={'színlap'}>
 	<div class="font-heavitas !font-normal text-4xl mb-6 mx-6">színlap</div>
+	<div class="lg:flex lg:space-x-6 space-y-4 mb-6 lg:space-y-0 mx-6">
+		<div class="text-2xl font-bold font-sans">
+			{#if eloadasHossza}
+				Előadás hossza: <span class="font-light">{durationFormatter(eloadasHossza)}</span>
+			{/if}
+		</div>
+		<div class="text-2xl font-bold font-sans">
+			{#if szunetekSzama}
+				Szünetek száma: <span class="font-light">
+					{szunetekSzama}
+				</span>
+			{/if}
+		</div>
+	</div>
 	<div class="lg:flex lg:space-x-6 space-y-4 lg:space-y-0 mx-6">
 		<div class="text-2xl font-bold font-sans">
 			{#if rendezo}
@@ -65,15 +90,19 @@
 			</span>
 		</div>
 	</div>
-	<div class="lg:flex lg:gap-x-6 space-y-4 lg:space-y-0 lg:flex-wrap mx-6">
+	<div class="lg:flex lg:gap-x-6 space-y-4 lg:space-y-0 lg:flex-wrap mt-6 mx-6">
 		{#each kozremukodok as kozremukodo}
 			<div class="text-2xl font-bold font-sans">
-				{findPosition(kozremukodo.value.pozicio).label}:
-				<span class="font-light">
+				{findPosition(kozremukodo.value.pozicio)?.label}:
+				<span class="font-light !capitalize">
 					{kozremukodo.value.munkatars.value.name}
 				</span>
 			</div>
 		{/each}
+	</div>
+
+	<div class="mt-6 font-sans mx-6">
+		<Richtext content={otherInfo} />
 	</div>
 
 	<div use:scrollRef={'szereplők'} class="m-6 grid grid-cols-1 gap-4 lg:gap-8 lg:flex lg:flex-wrap">
