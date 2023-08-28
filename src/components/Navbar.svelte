@@ -72,11 +72,12 @@
 		: 1});  transition: opacity 0.5s ease;"
 >
 	<div class="flex justify-between lg:justify-evenly max-w-7xl mx-auto items-center">
-		<a href="/" class="block">
+		<a aria-label="Kezdőlap" href="/" class="block">
 			<Logo color={navColor} height={'6rem'} slideUp={false} width={'15rem'} />
 		</a>
 		{#each navItems.navItems as item}
 			<a
+				aria-label={item.title}
 				href={item.link}
 				class="hidden lg:block text-white hover:text-white-stroke transition-color duration-300 ease-in-out"
 				class:navColor
@@ -85,6 +86,7 @@
 			</a>
 		{/each}
 		<a
+			aria-label="Facebook"
 			target="_blank"
 			class="hidden lg:block text-white text-xl cursor-pointer"
 			class:navColor
@@ -97,6 +99,7 @@
 			/>
 		</a>
 		<a
+			aria-label="Instagram"
 			href={navItems.instagramLink}
 			target="_blank"
 			class="hidden lg:block text-white text-xl cursor-pointer"
@@ -109,6 +112,7 @@
 			/>
 		</a>
 		<a
+			aria-label="Tiktok"
 			href={navItems.tiktokLink}
 			target="_blank"
 			class="hidden lg:block text-white text-xl cursor-pointer"
@@ -121,6 +125,7 @@
 			/>
 		</a>
 		<a
+			aria-label="Mailchimp"
 			href={navItems.mailchimpLink}
 			target="_blank"
 			class="hidden lg:block text-white text-xl"
@@ -133,12 +138,17 @@
 			/>
 		</a>
 		<a
+			aria-label="Jegyvásárlás"
 			href={navItems.jegyLink}
 			class="hidden lg:block btn variant-filled-error text-white font-heavitas"
 		>
 			jegyvásárlás
 		</a>
-		<button on:click={() => drawerStore.open(drawerSettings)} class="block lg:hidden text-xl mr-10">
+		<button
+			aria-label="Mobil menü"
+			on:click={() => drawerStore.open(drawerSettings)}
+			class="block lg:hidden text-xl mr-10"
+		>
 			<Icon color={navColor ? 'rgb(37,64,143)' : 'white'} src={FaSolidBars} />
 		</button>
 	</div>
