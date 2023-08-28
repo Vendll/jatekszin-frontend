@@ -18,13 +18,15 @@
 					<Logo height={'7rem'} slideUp={false} width={'100%'} color={false} />
 				</div>
 				<a
+					aria-label="Budai Magánrendelő"
 					href="https://budaimaganrendelo.hu/"
 					target="_blank"
 					class="text-sm leading-6 text-gray-300 hover:text-white"
 				>
 					A Játékszín egészségéről a Budai Magánorvosi Centrum gondoskodik
-				</a><br />
+				</a><br /><br />
 				<a
+					aria-label="Smart Food"
 					href="https://smart-food.hu"
 					target="_blank"
 					class="text-sm leading-6 text-gray-300 hover:text-white"
@@ -33,6 +35,7 @@
 				</a>
 				<div class="flex justify-between">
 					<a
+						aria-label="Facebook"
 						class="justify-center flex"
 						href={navItems.facebookLink}
 						target="_blank"
@@ -41,6 +44,7 @@
 						<Icon color="white" className="text-3xl" src={FaBrandsFacebook} />
 					</a>
 					<a
+						aria-label="Instagram"
 						class="justify-center flex"
 						href={navItems.instagramLink}
 						target="_blank"
@@ -49,6 +53,7 @@
 						<Icon color="white" className="text-3xl" src={FaBrandsInstagram} />
 					</a>
 					<a
+						aria-label="Youtube"
 						class="justify-center flex"
 						href={navItems.youtubeLink}
 						target="_blank"
@@ -57,6 +62,7 @@
 						<Icon color="white" className="text-3xl" src={FaBrandsYoutube} />
 					</a>
 					<a
+						aria-label="Tiktok"
 						class="justify-center flex"
 						href={navItems.tiktokLink}
 						target="_blank"
@@ -72,14 +78,18 @@
 						<h3 class="text-sm font-semibold leading-6 text-white">Hasznos linkek</h3>
 						<ul class="mt-6 space-y-4">
 							<li>
-								<a href="/impresszum" class="text-sm leading-6 text-gray-300 hover:text-white"
-									>IMPRESSZUM</a
+								<a
+									aria-label="IMPRESSZUM"
+									href="/impresszum"
+									class="text-sm leading-6 text-gray-300 hover:text-white">IMPRESSZUM</a
 								>
 							</li>
 
 							<li>
-								<a href="/kozadatok" class="text-sm leading-6 text-gray-300 hover:text-white"
-									>KÖZADATOK</a
+								<a
+									aria-label="KÖZADATOK"
+									href="/kozadatok"
+									class="text-sm leading-6 text-gray-300 hover:text-white">KÖZADATOK</a
 								>
 							</li>
 						</ul>
@@ -88,21 +98,27 @@
 						<h3 class="text-sm font-semibold leading-6 text-white">Elérhetőségek:</h3>
 						<ul class="mt-6 space-y-4">
 							<li>
-								<a href="/kapcsolat" class="text-sm leading-6 text-gray-300 hover:text-white"
+								<a
+									aria-label="Cím"
+									href="/kapcsolat"
+									class="text-sm leading-6 text-gray-300 hover:text-white"
 									>1066 Budapest, Teréz krt. 48.</a
 								>
 							</li>
 
 							<li>
 								<a
+									aria-label="emailcím"
 									href="mailto:info@jatekszin.hu"
 									class="text-sm leading-6 text-gray-300 hover:text-white">info@jatekszin.hu</a
 								>
 							</li>
 
 							<li>
-								<a href="tel:+3613318925" class="text-sm leading-6 text-gray-300 hover:text-white"
-									>+36 (1) 331-8925</a
+								<a
+									aria-label="telefon"
+									href="tel:+3613318925"
+									class="text-sm leading-6 text-gray-300 hover:text-white">+36 (1) 331-8925</a
 								>
 							</li>
 						</ul>
@@ -112,6 +128,7 @@
 						<ul class="mt-6 space-y-4">
 							<li>
 								<a
+									aria-label="ADATKEZELÉSI TÁJÉKOZTATÓ"
 									href="/adatkezelesi-szabalyzat"
 									class="text-sm leading-6 text-gray-300 hover:text-white"
 									>ADATKEZELÉSI TÁJÉKOZTATÓ</a
@@ -120,6 +137,7 @@
 
 							<li>
 								<a
+									aria-label="KÉP ÉS HANGFELVÉTEL"
 									href="/kep-es-hangfelvetel"
 									class="text-sm leading-6 text-gray-300 hover:text-white">KÉP ÉS HANGFELVÉTEL</a
 								>
@@ -127,6 +145,7 @@
 
 							<li>
 								<a
+									aria-label="NYEREMÉNYJÁTÉK SZABÁLYZATOK"
 									href="/nyeremenyjatek-szabalyzatok"
 									class="text-sm leading-6 text-gray-300 hover:text-white"
 									>NYEREMÉNYJÁTÉK SZABÁLYZATOK</a
