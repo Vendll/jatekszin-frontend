@@ -99,7 +99,7 @@
 						<ul class="mt-6 space-y-4">
 							<li>
 								<a
-									aria-label="Cím"
+									aria-label="1066 Budapest, Teréz krt. 48."
 									href="/kapcsolat"
 									class="text-sm leading-6 text-gray-300 hover:text-white"
 									>1066 Budapest, Teréz krt. 48.</a
@@ -108,7 +108,7 @@
 
 							<li>
 								<a
-									aria-label="emailcím"
+									aria-label="info@jatekszin.hu"
 									href="mailto:info@jatekszin.hu"
 									class="text-sm leading-6 text-gray-300 hover:text-white">info@jatekszin.hu</a
 								>
@@ -116,7 +116,7 @@
 
 							<li>
 								<a
-									aria-label="telefon"
+									aria-label="+36 (1) 331-8925"
 									href="tel:+3613318925"
 									class="text-sm leading-6 text-gray-300 hover:text-white">+36 (1) 331-8925</a
 								>

@@ -58,7 +58,7 @@
 									<div class="flex gap-x-3 mt-2">
 										<dt class="sr-only">Név</dt>
 										<Icon className="h-5 w-5 fill-white" src={FaSolidUser} />
-										<dd>contactInfo.name</dd>
+										<dd>{contactInfo.name}</dd>
 									</div>
 								{/if}
 								{#if contactInfo.address}
