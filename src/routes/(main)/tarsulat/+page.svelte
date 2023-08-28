@@ -5,7 +5,21 @@
 	let tabSet: number = 0;
 	export let data: any;
 	const { commonPage } = data.props;
-	console.log(commonPage);
+	const munkatarsak = data.props.munkatarsak.docs;
+
+	console.log(munkatarsak);
+
+	const színészek = munkatarsak.filter((munkatars: any) => munkatars.szinesz === true);
+	const alkotok = munkatarsak.filter((munkatars: any) => munkatars.alkoto === true);
+	const vezetoseg = munkatarsak.filter((munkatars: any) => munkatars.vezetoseg === true);
+	const altalanosMunkatarsak = munkatarsak.filter(
+		(munkatars: any) =>
+			munkatars.szinesz !== true && munkatars.alkoto !== true && munkatars.vezetoseg !== true
+	);
+	console.log(színészek);
+	console.log(alkotok);
+	console.log(vezetoseg);
+	console.log(altalanosMunkatarsak);
 </script>
 
 <svelte:head>
@@ -34,6 +48,7 @@
 		</h1>
 	</div>
 </div>
+
 <div class="relative overflow-hidden max-w-6xl mx-auto my-8">
 	<section class="w-full card bg-surface-200 p-4 text-token">
 		<TabGroup>
@@ -67,27 +82,75 @@
 			<svelte:fragment slot="panel">
 				{#if tabSet === 0}
 					<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-						<div class="card relative aspect-square">színés</div>
-						<div class="card relative aspect-square">színés</div>
-						<div class="card relative aspect-square">színés</div>
-						<div class="card relative aspect-square">színés</div>
-						<div class="card relative aspect-square">színés</div>
-						<div class="card relative aspect-square">színés</div>
-						<div class="card relative aspect-square">színés</div>
-						<div class="card relative aspect-square">színés</div>
-						<div class="card relative aspect-square">színés</div>
-						<div class="card relative aspect-square">színés</div>
-						<div class="card relative aspect-square">színés</div>
-						<div class="card relative aspect-square">színés</div>
-						<div class="card relative aspect-square">színés</div>
-						<div class="card relative aspect-square">színés</div>
+						{#each színészek as szinesz}
+							<div class="card relative aspect-square overflow-hidden">
+								{#if szinesz.thumbnail}
+									<img
+										class="absolute inset-0 object-contain"
+										src={szinesz.thumbnail?.sizes.medium.url}
+										alt=""
+									/>
+								{/if}
+								<span class="absolute bottom-4 left-4 text-white">
+									{szinesz.name}
+								</span>
+							</div>
+						{/each}
 					</div>
 				{:else if tabSet === 1}
-					(tab panel 2 contents)
+					<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+						{#each alkotok as alkoto}
+							<div
+								class="card bg-primary-500 text-center py-2 px-4 text-white relative overflow-hidden"
+							>
+								{#if alkoto.thumbnail}
+									<img
+										class="absolute inset-0 object-contain"
+										src={alkoto.thumbnail?.sizes.medium.url}
+										alt=""
+									/>
+								{/if}
+
+								{alkoto.name}
+							</div>
+						{/each}
+					</div>
 				{:else if tabSet === 2}
-					(tab panel 3 contents)
+					<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+						{#each altalanosMunkatarsak as munkatars}
+							<div
+								class="card bg-primary-500 text-center py-2 px-4 text-white relative overflow-hidden"
+							>
+								{#if munkatars.thumbnail}
+									<img
+										class="absolute inset-0 object-contain"
+										src={munkatars.thumbnail?.sizes.medium.url}
+										alt=""
+									/>
+								{/if}
+
+								{munkatars.name}
+							</div>
+						{/each}
+					</div>
 				{:else if tabSet === 3}
-					(tab panel 4 contents)
+					<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+						{#each vezetoseg as vezeto}
+							<div
+								class="card bg-primary-500 text-center py-2 px-4 text-white relative overflow-hidden"
+							>
+								{#if vezeto.thumbnail}
+									<img
+										class="absolute inset-0 object-contain"
+										src={vezeto.thumbnail?.sizes.medium.url}
+										alt=""
+									/>
+								{/if}
+
+								{vezeto.name}
+							</div>
+						{/each}
+					</div>
 				{/if}
 			</svelte:fragment>
 		</TabGroup>
