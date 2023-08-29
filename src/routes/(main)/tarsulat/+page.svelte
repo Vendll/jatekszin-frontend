@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { TabGroup, Tab, TabAnchor } from '@skeletonlabs/skeleton';
+	import person from '$lib/assets/person-jatekszin.webp';
 	import { PUBLIC_SITE_URL } from '$env/static/public';
 	import { page } from '$app/stores';
 	let tabSet: number = 0;
@@ -88,8 +89,10 @@
 									<img
 										class="absolute inset-0 object-contain"
 										src={szinesz.thumbnail?.sizes.medium.url}
-										alt=""
+										alt={szinesz.name}
 									/>
+								{:else}
+									<img src={person} alt={szinesz.name} class="absolute inset-0 object-contain" />
 								{/if}
 								<span class="absolute bottom-4 left-4 text-white">
 									{szinesz.name}
@@ -147,7 +150,8 @@
 									/>
 								{/if}
 
-								{vezeto.name}
+								{vezeto.name} <br />
+								{vezeto.titulus}
 							</div>
 						{/each}
 					</div>

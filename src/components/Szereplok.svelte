@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { scrollRef } from 'svelte-scrolling';
 	export let eloadas: any;
+	import person from '$lib/assets/person-jatekszin.webp';
 </script>
 
 <div use:scrollRef={'szereplők'} class="font-heavitas !font-normal text-4xl mb-6 mx-6">
@@ -11,11 +12,15 @@
 		<div
 			class="w-full h-full relative aspect-square lg:w-96 lg:h-96 overflow-hidden rounded-md flex flex-col justify-end px-6 py-3 bg-gray-300"
 		>
-			<img
-				src={szereplo.value.szinesz.value.thumbnail?.sizes.medium.url}
-				alt={szereplo.value.name}
-				class="absolute inset-0 rounded-md object-contain w-full object-center z-0"
-			/>
+			{#if !szereplo.value.szinesz.value.thumbnail}
+				<img src={person} alt="" class="absolute inset-0 rounded-md object-center z-1" />
+			{:else}
+				<img
+					src={szereplo.value.szinesz.value.thumbnail?.sizes.medium.url}
+					alt={szereplo.value.name}
+					class="absolute inset-0 rounded-md object-contain w-full object-center z-0"
+				/>
+			{/if}
 			<div class="z-10 text-error-500 text-xl lg:text-xl text-white-stroke-thin font-heavitas">
 				{szereplo.value.name}
 			</div>
