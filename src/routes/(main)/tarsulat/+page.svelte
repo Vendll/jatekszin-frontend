@@ -83,7 +83,7 @@
 				{#if tabSet === 0}
 					<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
 						{#each színészek as szinesz}
-							<div class="card relative aspect-square overflow-hidden">
+							<div class="card relative aspect-square overflow-hidden uppercase">
 								{#if szinesz.thumbnail}
 									<img
 										class="absolute inset-0 object-contain"
@@ -101,7 +101,7 @@
 					<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
 						{#each alkotok as alkoto}
 							<div
-								class="card bg-primary-500 text-center py-2 px-4 text-white relative overflow-hidden"
+								class="card bg-primary-500 text-center py-2 px-4 text-white relative overflow-hidden uppercase"
 							>
 								{#if alkoto.thumbnail}
 									<img
@@ -119,7 +119,7 @@
 					<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
 						{#each altalanosMunkatarsak as munkatars}
 							<div
-								class="card bg-primary-500 text-center py-2 px-4 text-white relative overflow-hidden"
+								class="card bg-primary-500 text-center py-2 px-4 text-white relative overflow-hidden uppercase"
 							>
 								{#if munkatars.thumbnail}
 									<img
@@ -137,7 +137,7 @@
 					<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
 						{#each vezetoseg as vezeto}
 							<div
-								class="card bg-primary-500 text-center py-2 px-4 text-white relative overflow-hidden"
+								class="card bg-primary-500 text-center py-2 px-4 text-white relative overflow-hidden uppercase"
 							>
 								{#if vezeto.thumbnail}
 									<img
