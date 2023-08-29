@@ -2,6 +2,7 @@
 	import { scrollRef } from 'svelte-scrolling';
 	import Time from 'svelte-time';
 	import Richtext from './Richtext.svelte';
+	import person from '$lib/assets/person-jatekszin.webp';
 
 	export let eloadas: any;
 
@@ -112,11 +113,15 @@
 			<div
 				class="w-full h-full aspect-square lg:w-96 lg:h-96 overflow-hidden rounded-md flex flex-col relative justify-end px-6 py-3 bg-gray-300"
 			>
-				<img
-					src={szereplo.value.szinesz.value.thumbnail?.sizes.medium.url}
-					alt=""
-					class="absolute inset-0 rounded-md object-center z-0"
-				/>
+				{#if !szereplo.value.szinesz.value.thumbnail}
+					<img src={person} alt="" class="absolute inset-0 rounded-md object-center z-1" />
+				{:else}
+					<img
+						src={szereplo.value.szinesz.value.thumbnail?.sizes.medium.url}
+						alt=""
+						class="absolute inset-0 rounded-md object-center z-0"
+					/>
+				{/if}
 				<div class="z-10 text-error-500 text-xl lg:text-xl text-white-stroke-thin font-heavitas">
 					{szereplo.value.name}
 				</div>
