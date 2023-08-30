@@ -114,12 +114,12 @@
 				class="w-full h-full aspect-square lg:w-96 lg:h-96 overflow-hidden rounded-md flex flex-col relative justify-end px-6 py-3 bg-gray-300"
 			>
 				{#if !szereplo.value.szinesz.value.thumbnail}
-					<img src={person} alt="" class="absolute inset-0 rounded-md object-center z-1" />
+					<img src={person} alt="" class="absolute w-full inset-0 rounded-md object-center z-1" />
 				{:else}
 					<img
 						src={szereplo.value.szinesz.value.thumbnail?.sizes.medium.url}
 						alt=""
-						class="absolute inset-0 rounded-md object-center z-0"
+						class="absolute w-full inset-0 rounded-md object-center z-0"
 					/>
 				{/if}
 				<div class="z-10 text-error-500 text-xl lg:text-xl text-white-stroke-thin font-heavitas">

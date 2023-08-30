@@ -170,8 +170,8 @@
 							<div class="card relative aspect-square overflow-hidden">
 								{#if szinesz.thumbnail}
 									<img
-										class="absolute inset-0 object-contain"
-										src={szinesz.thumbnail?.sizes.medium.url}
+										class="absolute inset-0 object-contain brightness-90"
+										src={szinesz.thumbnail?.sizes.small.url}
 										alt={szinesz.name}
 									/>
 								{:else}
