@@ -8,19 +8,101 @@
 	const { commonPage } = data.props;
 	const munkatarsak = data.props.munkatarsak.docs;
 
-	console.log(munkatarsak);
+	const categories = {
+		vezetoseg: [],
+		szinesz: [],
+		alkoto: [],
+		altalanosMunkatarsak: []
+	};
+	const subcategories = {
+		alkoto: [
+			'dalszovegiro',
+			'diszlettervezo',
+			'dramaturg',
+			'jelmeztervezo',
+			'karmester',
+			'koreografus',
+			'rendezo',
+			'szovegiro',
+			'vilagitastervezo'
+		],
+		altalanosMunkatarsak: [
+			'muvugykezeles',
+			'gazdasagi',
+			'tajszervezes',
+			'szervezes',
+			'kommunikacio',
+			'kellekes',
+			'muszakivez',
+			'diszito',
+			'fodraszat',
+			'oltoztetok',
+			'vilagosito',
+			'hangosito',
+			'bufe',
+			'portasok',
+			'nezoterimunkatars',
+			'takarito'
+		]
+	};
+	type Workforce = {
+		id: string;
+		name: string;
+		createdAt: string;
+		updatedAt: string;
+		[key: string]: string | boolean;
+	}[];
 
-	const színészek = munkatarsak.filter((munkatars: any) => munkatars.szinesz === true);
-	const alkotok = munkatarsak.filter((munkatars: any) => munkatars.alkoto === true);
-	const vezetoseg = munkatarsak.filter((munkatars: any) => munkatars.vezetoseg === true);
-	const altalanosMunkatarsak = munkatarsak.filter(
-		(munkatars: any) =>
-			munkatars.szinesz !== true && munkatars.alkoto !== true && munkatars.vezetoseg !== true
-	);
-	console.log(színészek);
-	console.log(alkotok);
-	console.log(vezetoseg);
-	console.log(altalanosMunkatarsak);
+	type Subcategories = {
+		alkoto: string[];
+		altalanosMunkatarsak: string[];
+	};
+
+	type CategorizedWorkforce = {
+		vezetoseg: Workforce;
+		szinesz: Workforce;
+		alkoto: { [key: string]: Workforce };
+		altalanosMunkatarsak: { [key: string]: Workforce };
+	};
+	function categorizeWorkforce(workforce: Workforce): CategorizedWorkforce {
+		const categorizedWorkforce: CategorizedWorkforce = {
+			vezetoseg: [],
+			szinesz: [],
+			alkoto: {},
+			altalanosMunkatarsak: {}
+		};
+
+		// Initialize subcategories
+		subcategories.alkoto.forEach((subcat) => {
+			categorizedWorkforce.alkoto[subcat] = [];
+		});
+		subcategories.altalanosMunkatarsak.forEach((subcat) => {
+			categorizedWorkforce.altalanosMunkatarsak[subcat] = [];
+		});
+
+		workforce.forEach((person) => {
+			for (const category in categorizedWorkforce) {
+				if (category !== 'alkoto' && category !== 'altalanosMunkatarsak' && person[category]) {
+					categorizedWorkforce[category as 'vezetoseg' | 'szinesz'].push(person);
+				}
+			}
+			for (const subcategory in subcategories) {
+				(subcategories[subcategory as 'alkoto' | 'altalanosMunkatarsak'] as string[]).forEach(
+					(subcat) => {
+						if (person[subcat]) {
+							categorizedWorkforce[subcategory as 'alkoto' | 'altalanosMunkatarsak'][subcat].push(
+								person
+							);
+						}
+					}
+				);
+			}
+		});
+
+		return categorizedWorkforce;
+	}
+
+	const workforce = categorizeWorkforce(munkatarsak);
 </script>
 
 <svelte:head>
