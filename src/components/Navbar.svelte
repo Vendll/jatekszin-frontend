@@ -77,6 +77,7 @@
 		</a>
 		{#each navItems.navItems as item}
 			<a
+				data-sveltekit-preload-data="hover"
 				aria-label={item.title}
 				href={item.link}
 				class="hidden lg:block text-white hover:text-white-stroke transition-color duration-300 ease-in-out"
