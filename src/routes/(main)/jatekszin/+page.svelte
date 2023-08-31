@@ -5,7 +5,6 @@
 	import type { PageData } from './$types';
 	export let data: any;
 	const { commonPage } = data.props;
-	console.log(commonPage);
 </script>
 
 <svelte:head>

@@ -42,7 +42,6 @@
 				},
 				events: show,
 				eventContent: function (args: any, event: any, createElement: any) {
-					console.log(args.event._def);
 					let jegyLink;
 
 					if (args.event._def.extendedProps.zartkoru) {

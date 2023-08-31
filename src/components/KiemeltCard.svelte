@@ -26,7 +26,6 @@
 			hovered = false;
 		}, 500);
 	}
-	console.log(ke);
 </script>
 
 <li
