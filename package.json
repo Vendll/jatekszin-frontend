@@ -23,7 +23,6 @@
 		"@types/escape-html": "^1.0.2",
 		"@typescript-eslint/eslint-plugin": "^5.45.0",
 		"@typescript-eslint/parser": "^5.45.0",
-		"@vite-pwa/sveltekit": "^0.2.5",
 		"autoprefixer": "^10.4.15",
 		"dayjs": "^1.11.9",
 		"eslint": "^8.28.0",
