@@ -99,6 +99,21 @@
 			}
 		});
 
+		// Sort each category and subcategory by name
+		for (const category in categorizedWorkforce) {
+			if (category === 'alkoto' || category === 'altalanosMunkatarsak') {
+				for (const subcat in categorizedWorkforce[category as 'alkoto' | 'altalanosMunkatarsak']) {
+					categorizedWorkforce[category as 'alkoto' | 'altalanosMunkatarsak'][subcat].sort((a, b) =>
+						a.name.localeCompare(b.name)
+					);
+				}
+			} else {
+				categorizedWorkforce[category as 'vezetoseg' | 'szinesz'].sort((a, b) =>
+					a.name.localeCompare(b.name)
+				);
+			}
+		}
+
 		return categorizedWorkforce;
 	}
 
