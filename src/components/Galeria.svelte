@@ -45,11 +45,11 @@
 		<!-- Full Images -->
 		<div
 			bind:this={elemCarousel}
-			class="snap-x snap-mandatory scroll-smooth flex gap-x-4 overflow-x-auto"
+			class="snap-x snap-mandatory scroll-smooth h-screen flex gap-x-4 overflow-x-auto"
 		>
 			{#each eloadas.galeria as image (image.id)}
 				<img
-					class="snap-center w-full h-full rounded-container-token"
+					class="snap-center w-full h-full object-contain rounded-container-token"
 					src={image.image.sizes.medium.url}
 					alt={image.image.alt}
 					loading="lazy"
