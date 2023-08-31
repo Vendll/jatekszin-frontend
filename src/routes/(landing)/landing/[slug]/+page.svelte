@@ -5,6 +5,7 @@
 	import Trailer from '$components/Trailer.svelte';
 	import Galeria from '$components/Galeria.svelte';
 	import Tamogatoink from '$components/Tamogatoink.svelte';
+	import Szinlap from '$components/Szinlap.svelte';
 	import Footer from '$components/Footer.svelte';
 	import { onMount } from 'svelte';
 	import type { PageData } from './$types';

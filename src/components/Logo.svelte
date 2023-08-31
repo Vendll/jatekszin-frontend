@@ -6,7 +6,7 @@
 </script>
 
 <svg
-	class="fill-white transition-color duration-300 ease-in-out"
+	class="fill-white text-stroke transition-color duration-300 ease-in-out"
 	class:color
 	class:slideUp
 	{width}
@@ -30,5 +30,7 @@
 	}
 	.color {
 		fill: rgb(var(--color-primary-500));
+		stroke: #fff;
+		stroke-width: 10px;
 	}
 </style>
