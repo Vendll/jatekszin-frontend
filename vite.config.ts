@@ -1,7 +1,6 @@
 import { sveltekit } from '@sveltejs/kit/vite';
 import { defineConfig } from 'vite';
 import { SvelteKitPWA } from '@vite-pwa/sveltekit';
-import { generateSW } from './pwa.mjs';
 
 export default defineConfig({
 	plugins: [
@@ -19,7 +18,7 @@ export default defineConfig({
 				start_url: '/',
 				scope: '/',
 				display: 'standalone',
-				theme_color: '#ffffff',
+				theme_color: '#25408F',
 				background_color: '#ffffff',
 				icons: [
 					{
