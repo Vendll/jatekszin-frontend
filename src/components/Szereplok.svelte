@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { scrollRef } from 'svelte-scrolling';
+	import Richtext from './Richtext.svelte';
 	export let eloadas: any;
 	import person from '$lib/assets/person-jatekszin.webp';
 </script>
@@ -28,3 +29,8 @@
 		</div>
 	{/each}
 </div>
+{#if eloadas.szereplokSzoveges}
+	<div class="mt-6 font-sans mx-6">
+		<Richtext content={eloadas.szereplokSzoveges} />
+	</div>
+{/if}

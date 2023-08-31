@@ -129,4 +129,9 @@
 			</div>
 		{/each}
 	</div>
+	{#if eloadas.szereplokSzoveges}
+		<div class="mt-6 font-sans mx-6">
+			<Richtext content={eloadas.szereplokSzoveges} />
+		</div>
+	{/if}
 </div>
