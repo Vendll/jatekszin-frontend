@@ -43,7 +43,7 @@
 			{#if eloadas?.video}
 				<Trailer {eloadas} />
 			{/if}
-			<Galeria {eloadas} />
+			<Galeria galleryID="galery" {eloadas} />
 			<Tamogatoink {partners} />
 		</div>
 		<Footer />

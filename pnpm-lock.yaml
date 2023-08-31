@@ -20,6 +20,9 @@ dependencies:
   escape-html:
     specifier: ^1.0.3
     version: 1.0.3
+  photoswipe:
+    specifier: ^5.3.8
+    version: 5.3.8
   slate:
     specifier: ^0.94.1
     version: 0.94.1
@@ -2005,6 +2008,11 @@ packages:
     resolution: {integrity: sha512-gDKb8aZMDeD/tZWs9P6+q0J9Mwkdl6xMV8TjnGP3qJVJ06bdMgkbBlLU8IdfOsIsFz2BW1rNVT3XuNEl8zPAvw==}
     engines: {node: '>=8'}
     dev: true
+
+  /photoswipe@5.3.8:
+    resolution: {integrity: sha512-4vTzOQt8GP4Chsm0s+8j2xDtVHAEN252PxrU12A1zXauNn0zD5HRHgjALKO2GKTyBnTnOrJUOxbV8LTrFIMrYw==}
+    engines: {node: '>= 0.12.0'}
+    dev: false
 
   /picocolors@1.0.0:
     resolution: {integrity: sha512-1fygroTLlHu66zi26VoTDv8yRgm0Fccecssto+MhsZ0D/DGW2sm8E8AjW7NU5VVTRt5GxbeZ5qBuJr+HyLYkjQ==}
