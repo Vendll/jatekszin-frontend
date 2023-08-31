@@ -66,13 +66,12 @@
 				<div
 					class="relative z-20 mx-auto flex w-64 rounded-xl bg-slate-600 shadow-xl md:mb-4 md:w-80 lg:w-auto"
 				>
-				<picture>
-					<source srcset={eloadas.poster.sizes.large.url} media="(min-width: 1280px)" />
-					<source srcset={eloadas.poster.sizes.medium.url} media="(min-width: 640px)" />
-					<source srcset={eloadas.poster.sizes.small.url} media="(min-width: 320px)" />
-					<img src={eloadas.poster.sizes.large.url} alt="" class="" />
-				</picture>
-				
+					<picture>
+						<source srcset={eloadas.poster.sizes.large.url} media="(min-width: 1280px)" />
+						<source srcset={eloadas.poster.sizes.medium.url} media="(min-width: 640px)" />
+						<source srcset={eloadas.poster.sizes.small.url} media="(min-width: 320px)" />
+						<img src={eloadas.poster.sizes.large.url} alt="" class="" />
+					</picture>
 				</div>
 			</div>
 			<!-- <div
@@ -131,7 +130,14 @@
 		{#if eloadas.video}
 			<Trailer {eloadas} />
 		{/if}
-		<Galeria {eloadas} />
+
+		{#if eloadas.otherVideos}
+			{#each eloadas.otherVideos as video}
+				<Trailer title={true} eloadas={video} />
+			{/each}
+		{/if}
+
+		<Galeria galleryID="galeryEl" {eloadas} />
 		<Jegyarak {eloadas} />
 		<CalendarJs {musor} />
 		<Tamogatoink {partners} />

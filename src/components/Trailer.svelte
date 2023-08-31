@@ -3,9 +3,11 @@
 	import FaSolidPlay from 'svelte-icons-pack/fa/FaSolidPlay';
 	import Icon from 'svelte-icons-pack/Icon.svelte';
 	export let eloadas: any;
+	export let poster: any | null = null;
 
 	let play: boolean = false;
 	let paused: boolean = true;
+	export let title: boolean = false;
 
 	$: {
 		if (!paused) {
@@ -15,7 +17,9 @@
 </script>
 
 <div use:scrollRef={'trailer'} class="m-6 space-y-4">
-	<div class="font-heavitas !font-normal text-4xl mb-6">trailer</div>
+	<div class="font-heavitas !font-normal text-4xl mb-6">
+		{title ? eloadas.video.name : 'trailer'}
+	</div>
 	<div class="">
 		<div
 			class="w-full relative aspect-video bg-white overflow-hidden rounded-md grid place-content-center"
@@ -26,7 +30,7 @@
 					controls={play}
 					controlslist="nodownload"
 					src={eloadas.video.url}
-					poster={eloadas.hero.sizes.medium.url}
+					poster={eloadas.hero ? eloadas.hero.sizes.medium.url : poster}
 					class="h-full w-full object-cover object-center"
 					bind:paused
 				>

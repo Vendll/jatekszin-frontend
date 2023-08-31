@@ -47,6 +47,7 @@
 		"axios": "^1.4.0",
 		"dotenv": "^16.3.1",
 		"escape-html": "^1.0.3",
+		"photoswipe": "^5.3.8",
 		"slate": "^0.94.1",
 		"svelte-icons-pack": "^2.1.0",
 		"svelte-scrolling": "^1.2.2",
