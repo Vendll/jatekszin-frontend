@@ -17,7 +17,6 @@
 
 	let visibe = false;
 	onMount(() => {
-		console.log('mounted');
 		visibe = true;
 	});
 </script>

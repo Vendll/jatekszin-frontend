@@ -5,7 +5,6 @@
 	export let heroes: any;
 	let loaded = false;
 
-	console.log(heroes);
 	onMount(() => {
 		register();
 		const swiperEl: any = document.querySelector('swiper-container');

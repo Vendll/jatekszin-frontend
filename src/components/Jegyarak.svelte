@@ -1,6 +1,5 @@
 <script lang="ts">
 	export let eloadas;
-	console.log(eloadas);
 </script>
 
 <div class="max-w-7xl mx-auto px-6 grid gap-4 lg:grid-cols-2">

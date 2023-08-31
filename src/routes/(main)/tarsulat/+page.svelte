@@ -103,7 +103,6 @@
 	}
 
 	const workforce = categorizeWorkforce(munkatarsak);
-	console.log(workforce);
 </script>
 
 <svelte:head>
