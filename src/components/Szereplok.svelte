@@ -5,13 +5,13 @@
 	import person from '$lib/assets/person-jatekszin.webp';
 </script>
 
-<div use:scrollRef={'szereplők'} class="font-heavitas !font-normal text-4xl mb-6 mx-6">
+<div use:scrollRef={'szereplők'} class="font-heavitas !font-normal text-3xl mb-6 mx-6">
 	szereplők
 </div>
 <div class="m-6 grid grid-cols-1 gap-4 lg:gap-8 lg:flex lg:flex-wrap">
 	{#each eloadas.szereplok as szereplo}
 		<div
-			class="w-full h-full relative aspect-square lg:w-96 lg:h-96 overflow-hidden rounded-md flex flex-col justify-end px-6 py-3 bg-gray-300"
+			class="w-full h-full group relative aspect-square lg:w-64 lg:h-64 overflow-hidden rounded-md flex flex-col justify-end px-6 py-3 bg-gray-300"
 		>
 			{#if !szereplo.value.szinesz.value.thumbnail}
 				<img src={person} alt="" class="absolute inset-0 rounded-md object-center z-1" />
@@ -22,7 +22,9 @@
 					class="absolute inset-0 rounded-md object-contain w-full object-center z-0"
 				/>
 			{/if}
-			<div class="z-10 text-error-500 text-xl lg:text-xl text-white-stroke-thin font-heavitas">
+			<div
+				class="z-10 text-error-500 text-xl lg:text-base line-clamp-2 group-hover:line-clamp-none text-white-stroke-thin font-heavitas"
+			>
 				{szereplo.value.name}
 			</div>
 			<div class="z-10 text-white">{szereplo.value.szinesz.value.name}</div>

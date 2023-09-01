@@ -8,7 +8,7 @@
 </script>
 
 <div class="m-6 space-y-4">
-	<div class="font-heavitas !font-normal text-4xl mb-6">támogatóink</div>
+	<div class="font-heavitas !font-normal text-3xl mb-6">támogatóink</div>
 	<swiper-container
 		slides-per-view="auto"
 		speed="500"
@@ -22,11 +22,11 @@
 		class="!w-full !h-full"
 	>
 		{#each partners as partner (partner.id)}
-			<swiper-slide class="card !h-40 !w-40 bg-primary-500">
+			<swiper-slide class="card !h-20 !w-20 p-2 bg-primary-500">
 				<img
 					src={partner.logo.sizes.medium.url}
 					alt=""
-					class="objcet-center !h-36 !w-36 object-contain"
+					class="objcet-center h-full w-full object-contain"
 				/>
 			</swiper-slide>
 		{/each}

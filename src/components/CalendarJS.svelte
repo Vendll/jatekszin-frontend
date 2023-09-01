@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { Calendar } from '@fullcalendar/core';
+	import { scrollRef } from 'svelte-scrolling';
 	import { onMount } from 'svelte';
 	import listPlugin from '@fullcalendar/list';
 	import { popup } from '@skeletonlabs/skeleton';
@@ -72,7 +73,7 @@
 	});
 </script>
 
-<div id="calendar" class="!mb-16 mx-6" />
+<div use:scrollRef={'musor'} id="calendar" class="!mb-16 mx-6" />
 <div class="card p-4 w-72 shadow-xl" data-popup="popupFeatured">
 	<div><p>Demo Content</p></div>
 	<div class="arrow bg-surface-100-800-token" />

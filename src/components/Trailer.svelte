@@ -17,7 +17,7 @@
 </script>
 
 <div use:scrollRef={'trailer'} class="m-6 space-y-4">
-	<div class="font-heavitas !font-normal text-4xl mb-6">
+	<div class="font-heavitas !font-normal text-3xl mb-6">
 		{title ? eloadas.video.name : 'trailer'}
 	</div>
 	<div class="">

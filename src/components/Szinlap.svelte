@@ -72,14 +72,14 @@
 {/if}
 
 <div class="mt-4" use:scrollRef={'színlap'}>
-	<div class="font-heavitas !font-normal text-4xl mb-6 mx-6">színlap</div>
-	<div class="lg:flex lg:space-x-6 space-y-4 mb-6 lg:space-y-0 mx-6">
-		<div class="text-2xl font-bold font-sans">
+	<div class="font-heavitas !font-normal text-3xl mb-6 mx-6">színlap</div>
+	<div class="lg:flex lg:space-x-6 space-3 mb-3 lg:space-y-0 mx-6">
+		<div class="text-base font-bold font-sans">
 			{#if eloadasHossza}
 				Előadás hossza: <span class="font-light">{durationFormatter(eloadasHossza)}</span>
 			{/if}
 		</div>
-		<div class="text-2xl font-bold font-sans">
+		<div class="text-base font-bold font-sans">
 			{#if szunetekSzama}
 				Szünetek száma: <span class="font-light">
 					{szunetekSzama}
@@ -87,21 +87,21 @@
 			{/if}
 		</div>
 	</div>
-	<div class="lg:flex lg:space-x-6 space-y-4 lg:space-y-0 mx-6">
-		<div class="text-2xl font-bold font-sans">
+	<div class="lg:flex lg:space-x-6 space-y-3 lg:space-y-0 mx-6">
+		<div class="text-base font-bold font-sans">
 			{#if rendezo}
 				Rendező: <span class="font-light">{rendezo.value.munkatars.value.name}</span>
 			{/if}
 		</div>
-		<div class="text-2xl font-bold font-sans">
+		<div class="text-base font-bold font-sans">
 			Bemutató: <span class="font-light">
 				<Time timestamp={eloadas.bemutatoDatum} format="YYYY. MMMM DD." />
 			</span>
 		</div>
 	</div>
-	<div class="lg:flex lg:gap-x-6 space-y-4 lg:space-y-0 lg:flex-wrap mt-6 mx-6">
+	<div class="lg:flex lg:gap-x-6 space-y-4 lg:space-y-0 lg:flex-wrap mt-3 mx-6">
 		{#each kozremukodok as kozremukodo}
-			<div class="text-2xl font-bold font-sans">
+			<div class="text-base font-bold font-sans">
 				{findPosition(kozremukodo.value.pozicio)?.label}:
 				<span class="font-light !capitalize">
 					{kozremukodo.value.munkatars.value.name}
@@ -113,7 +113,7 @@
 	<div use:scrollRef={'szereplők'} class="m-6 grid grid-cols-1 gap-4 lg:gap-8 lg:flex lg:flex-wrap">
 		{#each eloadas.szereplok as szereplo}
 			<div
-				class="w-full h-full aspect-square lg:w-96 lg:h-96 overflow-hidden rounded-md flex flex-col relative justify-end px-6 py-3 bg-gray-300"
+				class="w-full h-full group aspect-square lg:w-64 lg:h-64 overflow-hidden rounded-md flex flex-col relative justify-end px-6 py-3 bg-gray-300"
 			>
 				{#if szereplo.value.eloadasKep}
 					<img
@@ -131,7 +131,9 @@
 					<img src={person} alt="" class="absolute w-full inset-0 rounded-md object-center z-1" />
 				{/if}
 
-				<div class="z-10 text-error-500 text-xl lg:text-xl text-white-stroke-thin font-heavitas">
+				<div
+					class="z-10 text-error-500 text-xl lg:text-base line-clamp-2 group-hover:line-clamp-none text-white-stroke-thin font-heavitas"
+				>
 					{szereplo.value.name}
 				</div>
 				<div class="z-10 text-white">{szereplo.value.szinesz.value.name}</div>

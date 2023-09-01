@@ -1,9 +1,9 @@
 <script lang="ts">
-	export let eloadas;
+	export let eloadas: any;
 </script>
 
 <div class="max-w-7xl mx-auto px-6 grid gap-4 lg:grid-cols-2">
-	<div class="font-heavitas !font-normal text-4xl mb-6 lg:col-span-2">Jegyárak</div>
+	<div class="font-heavitas !font-normal text-3xl mb-6 lg:col-span-2">Jegyárak</div>
 
 	<div>
 		{#if eloadas.f1_9 && eloadas.f10_12 && eloadas.f13 && eloadas.f_potszek}
