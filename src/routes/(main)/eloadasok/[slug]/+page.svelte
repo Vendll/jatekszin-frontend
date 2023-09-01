@@ -31,8 +31,8 @@
 	<meta property="article:modified_time" content={eloadas?.date} />
 </svelte:head>
 
-<div class="mt-20">
-	<header class="overflow-hidden bg-white lg:bg-transparent lg:px-5">
+<div class="mt-20 w-screen">
+	<header class="overflow-hidden bg-white lg:bg-transparent">
 		<div
 			class="mx-auto lg:h-screen grid max-w-6xl grid-cols-1 grid-rows-[auto_1fr] gap-y-16 pt-16 md:pt-12 md:gap-y-0 lg:grid-cols-12 lg:px-3 lg:pb-16"
 		>
@@ -93,10 +93,10 @@
 					</p>
 
 					<div
-						class="row-start-1 z-10 relative lg:absolute lg:bottom-0 grid grid-cols-2 text-2xl max-w-[100vw] font-heavitas mt-8 lg:text-3xl lg:self-center lg:max-w-lg justify-center items-center px-6 pb-24 lg:pb-6 gap-y-4"
+						class="row-start-1 z-10 relative lg:absolute lg:bottom-0 grid grid-cols-2 text-2xl !max-w-[100vw] font-heavitas mt-8 lg:text-3xl lg:self-center lg:max-w-lg justify-center items-center px-6 pb-24 lg:pb-6 gap-y-4"
 					>
 						<div
-							class="absolute z-[-1] bg-primary-600 -top-4 lg:-top-6 bottom-20 lg:-bottom-2 -left-[100vw] right-[-100vw]"
+							class="absolute z-[-1] lg:max-w-[101vw] bg-primary-600 -top-4 lg:-top-6 bottom-20 lg:-bottom-2 -left-[100vw] right-[-100vw] lg:-left-[47.5vw] xl:-left-[49.3vw] lg:-right-[29.1vw]"
 						/>
 						<a
 							href="https://jatekszin.jegy.hu/"
