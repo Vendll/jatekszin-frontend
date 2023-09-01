@@ -43,6 +43,13 @@
 			{#if eloadas?.video}
 				<Trailer {eloadas} />
 			{/if}
+
+			{#if eloadas.otherVideos}
+				{#each eloadas.otherVideos as video}
+					<Trailer title={true} eloadas={video} />
+				{/each}
+			{/if}
+
 			<Galeria galleryID="galery" {eloadas} />
 			<Tamogatoink {partners} />
 		</div>
