@@ -13,14 +13,20 @@
 		<div
 			class="w-full h-full relative aspect-square lg:w-96 lg:h-96 overflow-hidden rounded-md flex flex-col justify-end px-6 py-3 bg-gray-300"
 		>
-			{#if !szereplo.value.szinesz.value.thumbnail}
-				<img src={person} alt="" class="absolute inset-0 rounded-md object-center z-1" />
-			{:else}
+			{#if szereplo.value.eloadasKep}
+				<img
+					src={szereplo.value.eloadasKep?.sizes.medium.url}
+					alt=""
+					class="absolute w-full inset-0 rounded-md object-center z-0"
+				/>
+			{:else if szereplo.value.szinesz.value.thumbnail}
 				<img
 					src={szereplo.value.szinesz.value.thumbnail?.sizes.medium.url}
-					alt={szereplo.value.name}
-					class="absolute inset-0 rounded-md object-contain w-full object-center z-0"
+					alt=""
+					class="absolute w-full inset-0 rounded-md object-center z-0"
 				/>
+			{:else}
+				<img src={person} alt="" class="absolute w-full inset-0 rounded-md object-center z-1" />
 			{/if}
 			<div class="z-10 text-error-500 text-xl lg:text-xl text-white-stroke-thin font-heavitas">
 				{szereplo.value.name}
