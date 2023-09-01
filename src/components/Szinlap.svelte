@@ -71,7 +71,7 @@
 	</div>
 {/if}
 
-<div class="mt-4" use:scrollRef={'színlap'}>
+<div class="!mt-4" use:scrollRef={'színlap'}>
 	<div class="font-heavitas !font-normal text-3xl mb-6 mx-6">színlap</div>
 	<div class="lg:flex lg:space-x-6 space-3 mb-3 lg:space-y-0 mx-6">
 		<div class="text-base font-bold font-sans">
