@@ -40,7 +40,7 @@
 </script>
 
 <div
-	class="relative bg-gray-600 text-white !h-screen w-screen font-heavitas flex flex-col justify-between"
+	class="bg-surface-300 relative text-white !h-screen w-screen font-heavitas flex flex-col justify-between"
 >
 	<swiper-container
 		init="false"

@@ -29,24 +29,34 @@
 </svelte:head>
 
 <MainHero {heroes} />
-<Kiemelt {kiemelt} />
 
-<div class="bg-gray-50 px-6 pb-20 lg:px-8 lg:pt-10 lg:pb-28">
-	<div class="relative mx-auto max-w-7xl">
-		<h1 class="font-heavitas !font-normal text-center text-4xl mb-6">Kiemelt Hírek</h1>
-		<div class="mx-auto mt-12 grid max-w-lg gap-5 lg:max-w-none lg:grid-cols-3">
-			{#each kiemeltHirek as kiemeltHir (kiemeltHir.id)}
-				<HirCard
-					desc={kiemeltHir.description}
-					link={kiemeltHir.slug}
-					img={kiemeltHir.thumbnail.sizes.medium.url}
-					title={kiemeltHir.title}
-				/>
-			{/each}
+<div class="bg-surface-200">
+	<Kiemelt {kiemelt} />
+
+	<div class="px-6 pb-20 lg:px-8 lg:pt-10 lg:pb-28">
+		<div class="relative mx-auto max-w-7xl">
+			<h1 class="font-heavitas text-center text-5xl mb-6 text-error-500">Hírek</h1>
+			<div class="mx-auto mt-12 grid max-w-lg gap-5 lg:max-w-none lg:grid-cols-3">
+				{#each kiemeltHirek as kiemeltHir (kiemeltHir.id)}
+					<HirCard
+						desc={kiemeltHir.description}
+						link={kiemeltHir.slug}
+						img={kiemeltHir.thumbnail.sizes.medium.url}
+						title={kiemeltHir.title}
+					/>
+				{/each}
+			</div>
 		</div>
 	</div>
 </div>
-
 <div class="mx-auto max-w-7xl px-6 h-fit">
 	<Tamogatoink {partners} />
 </div>
+
+<style>
+	.white-stroke {
+		stroke: white;
+		stroke-width: 1;
+		-webkit-text-stroke: 1px #ffffff;
+	}
+</style>

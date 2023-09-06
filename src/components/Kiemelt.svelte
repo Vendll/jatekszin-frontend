@@ -5,8 +5,8 @@
 	let timeout: any;
 </script>
 
-<div class="w-full bg-surface-300 mx-auto px-6 my-16 overflow-hidden">
-	<h1 class="font-heavitas !font-normal text-center text-4xl mb-6">Kiemelt előadások</h1>
+<div class="w-full mx-auto px-6 my-16 overflow-hidden">
+	<h1 class="font-heavitas text-center text-5xl text-error-500 mb-6">Kiemelt előadásaink</h1>
 	<ul
 		on:touchstart={() => {
 			scrolling = true;

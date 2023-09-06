@@ -18,7 +18,7 @@
 	<meta property="article:modified_time" content={hir.date} />
 </svelte:head>
 
-<div class="relative overflow-hidden bg-white mx-auto my-16">
+<div class="relative overflow-hidden bg-surface-200 mx-auto my-16">
 	<div class="relative py-16 px-6 lg:px-8">
 		<div class="mx-auto text-lg prose max-w-4xl">
 			<h1>
@@ -27,7 +27,7 @@
 					>{hir.title}</span
 				>
 			</h1>
-			<p class="mt-8 text-xl leading-8 text-gray-500">
+			<p class="mt-8 text-xl leading-8 text-gray-800">
 				<img
 					class="rounded-md mx-auto"
 					src={hir.thumbnail.sizes.medium.url}

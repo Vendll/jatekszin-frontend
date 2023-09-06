@@ -34,9 +34,9 @@
 		</h1>
 	</div>
 </div>
-<div class="relative overflow-hidden bg-white prose max-w-4xl px-6 mx-auto my-8">
+<div class="relative overflow-hidden bg-surface-200 prose max-w-4xl px-6 mx-auto my-8">
 	<div class="mx-auto text-lg">
-		<p class="mt-8 text-xl leading-8 text-gray-500">
+		<p class="mt-8 text-xl leading-8 text-gray-800">
 			<Richtext content={commonPage.content} />
 		</p>
 	</div>
