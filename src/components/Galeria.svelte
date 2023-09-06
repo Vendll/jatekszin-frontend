@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { scrollRef } from 'svelte-scrolling';
 	import { onMount } from 'svelte';
 	import PhotoSwipeLightbox from 'photoswipe/lightbox';
 	import 'photoswipe/style.css';
@@ -26,8 +25,8 @@
 	export let eloadas: any;
 </script>
 
-<div use:scrollRef={'galéria'} class="m-6 space-y-4">
-	<div class="font-heavitas !font-normal text-4xl mb-6">galéria</div>
+<div class="m-6 space-y-4">
+	<div class="font-heavitas !font-normal text-3xl mb-6">galéria</div>
 
 	<section class="grid grid-cols-2 md:grid-cols-3 gap-4 pswp-gallery" id={galleryID}>
 		{#each eloadas.galeria as image (image.id)}
@@ -39,7 +38,7 @@
 				rel="noreferrer"
 			>
 				<img
-					class="h-full max-w-full object-cover object-center mx-auto rounded-lg"
+					class="h-full md:max-h-96 w-full max-w-full object-cover object-center mx-auto rounded-lg"
 					src={image.image.sizes.large.url}
 					alt={image.image.alt}
 					loading="lazy"

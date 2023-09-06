@@ -56,17 +56,17 @@
 				trailer
 			</a>
 			<a
-				use:scrollTo={{ ref: 'galéria', offset: -50, duration: 1000 }}
+				use:scrollTo={{ ref: 'musor', offset: -50, duration: 1000 }}
 				class="text-blue-stroke text-right"
 			>
-				galéria
+				műsor
 			</a>
 		{:else}
 			<a
-				use:scrollTo={{ ref: 'galéria', offset: -50, duration: 1000 }}
+				use:scrollTo={{ ref: 'musor', offset: -50, duration: 1000 }}
 				class="text-blue-stroke text-center col-span-2"
 			>
-				galéria
+				műsor
 			</a>
 		{/if}
 	</nav>

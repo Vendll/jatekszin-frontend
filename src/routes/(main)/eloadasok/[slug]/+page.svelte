@@ -31,12 +31,12 @@
 	<meta property="article:modified_time" content={eloadas?.date} />
 </svelte:head>
 
-<div class="mt-20">
-	<header class="overflow-hidden bg-white lg:bg-transparent lg:px-5">
+<div class="mt-20 w-screen">
+	<header class="overflow-hidden bg-white lg:bg-transparent">
 		<div
-			class="mx-auto grid max-w-6xl grid-cols-1 grid-rows-[auto_1fr] gap-y-16 pt-16 md:pt-12 md:gap-y-0 lg:grid-cols-12 lg:px-3 lg:pb-16"
+			class="mx-auto lg:h-screen grid max-w-6xl grid-cols-1 grid-rows-[auto_1fr] gap-y-16 pt-16 md:pt-12 md:gap-y-0 lg:grid-cols-12 lg:px-3 lg:pb-16"
 		>
-			<div class="relative flex items-start lg:col-span-5">
+			<div class="relative lg:h-[calc(100vh-6rem)] flex items-start lg:col-span-5">
 				<svg
 					width="384"
 					height="384"
@@ -61,7 +61,7 @@
 					</defs>
 				</svg>
 				<div
-					class="absolute -top-20 -bottom-12 left-0 right-1/2 z-10 rounded-br-md bg-primary-600 md:-bottom-8 lg:bottom-0 lg:-inset-y-8 lg:right-full lg:left-[-100vw] lg:-mr-40"
+					class="absolute -top-20 -bottom-12 left-0 right-1/2 z-10 rounded-br-md bg-primary-600 md:-bottom-8 lg:bottom-12 lg:-inset-y-8 lg:right-full lg:left-[-100vw] lg:-mr-40"
 				/>
 				<div
 					class="relative z-20 mx-auto flex w-64 rounded-xl bg-slate-600 shadow-xl md:mb-4 md:w-80 lg:w-auto"
@@ -69,7 +69,7 @@
 					<picture>
 						<source srcset={eloadas.poster.sizes.large.url} media="(min-width: 1280px)" />
 						<source srcset={eloadas.poster.sizes.medium.url} media="(min-width: 640px)" />
-						<source srcset={eloadas.poster.sizes.small.url} media="(min-width: 320px)" />
+						<source srcset={eloadas.poster.sizes.small.url} media="(max-width: 639px)" />
 						<img src={eloadas.poster.sizes.large.url} alt="" class="" />
 					</picture>
 				</div>
@@ -86,15 +86,17 @@
 						{eloadas.title}
 					</h1>
 
-					<p class="text-lg font-light font-sans mt-6 prose">
+					<p
+						class="text-lg font-light h-[calc(100vh-12.25rem-1.5rem-7.5rem-3rem-5.5rem)] overflow-y-auto font-sans mt-6 prose"
+					>
 						{eloadas.description}
 					</p>
 
 					<div
-						class="row-start-1 z-10 relative grid grid-cols-2 text-2xl max-w-[100vw] font-heavitas mt-8 lg:text-3xl lg:self-center lg:max-w-lg justify-center items-center px-6 pb-24 lg:pb-6 gap-y-4"
+						class="row-start-1 z-10 relative lg:absolute lg:bottom-0 grid grid-cols-2 text-2xl !max-w-[100vw] font-heavitas mt-8 lg:text-3xl lg:self-center lg:max-w-lg justify-center items-center px-6 pb-24 lg:pb-6 gap-y-4"
 					>
 						<div
-							class="absolute z-[-1] bg-primary-600 -top-4 lg:-top-6 bottom-20 lg:-bottom-2 -left-[100vw] right-[-100vw]"
+							class="absolute z-[-1] lg:max-w-[101vw] bg-primary-600 -top-4 lg:-top-6 bottom-20 lg:-bottom-2 -left-[100vw] right-[-100vw] lg:-left-[47.5vw] xl:-left-[49.3vw] lg:-right-[29.1vw]"
 						/>
 						<a
 							href="https://jatekszin.jegy.hu/"
@@ -110,15 +112,27 @@
 						>
 							szereplők
 						</p>
-						<p use:scrollTo={{ ref: 'trailer', offset: -150, duration: 1000 }} class=" text-white">
-							trailer
-						</p>
-						<p
-							use:scrollTo={{ ref: 'galéria', offset: -150, duration: 1000 }}
-							class=" text-white text-right"
-						>
-							galéria
-						</p>
+						{#if eloadas.video}
+							<p
+								use:scrollTo={{ ref: 'trailer', offset: -150, duration: 1000 }}
+								class=" text-white"
+							>
+								trailer
+							</p>
+							<p
+								use:scrollTo={{ ref: 'musor', offset: -150, duration: 1000 }}
+								class=" text-white text-right"
+							>
+								műsor
+							</p>
+						{:else}
+							<p
+								use:scrollTo={{ ref: 'musor', offset: -150, duration: 1000 }}
+								class="col-span-2 text-white text-center"
+							>
+								műsor
+							</p>
+						{/if}
 					</div>
 				</div>
 			</div>
