@@ -36,12 +36,12 @@
 </div>
 <div class="relative overflow-hidden prose max-w-4xl mx-auto px-6 my-8">
 	<div class="mx-auto text-lg">
-		<p class="mt-8 text-xl leading-8 text-gray-500">
+		<p class="mt-8 text-xl leading-8 text-gray-800">
 			<Richtext content={commonPage.content} />
 		</p>
 		<div>
 			<h2>A Játékszín alapító okirata</h2>
-			<p class="mt-8 text-xl leading-8 text-gray-500">
+			<p class="mt-8 text-xl leading-8 text-gray-800">
 				{#each commonPage.files.reverse() as file}
 					<a target="_blank" href={file.file.url} class="flex gap-1 items-center">
 						<Icon src={FaFilePdf} className="ml-2 fill-primary-500" />
@@ -52,7 +52,7 @@
 		</div>
 		<div>
 			<h2>Beszámolók</h2>
-			<p class="mt-8 text-xl leading-8 text-gray-500">
+			<p class="mt-8 text-xl leading-8 text-gray-800">
 				{#each commonPage.beszamolok.reverse() as file}
 					<a target="_blank" href={file.file.url} class="flex gap-1 items-center">
 						<Icon src={FaFilePdf} className="ml-2 fill-primary-500" />
@@ -63,7 +63,7 @@
 		</div>
 		<div>
 			<h2>Művészeti koncepciónk</h2>
-			<p class="mt-8 text-xl leading-8 text-gray-500">
+			<p class="mt-8 text-xl leading-8 text-gray-800">
 				{#each commonPage.muveszetiKoncepcio.reverse() as file}
 					<a target="_blank" href={file.file.url} class="flex gap-1 items-center">
 						<Icon src={FaFilePdf} className="ml-2 fill-primary-500" />
@@ -74,7 +74,7 @@
 		</div>
 		<div>
 			<h2>Jegybevételi nyilatkozat</h2>
-			<p class="mt-8 text-xl leading-8 text-gray-500">
+			<p class="mt-8 text-xl leading-8 text-gray-800">
 				{#each commonPage.jegybeveteliNyilatkozat.reverse() as file}
 					<a target="_blank" href={file.file.url} class="flex gap-1 items-center">
 						<Icon src={FaFilePdf} className="ml-2 fill-primary-500" />

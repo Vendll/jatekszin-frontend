@@ -82,12 +82,12 @@
 
 			<div class="bg-white pt-0 lg:col-span-7 lg:bg-transparent lg:pl-16 xl:pl-20">
 				<div class="grid lg:block mx-auto px-4 sm:px-6 md:max-w-2xl md:px-4 lg:px-0">
-					<h1 class="lowercase font-display text-5xl font-heavitas text-slate-900 sm:text-6xl">
+					<h1 class="lowercase font-display text-2xl font-heavitas text-slate-900 sm:text-4xl">
 						{eloadas.title}
 					</h1>
 
 					<p
-						class="text-lg font-light h-[calc(100vh-12.25rem-1.5rem-7.5rem-3rem-5.5rem)] overflow-y-auto font-sans mt-6 prose"
+						class="font-light sm:h-[calc(100vh-12.25rem-1.5rem-7.5rem-3rem-5.5rem)] overflow-y-auto font-sans mt-6 prose text-gray-700"
 					>
 						{eloadas.description}
 					</p>
