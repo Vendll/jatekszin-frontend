@@ -181,20 +181,22 @@
 				{#if tabSet === 0}
 					<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
 						{#each workforce.szinesz as szinesz}
-							<div class="card relative aspect-square overflow-hidden">
-								{#if szinesz.thumbnail}
-									<img
-										class="absolute inset-0 object-contain brightness-90"
-										src={szinesz.thumbnail?.sizes.medium.url}
-										alt={szinesz.name}
-									/>
-								{:else}
-									<img src={person} alt={szinesz.name} class="absolute inset-0 object-contain" />
-								{/if}
-								<span class="absolute bottom-4 left-4 text-white uppercase">
-									{szinesz.name}
-								</span>
-							</div>
+							{#if !szinesz.kulsos}
+								<div class="card relative aspect-square overflow-hidden">
+									{#if szinesz.thumbnail}
+										<img
+											class="absolute inset-0 object-contain brightness-90"
+											src={szinesz.thumbnail?.sizes.medium.url}
+											alt={szinesz.name}
+										/>
+									{:else}
+										<img src={person} alt={szinesz.name} class="absolute inset-0 object-contain" />
+									{/if}
+									<span class="absolute bottom-4 left-4 text-white uppercase">
+										{szinesz.name}
+									</span>
+								</div>
+							{/if}
 						{/each}
 					</div>
 				{:else if tabSet === 1}
