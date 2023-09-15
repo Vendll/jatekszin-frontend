@@ -40,6 +40,7 @@
 		<div class="max-w-7xl mx-auto space-y-16">
 			<Informaciok {eloadas} />
 			<Szereplok {eloadas} />
+
 			{#if eloadas?.video}
 				<Trailer {eloadas} />
 			{/if}
