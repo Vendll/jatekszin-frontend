@@ -25,7 +25,6 @@
 			class="w-full relative aspect-video bg-white overflow-hidden rounded-md grid place-content-center"
 		>
 			<div class="absolute z-0 inset-0 bg-black/20">
-				<div class="absolute z-0 inset-0 bg-black/20" />
 				<video
 					controls={play}
 					controlslist="nodownload"
