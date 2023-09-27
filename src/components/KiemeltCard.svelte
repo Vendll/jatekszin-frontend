@@ -28,12 +28,10 @@
 	}
 </script>
 
-<li
-	class="block md:hidden snap-start shrink-0 group relative rounded-md w-[21rem] h-[28rem] aspect-[4/3] md:hover:w-[42rem] md:hover:aspect-[2/3] overflow-hidden transition-all delay-500 duration-[350ms] ease-in-out"
->
+<li class=" snap-start shrink-0 group relative rounded-md w-[21rem] h-[28rem] aspect-[4/3]">
 	<div>
 		<img
-			class=" absolute rounded-md object-cover top-0 left-0 w-[42rem] h-[28rem]"
+			class="absolute rounded-md object-cover top-0 left-0 w-[42rem] h-[28rem] brightness-95"
 			src={ke.value.heroMobile.sizes.medium.url}
 			alt="sad"
 		/>
@@ -73,7 +71,7 @@
 		</div>
 	</div>
 </li>
-<li
+<!-- <li
 	class="hidden md:block snap-start shrink-0 group relative rounded-md w-[21rem] h-[28rem] aspect-[4/3] md:hover:w-[42rem] md:hover:aspect-[2/3] overflow-hidden transition-all delay-500 duration-[350ms] ease-in-out"
 	on:mouseenter={() => handleMouseEnter()}
 	on:pointerleave={() => handleMouseLeave()}
@@ -147,4 +145,4 @@
 			</div>
 		</div>
 	{/if}
-</li>
+</li> -->

@@ -125,14 +125,14 @@
 					<img
 						src={szereplo.value.szinesz.value.thumbnail?.sizes.medium.url}
 						alt=""
-						class="absolute w-full inset-0 rounded-md object-center z-0"
+						class="absolute w-full inset-0 rounded-md object-center z-0 brightness-90"
 					/>
 				{:else}
 					<img src={person} alt="" class="absolute w-full inset-0 rounded-md object-center z-1" />
 				{/if}
 
 				<div
-					class="z-10 text-error-500 text-xl lg:text-base line-clamp-2 group-hover:line-clamp-none text-white-stroke-thin font-heavitas"
+					class="z-10 text-error-500 text-xl lg:text-lg line-clamp-2 group-hover:line-clamp-none text-white-stroke-thin font-heavitas"
 				>
 					{szereplo.value.name}
 				</div>
