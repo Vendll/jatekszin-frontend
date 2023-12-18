@@ -35,17 +35,7 @@
 			src={ke.value.heroMobile.sizes.medium.url}
 			alt="sad"
 		/>
-		<div
-			class="z-10 absolute bottom-0 left-0 inset-0"
-			in:fly={{
-				delay: 400,
-				duration: 500,
-				x: 0,
-				y: 250,
-				opacity: 0,
-				easing: quintOut
-			}}
-		>
+		<div class="z-10 absolute bottom-0 left-0 inset-0">
 			<div class="absolute bottom-10 left-2 right-2 text-center">
 				<h1
 					class="lowercase text-error-500 text-xl lg:text-2xl text-white-stroke-thin font-heavitas"
