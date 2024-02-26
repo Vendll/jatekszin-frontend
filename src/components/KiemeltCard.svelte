@@ -37,14 +37,10 @@
 		/>
 		<div class="z-10 absolute bottom-0 left-0 inset-0">
 			<div class="absolute bottom-10 left-2 right-2 text-center">
-				<h1
-					class="lowercase text-error-500 text-xl lg:text-2xl text-white-stroke-thin font-heavitas"
-				>
+				<h1 class="lowercase text-white drop-shadow-lg text-xl lg:text-2xl font-heavitas">
 					{ke.value.author}
 				</h1>
-				<h1
-					class="lowercase text-error-500 text-xl lg:text-3xl text-white-stroke-thin font-heavitas"
-				>
+				<h1 class="lowercase text-white drop-shadow-lg text-xl lg:text-3xl font-heavitas">
 					{ke.value.title}
 				</h1>
 				<div class="gap-3 flex justify-center mt-4">
