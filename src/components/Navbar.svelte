@@ -80,7 +80,7 @@
 				data-sveltekit-preload-data="hover"
 				aria-label={item.title}
 				href={item.link}
-				class="hidden lg:block text-white hover:text-white-stroke transition-color duration-300 ease-in-out"
+				class="hidden lg:block text-white hover:text-white-stroke hover:cursor-pointer transition-color duration-300 ease-in-out"
 				class:navColor
 			>
 				{item.title}
