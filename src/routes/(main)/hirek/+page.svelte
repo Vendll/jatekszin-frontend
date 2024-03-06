@@ -58,6 +58,7 @@
 					link={hir.slug}
 					img={hir.thumbnail.sizes.medium.url}
 					title={hir.title}
+					date={hir.date}
 				/>
 			{/each}
 		</div>

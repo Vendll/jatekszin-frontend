@@ -43,6 +43,7 @@
 						link={kiemeltHir.slug}
 						img={kiemeltHir.thumbnail.sizes.medium.url}
 						title={kiemeltHir.title}
+						date={kiemeltHir.date}
 					/>
 				{/each}
 			</div>

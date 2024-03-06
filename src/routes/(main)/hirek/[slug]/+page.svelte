@@ -3,6 +3,7 @@
 	import Richtext from '$components/Richtext.svelte';
 	export let data;
 	const hir = data.props.hirek.docs[0];
+	import { formatDate } from '$lib/utils/formatDate';
 </script>
 
 <svelte:head>
@@ -21,6 +22,7 @@
 <div class="relative overflow-hidden bg-surface-200 mx-auto my-16">
 	<div class="relative py-16 px-6 lg:px-8">
 		<div class="mx-auto text-lg prose max-w-4xl">
+			<p class="text-center text-gray-900 opacity-40">{formatDate(hir.date)}</p>
 			<h1>
 				<span
 					class="mt-2 block text-center text-3xl font-bold leading-8 tracking-tight text-gray-900 sm:text-4xl"
