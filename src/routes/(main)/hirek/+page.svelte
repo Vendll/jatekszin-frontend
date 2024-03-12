@@ -4,9 +4,11 @@
 	import { PUBLIC_SITE_URL } from '$env/static/public';
 	import { page } from '$app/stores';
 	import type { PageData } from './$types';
-	let commonPage: any;
+
 	export let data: PageData;
 	const hirek = data.props.hirek.docs;
+	let commonPage: any = data.props.commonPage;
+
 	import { Paginator } from '@skeletonlabs/skeleton';
 	const source = hirek;
 	let pagePagination = {
