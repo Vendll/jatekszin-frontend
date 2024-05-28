@@ -13,12 +13,10 @@
 	import { page } from '$app/stores';
 	export let data: PageData;
 	const eloadas = data.props.eloadasok.docs[0];
+
 	const partners = data.props.partners.docs;
 
 	let visibe = false;
-	onMount(() => {
-		visibe = true;
-	});
 </script>
 
 <svelte:head>
@@ -34,26 +32,24 @@
 	<meta property="article:modified_time" content={eloadas?.date} />
 </svelte:head>
 
-{#if visibe}
-	<div class="space-y-16">
-		<Hero {eloadas} />
-		<div class="max-w-7xl mx-auto space-y-16">
-			<Informaciok {eloadas} />
-			<Szereplok {eloadas} />
+<div class="space-y-16">
+	<Hero {eloadas} />
+	<div class="max-w-7xl mx-auto space-y-16">
+		<Informaciok {eloadas} />
+		<Szereplok {eloadas} />
 
-			{#if eloadas?.video}
-				<Trailer {eloadas} />
-			{/if}
+		{#if eloadas?.video}
+			<Trailer {eloadas} />
+		{/if}
 
-			{#if eloadas.otherVideos}
-				{#each eloadas.otherVideos as video}
-					<Trailer title={true} eloadas={video} />
-				{/each}
-			{/if}
+		{#if eloadas.otherVideos}
+			{#each eloadas.otherVideos as video}
+				<Trailer title={true} eloadas={video} />
+			{/each}
+		{/if}
 
-			<Galeria galleryID="galery" {eloadas} />
-			<Tamogatoink {partners} />
-		</div>
-		<Footer />
+		<Galeria galleryID="galery" {eloadas} />
+		<Tamogatoink {partners} />
 	</div>
-{/if}
+	<Footer />
+</div>

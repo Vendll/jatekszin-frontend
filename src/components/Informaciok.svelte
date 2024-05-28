@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { scrollRef } from 'svelte-scrolling';
-	import Time from 'svelte-time';
+	import Time, { dayjs } from 'svelte-time';
+	import 'dayjs/locale/hu';
 	import Richtext from './Richtext.svelte';
 
 	export let eloadas: any;
@@ -86,7 +87,7 @@
 			</div>
 			<div class="text-2xl font-bold font-sans">
 				Bemutató: <span class="font-light">
-					<Time timestamp={eloadas.bemutatoDatum} format="YYYY. MMMM DD." />
+					<Time timestamp={dayjs(eloadas.bemutatoDatum).locale('hu')} format="YYYY. MMMM DD." />
 				</span>
 			</div>
 		</div>

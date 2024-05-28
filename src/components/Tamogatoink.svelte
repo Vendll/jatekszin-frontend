@@ -28,7 +28,7 @@
 	>
 		<SplideTrack>
 			{#each partners as partner (partner.id)}
-				<SplideSlide class="card !h-20 !w-20 p-2 bg-primary-500">
+				<SplideSlide class="card !h-36 !w-36 p-2  bg-primary-500">
 					<img
 						src={partner.logo.sizes.medium.url}
 						alt=""
