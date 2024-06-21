@@ -15,6 +15,13 @@
 	const eloadas = data.props.eloadasok.docs[0];
 
 	const partners = data.props.partners.docs;
+	console.log(eloadas);
+	let color = '';
+
+	$: if (eloadas.id === '64e9ccdef862c48a0910e0e3') {
+		color = '#000000';
+	}
+	$: console.log(color);
 
 	let visibe = false;
 </script>

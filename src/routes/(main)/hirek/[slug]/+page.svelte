@@ -29,14 +29,14 @@
 					>{hir.title}</span
 				>
 			</h1>
-			<p class="mt-8 text-xl leading-8 text-gray-800">
-				<img
-					class="rounded-md mx-auto"
-					src={hir.thumbnail.sizes.medium.url}
-					alt={hir.thumbnail.alt}
-				/>
-				<Richtext content={hir.content} />
-			</p>
+
+			<img
+				class="rounded-md mx-auto"
+				src={hir.thumbnail.sizes.medium.url}
+				alt={hir.thumbnail.alt}
+			/>
+
+			<Richtext content={hir.content} />
 		</div>
 	</div>
 </div>
