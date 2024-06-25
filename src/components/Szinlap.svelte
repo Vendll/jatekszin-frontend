@@ -42,7 +42,9 @@
 			{ label: 'Társszerző', value: 'tarsszerzo' },
 			{ label: 'Producer', value: 'producer' },
 			{ label: 'Divattervező', value: 'divattervezo' },
-			{ label: 'Társastánc', value: 'tarsastanc' }
+			{ label: 'Társastánc', value: 'tarsastanc' },
+			{ label: 'Vizuál', value: 'vizual' },
+			{ label: 'Videóanimáció', value: 'videoanimacio' }
 		];
 
 		return options.find((option) => option.value === value);
